@@ -168,12 +168,12 @@ __NOTOC__&lt;!-- no table of contents --&gt;
 {{{end template}}}
 
 
-= Transkript = 
+= Transkript =
 {{{for template|Transkript|multiple}}}
 {| class=&quot;formtable&quot;
 ! Abschnitt: {{#info:Bitte den Abschnitt eingeben}}&lt;br&gt;{{{field|Zeilennummer|property=Zeilennummer|mandatory}}} || Zeit Beginn: {{#info:Bitte Startzeit angeben}}&lt;br&gt; {{{field|Startzeit|property=Strartzeit|input type=text|size=10}}} || Zeit Ende: {{#info:Bitte eine Stoppzeit angeben}}&lt;br&gt;{{{field|Endzeit|property=Endzeit|input type=text|size=10}}}
 |-
-! Sprecher / Akteur:&lt;br&gt;{{{field|Akteur1|size=15|property=Akteur1|input type=text with autocomplete|list|values from property=Akteur1}}} 
+! Sprecher / Akteur:&lt;br&gt;{{{field|Akteur1|size=15|property=Akteur1|input type=text with autocomplete|list|values from property=Akteur1}}}
 |}
 '''Transkript Text:'''&lt;br&gt;
 {{{field|Transkripttext|size=100|property=Transkripttext|input type=textarea|rows=10|cols=100|autogrow}}}
@@ -223,7 +223,7 @@ Sofern bereits eine Seite mit diesem Namen vorhanden ist, erfolgt die Bearbeitun
 
 '''Beispiel: Ethik_Klasse6_Fremdsein_apaek02152'''
 
-== == 
+== ==
 
 {{#forminput:form=Erhebungsmaterial Metadaten|autocomplete on category=Unterrichtstranskripte}}
 
@@ -262,7 +262,7 @@ __NOTOC__&lt;!-- no table of contents --&gt;
 ! Schlagwörter:
 | {{{field|Schlagwörter|size=100|input type=text with autocomplete|size=50|list|values=Kaeltestudien, Unterricht, Schule, Maennlich, Sprachlichliterarischkuenstlerischerunterricht, Lehrerschuelerkommunikation, Gruppenarbeit, Arbeitsblatt, Lehrerverhalten, Tafelanschrieb, Schuelerverhalten, Muendigkeit, Lehrerschuelerinteraktion, Portraitfoto, Lehrerschuelerverhaeltnis, Schulprogramm, Schulreform, Kriseninduktion, Schuelerschuelerinteraktion, Hausaufgabe, Unterrichtsstoerung, Gerechtigkeit, Disziplinproblem, Fremdsprachenunterricht, Aufmerksamkeitunterricht, Gruppenfoto, Stillarbeit, Allgemeinbildung, Naturwissenschaftlichtechnischerunterricht, Weiblich, Begruessung, Sozialeintimitaet, Grammatik, Lehrerautoritaet, Sprachunterricht, Umgangmitguetern, Lesen, Solidaritaet, Partnerarbeit, Sprachdidaktik, Schulbuch, Hausaufgabenkontrolle, Tafelbild, Erziehung, Overheadprojektion, Disziplinierungsmassnahme, Klassenarbeit, Helpstellung, Literaturunterricht, Schuelerpraktikanteninteraktion, Analyse, Algebra, Praesentation, Textarbeit, Autoritaet, Lehrerpraktikanteninteraktion, Politischemuendigkeit, Nebentaetigkeit, Traeumen, Geometrie, Schreiben, Spiel, Addition, Missverstaendnis, Umgangmitliterarischentexten, Talk, Zeitformen, Schuelerstreit, Verhaltensregeln, Bildung, Mathematik, Stuhlkreis, Arbeitsheft, Vokabeln, Organisation, Rituale, Pausenkonflikt, Gehorsam, Grundrechenarten, Literatur, Gedicht, Schuelerfragen, Schuelerorientierung, Wortarten, Didaktik, Jugendliteratur, Konflikt, Sozialverhalten, Verstaendnisproblem, Interpretation, Sitzposition, Streitschlichtung, Argumentation, Aufgabenstellung, Benotung, Melden, Ruhezeichen, Selbstorganisation, Klassengespraech, Lektuere, Cd, Experiment, Konfliktloesung, Motivation, Respekt, Rollenspiel, Spracherziehung, Subtraktion, Gruppentisch, Gruschkaandreaserkenntnisinunddurchunterricht, Klausurvorbereitung, Kopfrechnen, Textanalyse, Unterrichtsgespraech, Lied, Sitzkreis, Sozialesverhalten, Verspaetung, Versuch, Kurzgeschichte, Referat, Selbstbestimmung, Gleichung, Interaktionsverhalten, Ironie, Kreativesschreiben, Notenbesprechung, Pronomen, Strafarbeit, Textinterpretation, Unterrichtsanfang, Wortmeldung, Bibel, Bruchrechnung, Nationalsozialismus, Regeln, Assoziativesunterrichtsgespraech, Fehlerkorrekturen, Inhaltszusammenfassung, Kunsterziehung, Religion, Schulausflug, Textaufgabe, Unterrichtsplanung, Film, Hoerverstehensuebung, Lueckentext, Multiplikation, Stilmittel, Bildanalyse, Bildbeschreibung, Chemischereaktion, Diktat, Konjugation, Leseverstaendnis, Plakat, Politik, Religionslehre, Schuelerzentriert, Sitzordnung, Sportunterricht, Strafe, Szenischeslesen, Zeichnen, Demokratie, Erzaehlkreis, Gespraech, Hoerverstehen, Krankheit, Lesefertigkeit, Lesekompetenz, Lesetraining, Lyrik, Schuelersolidaritaet, Vortrag, Uebersetzung, Gewalt, Kommunikation, Rechenspiel, Rechnen, Test, Uebung, Beleidigung, Charakterisierung, Inkonsequenz, Islam, Mediation, Praktikum, Schulorganisation, Sprache, Anerkennung, Arithmetik, Dividieren, Klassengemeinschaft, Klassenrat, Konfliktbewaeltigung, Lehrerzimmer, Lehrkraft, Linearegleichung, Literaturepoche, Satzbau, Tafelwischen, Unterrichtsablauf, Unterrichtsorganisation, Zahlenbereich, Direktor, Formel, Genetik, Geographie, Gott, Integration, Masseinheit, Mittelalter, Modell, Praesentationstechnik, Referendar, Vertretungslehrer, Adjektiv, Austeildienst, Beschreibung, Desoxyribonukleinsaeure, Dna, Durchsage, Gleichnis, Koerperberechnung, Rechtschreibung, Simplepast, Textgattung, Unterrichtsvorbereitung, Verbformen, Vertretungsstunde, Vokabelabfragung, Berufswahl, Demokratieerziehung, Familie, Flaecheninhalt, Glaube, Koordinatensystem, Lernstation, Leseuebung, Mindmap, Mobbing, Moralentwicklung, Quelle, Rollenverhalten, Satzglied, Schuelererwartungen, Trainingsraum, Versuchsbeschreibung, Wortsuchspiel, Aggregatzustand, Beziehungen, Diktatur, Foerderkurs, Flaechenberechnung, Geodreieck, Gerade, Geschlechterverhaeltnis, Grafik, Integrationsklasse, Interaktion, Klassenordnung, Klima, Lehrerelternkonflikt, Lehrerlehrerkommunikation, Migration, Migrationshintergrund, Nacherzaehlung, Parabel, Regelverstoss, Reimschema, Satzarten, Schulordnungregeln, Singen, Terme, Unterrichtsmethode, Vokabeltest, Werteerziehung, Winkel, Zeitgeschichte, Zeugnisnoten, Aesthetik, Oesterreich, Buchbesprechung, Fremdwoerter, Funktion, Gebet, Internet, Jesus, Kunstgeschichte, Lehrerelterninteraktion, Lehrerlehrerverhaeltnis, Lehrerzentriert, Lesefaehigkeit, Medien, Merksatz, Methode, Musik, Praeteritum, Revolution, Selbstkontrolle, Sprachfoerderung, Termumformung, Tiere, Verb, Versuchsprotokoll, Volumenberechnung, Ballsportarten, Binomischeformel, Christentum, Computer, Deklination, Diskriminierung, Einsetzungsverfahren, Elterneinbindung, Eroeffnung, Fachsprache, Feedback, Funktionsgleichung, Gesellschaftskunde, Gleichsetzungsverfahren, Gliederung, Goethejohannwolfgang, Von, Hilfsverben, Lernklima, Maerchen, Natuerlichezahlen, Ordnungsdienst, Powerpointpraesentation, Schulforschung, Schulstruktur, Sprechuebung, Unangekuendigt, Textstruktur, Versuchsdemonstration, Zahlenreihe, Abstimmung, Adhs, Alkohol, Anatomie, Ballade, Bewegungslehre, Buchstabentraining, Computerprogramm, Dialog, Drogen, Epoche, Ernaehrung, Franzoesischerevolution, Globalekonflikte, Industrialisierung, Koerperaufbau, Klassensprecher, Landeskunde, Landkarte, Lehrerforscherinteraktion, Leistungsdifferenzierung, Leseverhalten, Mensch, Metapher, Quellenanalyse, Roemischesreich, Rechtschreibunterricht, Reflexion, Schreibunterricht, Sexualitaet, Strafmuendigkeit, Stundenplan, Substantiv, Tabelle, Tagebuch, Tod, Umwelt, Unitedstatesofamerica, Usa, Vergleichsarbeit, Versmass, Wetter, Wortschatz, Zahlenstrahl, Zweiterweltkrieg, Aequivalenzumformungen, Oekologie, Adverb, Alphabetisierung, Anthropologie, Arbeitswelt, Architektur, Beamer, Befragung, Begruendetestellungnahme, Bildungsforschung, Elektrizitaetslehre, Emotion, Eroerterung, Erstlesen, Fabel, Forschung, Globalisierung, Grossezahlen, Grundgesetz, Handy, Homosexualitaet, Inhaltsangabe, Instrument, Koerperverletzung, Kassette, Kinderpsychologe, Klimawandel, Lehrlernsituation, Lehrplan, LernHelp, Modernekunst, Muskelaufbau, Optik, Philosophie, Potenzrechnung, Praktikumsbericht, Presentperfect, Projekttagwoche, Proportionalitaet, Reformation, Regelmaessigeverben, Relativsaetze, Roman, Runden, Schillerfriedrich, Schlichtungsvertrag, Schulgemeinschaft, Sozialstruktur, Steinzeit, Strecke, Sturmunddrang, Szenischesspiel, Teamteaching, Teilbarkeit, UnterrichtsConcept, Verbindlichkeit, Vererbungslehre, Vorundfruehgeschichte, Woertlicherede, Witz, Wochenplan, Wurzel, Zahlbegriff, Zehnersystem, Zuverlaessigkeit, Zwanzigstesjahrhundert, Oekonomie, Aberkennung, Aktionspotenzial, Alltagsgeschichte, Altertum, Antiproportionalitaet, Archaeologie, Armut, Aufnahme, Aufsatzunterricht, Behinderung, Bericht, Bewerbung, Bildergeschichte, Bonapartenapolã©On, Brainstorming, Chagallmarc, Dafoedanielrobinsoncrusoe, Dezimalzahl, Diagramm, Diebstahl, Distributivgesetz, Drama, Dreisatz, Elektrischerstrom, Entscheidungsfragen, Entspannung, Erdgeschichte, Erzaehlball, Ethikunterricht, Evolutionsbiologie, Gender, Groessenverhaeltnis, Grad, Kalterkrieg, Klassenraumgestaltung, Klausurbesprechung, Konferenz, Kordonklausdiereisezurwunderinsel, Kritischepaedagogik, Lebensmittel, Lebensweltbezug, Leistungsforderung, Liebesgedicht, Muendlnote, Medienerziehung, Musikunterricht, Naturschutz, Neuzeit, Perfekt, Planet, Politischereden, Praeposition, Praesens, Primzahlen, Problemorientierteaufgabe, Protokoll, Pythagoras, Quadratischegleichung, Rauchen, Raumverweis, Reformpaedagogik, Saeure, Schuelerelternkonflikt, Schuelervertretungsv, Selbstwahrnehmung, Sexualerziehung, Skelett, Smartboard, Sonnensystem, Stellentafel, Sucht, Temperatur, Textverarbeitung, Theaterstueck, Topografie, Transferleistung, Umweltschutz, Unfall, Unregelmaessigeverben, Verstehen, Vorurteil, Weimarerrepublik, Widerstand, Zellteilung, Zuordnung, Abhaengigkeit, Absolutismus, Activeboard, Altestestament, Analysis, Atom, Ausserschulischerlernort, Auge, Ausgrenzung, Breitengrad, Buchvorstellung, Bundestag, Cytologie, Design, Dezimalbruch, Diaprojektor, Diezehngebote, Dilemma, Drittesreich, Drogenmissbrauch, Drogenpraevention, Einheiten, Einzahl, Element, Erdkunde, Essen, Europa, Examensarbeit, Flaeche, Fontanetheodorirrungenwirrungen, Form, Fragewoerter, Gefaehrdeteskindeswohl, Genitiv, Geschlechtergeschichte, Herrschaft, Himmelsrichtungen, Hinterglasmalerei, Indianer, Jahreszeit, Judenverfolgung, Karikatur, Klassenbuch, Kooperation, KurvenTalk, Landwirtschaft, Leistungsmessung, Lesespiel, Luthermartin, Macht, Medienkonsum, Meditation, Mehrzahl, Mengenlehre, Mikroskopieren, Nachkriegszeit, Nachschreiben, Namenwort, Nationalhymne, Nationalitaet, Naturalismus, Neuemedien, Neuestestament, Perlenkette, Personifikation, Pflanze, Pflanzen, Platon, Portrait, ProkontraTalk, Prosa, Prozentrechnung, Quadratischefunktion, Quiz, Raetsel, Rassismus, Rechenkette, Reflex, Religioesefeste, Sauberkeitserziehung, Schulangst, Schulsozialarbeit, Schulweg, Schwerkraft, Sozialeselektion, Sozialform, Sprachphilosophie, Stochastik, Strukturierung, Taeuschungsversuch, Tanzen, Taschenrechner, Traumreise, Uhrzeit, Umweltbedingungen, Vaterunser, Versaillerfriedensvertrag, Waermelehre, Wuerfel, Wahrscheinlichkeit, Zeichensetzung, Zeitstrahl, Zelle, Aegypten, Uebergaenge, Uebungstontraeger, Adornotheodorw, Alkane, Allegorie, Antike, Assoziativgesetz, Astronomie, Aufsichtspflicht, Auslandsschule, Barock, Beratungslehrer, Bichselpeterdietochter, Binaereszahlensystem, Brittinggeorgbrudermordimaltwasser, Bundesrat, Caesarjulius, Collage, Definitionsbereich, Deutscheklassik, Diffusion, Downsyndrom, Doylearthurcanondasgefleckteband, Dreissigjaehrigerkrieg, Einfuehrungvontextaufgaben, Einschulung, Elektrischerwiderstand, Elektromagnetischeinduktion, Elektron, Emanzipation, Enjambement, Entnazifizierung, Entwicklungslaender, Entwicklungszusammenarbeit, Europapolitik, Expressionismus, Faecherverbindenderunterricht, Fachfremdethemen, Fachkonferenz, Fckw, Fluorchlorkohlenwasserstoff, Fishbackpowersmargaretspurenimsand, Fluesterrolle, Fontanetheodoreffibriest, Formsprache, Forschungsmethode, Fortpflanzung, Frischmaxandorra, Frischmaxbiedermannunddiebrandstifter, Galgenmaennchen, Gauss, Gebot, Gegenoperator, Gemisch, Gericht, Gesetz, Gesetze, Gewichtseinheiten, Gezeiten, Gluehlampe, Glaubensbekenntnis, Goethejohannwolfgangvonurfaust, Gruenmaxvondervorstadtkrokodile, Grimmrumpelstilzchen, Grossundkleinschreibung, Hoehenstufen, Halbjahreszeugnis, Hetmannfrederickdasgeraeuschdergrille, Hilfsorganisationen, Hitlerjugend, Holocaust, Homophobie, Imperfekt, Infrastruktur, Internat, Interviewleitfaden, Judentum, Jugendamt, Jugendschutzgesetz, Karldergrosse, Kartographie, Kellergottfried, Kellergottfriedkleidermachenleute, Kirchenlieder, Klimax, Klimazone, Kohlberglawrence, Kollegialitaet, Kolonialisierung, Kommunismus, Kompetenz, Kreis, Kriminalgeschichte, Kuscheltier, Loesung, Lateinamerika, Lauge, Leistungsdruck, Leistungskurs, Lernstoerung, Lesekiste, Lesewettbewerb, Limerick, Lineareungleichung, Marktwirtschaft, Mediationsprotokoll, Morgenkreis, Motorik, Musikgattung, Nationalstaat, Natur, Negativezahl, Objektivehermeneutik, Okkultismus, Paedagogischertag, Parallele, Partizipation, Periodensystem, Perspektive, Pflichten, Phaenomen, Phonetik, Physikalischechemie, Presslermirjamnovemberkatzen, Produktregel, Projektmethode, Proportion, Provokation, Quadratzahlen, Roemischezahlen, Realismus, Redoxreaktion, Reflektion, Religionskritik, Renaissance, Richterhanspeterdamalswaresfriedrich, Rittertum, Saeugetiere, Sachbeschaedigung, Satire, Schueleraustausch, Schillerfriedrichwilhelmtell, Schulgestaltung, Schulverweis, Selbstversuch, Sexuellebelaestigung, Shakespearewilliam, Siedlungsbau, Simplepresent, Sinnesorgan, Sonnenfinsternis, Spickzettel, Statistik, Stellungnahme, SterbeHelp, Stormtheodordiestadt, Stormtheodorderschimmelreiter, Strahlen, Streitschlichtungsregeln, Suizid, Symmetrie, Tagesplan, Timmuwerennschweinrudiruessel, Todesstrafe, Treibhauseffekt, Trigonometrie, Umkehraufgabe, Unterrichtsgarantieplus, Urknall, Urteilsbildung, Verkehrserziehung, Woerterliste, Wasserdampf, Wassergewinnung, Wasserverbrauch, Weltkarte, Wiederaufbau, Wienerkongress, Winde, Zahlendiktat, Zahlenraetsel, Zehnerpotenz, Zeitungsausschnitt, Zitieren, Zivilisation, Zwerenzgerhardnichtallesgefallenlassen, Aequator, Abfallentsorgung, Abiturpruefung, Adel, Aggressionstheorie, Aichingerilsedasfenstertheater, Aktionsform, Alge, Altdeutscherwortschatz, Alterspyramide, Analysator, Anderschalfredsansibaroderderletztegrund, Anlauttabelle, Arbeit, Aristoteles, Assistantteacher, Atmosphaere, Atmung, Atommodell, Auferstehung, Aufklaerung, Ausbildung, Aussagesatz, Autoevaluation, Boellheinrichanekdotezursenkungderarbeitsmoral, Barbarossafriedrichi, Bauernkriege, Begabung, Belohnungssystem, Benjaminfranklin, Berufsoberschule, Beschleunigung, Bevorzugungvonmaedchen, Bildbearbeitungsprogramm, Bilderverbot, Biographischeerzaehlung, Bonhoefferdietrich, Borchertwolfgangnachtsschlafendierattendoch, Boschhieronymusdasnarrenschiff, Boschhieronymusweltgerichtstriptychon, Brechtbertoltdergutemenschvonsezuan, Brechtbertoltmuttercourageundihrekinder, Brechtbertoltundwasbekamdessoldatenweib, Bunsenbrenner, Burg, Buschendorfffloriangeildaspeinlichefotostellenwironline, Byarsbetsytheglorygirl, Chemischesgleichgewicht, Christophkolumbus, Cobainkurtdonald, Comic, Cortã©Shernã¡N, Creeps, Duerrenmattfriedrichderrichterundseinhenker, Dagermanstigeinkindtoeten, Dahlroaldmatilda, Dasgleichnisvomfestmahl, Datumsdienst, Demografischerwandel, Descartes, Destillation, Dicamillokatewinndixie, Didaktikum, Diebienenkoenigingrimm, Diploidie, Dosendiktat, Dramapaedagogik, Dreieck, Dreieckshandel, Durchmesser, Edisonthomasalva, Edv, Eisschmelze, Elektromagnetischewellen, Elternabend, Elternsprechtag, Energiedifferenz, Erfahrungsbericht, Erhaltungssatz, Erkenntnistheorie, Ersterweltkrieg, Erwachsenenbildung, Erwerbstaetigkeit, ErziehungsHelp, Essstoerung, Eu, Europaeischeunion, Existentialismus, Exkursion, Faltblatt, Feudalsystem, Feueralarm, Fisch, Fluessigkeit, Floskel, Fontanetheodorgreteminde, Fossilien, Fotografie, Frueheneuzeit, Freiheit, Futur, Galvanischerstrom, Ganzezahl, Ganztagsschule, Gebiss, Gegliedertesschulwesen, Gemeinschaftsschule, Genie, Genetikimexperiment, Gesundheitsmanagement, Gewaltenteilung, Gewerkschaften, Glueck, Gleichgeschlechtlich, Gleichgewichtszustand, Gleichschaltung, Gletscher, Goethejohannwolfgangvonfaust, Goldenezwanziger, Gottesbeweis, Gottholdephraimlessingnathanderweise, Gottholdephraimlessingdienachtigallundderpfau, Graffiti, Griechischemythologie, Grundriss, Grundwortschatz, Hoehenlinien, Hambacherfest, Hanekemichaeldasweisseband, Haselursulapedrounddiebettlervoncartegena, Heineheinrichlorelei, Heinrichi, Heizwendel, Herbst, Hessehermannuntermrad, Himmelskoerper, Hiroshima, Hofvonversailles, Hookeschesgesetz, Hugenotten, Humor, Immunsystem, Imperialismus, Inflation, Intelligenz, Ira, Japan, Johnlocke, Kafkafranzheimkehr, Kalenderdienst, Kanon, Kant, Karlsbaderbeschluesse, Karyogramm, Kelten, Kernwaffen, Klaeranlage, Klapptest, Klimaveraenderung, Klippertheinz, Kloster, Kochen, Kommutativgesetz, Koran, Kreisbogen, Kreisinhalt, Kyotoprotokoll, Lebenslauf, Lehrer, Lerntheke, Lessinggottholdephraimemiliagalotti, Lichtgeschwindigkeit, Lorenzkonraddassogenannteboese, Lunge, Mahatmagandhi, Mannschaftsauswahl, Massenwirkungsgesetz, Mehrwertsteuer, Memorierungsuebung, Mendelscheregeln, Menschenrechte, Methodischerzweifel, Metternichklemensvon, Meyerdietrichingeunddasnenntihrmut, Mitose, Modulation, Mohammed, Molekuel, Mosererwindiefuenfholzwuermer, Motorischeslernen, Museum, Musikgeschichte, Mythos, Noestlingerchristinedasaustauschkind, Nervenzelle, Novelle, Nutzpflanze, Odellscottinselderblauendelphine, Odysseus, Oktettregel, Organischechemie, Orthographie, Ostercamp, Oxidation, Paedagogischekasuistik, Parallelogramm, Parodie, Paterfamilias, Patrizier, Peers, Periode, Persoenlichkeitsentwicklung, Personalkonferenz, Philologie, Politischeparteien, Positionssystem, Presentprogressive, Preusslerotfriedkrabat, Prometheus, Pythagorasvonsamos, Quadratischeergaenzung, Quersumme, Querversetzung, Raeterepublik, Rassenfrage, Rationalezahl, Realschule, Realschulempfehlung, Recherche, Rede, Redestab, Reichgottes, Theol, Reinlichkeitserziehung, Relationszeichen, Reliquie, Rilkerainermaria, Ritualisierung, Rohstoffe, Rousseaujeanjaques, Soerllesteinardienachtalskeinerschlief, Sachanalyse, Sartre, Schamirafikeinehandvollersterne, Schollsophie, Schulverfassung, Schulwahlentscheidungen, Seiteneinsteiger, Smithadam, Sozialefrage, Sozialprodukt, Soziogramm, Sprechendenamen, Sprichwort, Stand, Stehkreis, Storytelling, Suchtgefaehrdung, Suchtmittel, Synthese, Tagesplanarbeit, Technikgeschichte, Angekuendigt, Thermik, Thirdinternationalmathematicsandsciencestudy, Timss, Tonleiter, Tonumfang, Tragoedie, Tragikkomoedie, Trapez, Trisomie21, Troja, Tucholskykurt, Tuwortlabyrinth, Tuwortpantomime, Uhryalfreddrivingmissdaisy, Umfang, Unterrichtsbesuch, Urbanisierung, Voelkerbund, Vektor, Verdunstung, Verhaltenshomologie, Versehen, Versicherung, Verstaedterung, Vertraegevonlocarno, Vertrag, Viereck, Voigtfriedrichwilhelm, Vokabelfussball, Vorgangsbeschreibung, Waehrung, Waermewirkung, Wahlrecht, Wallfahrt, Warschauerpakt, Weisserose, Weinendelehrperson, Weltuntergang, Weltwirtschaftskrise, Wertetabelle, Wettbewerb, Wiewortmemory, Wirbeltiere, Wirklichkeitsproblematik, Wittgenstein, Wolfchristastoerfall, Wolkenbildung, Wortkette, Zahn, Zeitzone, Zeugnisvergabe, Zufallsversuch, Zusatzstoffe, Zweiersystem|sep=;}}}
 |}
-= Aufzeichnung = 
+= Aufzeichnung =
 {| class=&quot;formtable&quot;
 ! Erhebungsdatum (Datum der Aufnahme):
 | {{{field|Erhebungsdatum|input type=datepicker|week start=1|date format=dd.mm.yy}}}
@@ -331,12 +331,12 @@ __NOTOC__&lt;!-- no table of contents --&gt;
 | {{{field|Transkripttext|cols=20|rows=20|editor=wikieditor}}}
 |}
 
-= Transkript = 
+= Transkript =
 {{{for template|Transkript|multiple}}}
 {| class=&quot;formtable&quot;
 ! Zeilennummer: {{#info:Bitte Zeilennummer eingeben}}&lt;br&gt;{{{field|Zeilennummer|property=Zeilennummer|mandatory}}} || Zeit Beginn: {{#info:Bitte Startzeit angeben}}&lt;br&gt; {{{field|Startzeit|property=Strartzeit|input type=text|size=10}}} || Zeit Ende: {{#info:Bitte eine Stoppzeit angeben}}&lt;br&gt;{{{field|Endzeit|property=Endzeit|input type=text|size=10}}}
 |-
-! Sprecher / Akteur:&lt;br&gt;{{{field|Akteur1|size=15|property=Akteur1|input type=text with autocomplete|list|values from property=Akteur1}}} 
+! Sprecher / Akteur:&lt;br&gt;{{{field|Akteur1|size=15|property=Akteur1|input type=text with autocomplete|list|values from property=Akteur1}}}
 |}
 '''Transkript Text:'''&lt;br&gt;
 {{{field|Transkripttext|size=100|property=Transkripttext|input type=textarea|rows=10|cols=100|autogrow}}}
@@ -430,34 +430,34 @@ Sofern bereits eine Seite dieses Namens vorhanden ist, wirst du automatisch zum 
 &lt;div id=&quot;wikiPreview&quot; style=&quot;display: none; padding-bottom: 25px; margin-bottom: 25px; border-bottom: 1px solid #AAAAAA;&quot;&gt;&lt;/div&gt;
 {{{for template|Linkliste}}}
 {| class=&quot;formtable&quot;
-! Name: 
+! Name:
 | {{{field|Name|size=100|input type=text}}}
 |-
-! Beschreibung: 
+! Beschreibung:
 | {{{field|Beschreibung|size=100|input type=text}}}
 |-
-! Webseite: 
+! Webseite:
 | {{{field|Webseite|size=100|input type=text|size=100}}}
 |-
-! Logo: 
+! Logo:
 | {{{field|Logo|size=100|input type=text}}}
 |-
-! Ort: 
+! Ort:
 | {{{field|Ort|size=100|input type=text with autocomplete|values from property=Ort}}}
 |-
-! Community: 
+! Community:
 | {{{field|Community|input type=listbox|values=Historische Bildungsforschung;Allgemeine Erziehungswissenschaft;Vergleichende Erziehungswissenschaft;Empirische Bildungsforschung;Bildungsorganisation Bildungsplanung und Bildungsrecht;Schulpädagogik;Behindertenpädagogik;Berufs- und Wirtschaftspädagogik;Sozialpädagogik;Pädagogik der frühen Kindheit;Erwachsenenbildung / Weiterbildung;Pädagogische Freizeitforschung und Sportpädagogik;Frauen- und Geschlechterforschung in der Erziehungswissenschaft;Medienpädagogik;Umweltpädagogik;Differentielle Erziehungs- und Bildungsforschung;Hochschulforschung und Hochschuldidaktik;Pädagogische Psychologie;Bildungssoziologie;Fachdidaktiken;Fachdidaktik/fächerübergreifende Bildungsthemen;Fachdidaktik/mathematisch-naturwissenschaftliche Fächer;Fachdidaktik/musische Fächer;Fachdidaktik/praktische Fächer;Fachdidaktik/sozialkundlich-philosophische Fächer;Fachdidaktik/Sprache und Literatur;Sonstige|size=10|sep=;|delimiter=;}}}
 |-
-! Typ: 
+! Typ:
 | {{{field|Typ|input type=dropdown|size=100|show on select=Daten und Materialien=&gt;Daten;Werkzeuge=&gt;Werkzeuge;Projekte=&gt;Projekte;Rezepte=&gt;Rezepte;Einrichtungen=&gt;Einrichtungen;Konferenzen und Tagungen=&gt;Konferenzen}}}
 |}
 
 &lt;div id=&quot;Daten&quot;&gt;
 {| class=&quot;formtable&quot;
-! Sprache: 
+! Sprache:
 | {{{field|Sprache|input type=dropdown}}}
 |-
-! Datentypus: 
+! Datentypus:
 | {{{field|Datentypus|delimiter=;|size=100||input type=menuselect|structure=
 *audio
 ** 1d-interleaved-parityfec
@@ -660,7 +660,7 @@ Sofern bereits eine Seite dieses Namens vorhanden ist, wirst du automatisch zum 
 *** vnd.wap.wbmp
 *** vnd.xiff
 *** vnd.zbrush.pcx
-*** vnd.zbrush.pcx 
+*** vnd.zbrush.pcx
 *text
 **1d-interleaved-parityfec
 **cache-manifest
@@ -733,7 +733,7 @@ Sofern bereits eine Seite dieses Namens vorhanden ist, wirst du automatisch zum 
 *** vnd.wap.wmlscript
 ** xml
 ** xml-external-parsed-entity
-** xml-external-parsed-entity 
+** xml-external-parsed-entity
 * video
 **1d-interleaved-parityfec
 **3gpp
@@ -814,84 +814,84 @@ Sofern bereits eine Seite dieses Namens vorhanden ist, wirst du automatisch zum 
 *** vnd.vivo
 *** vnd.vivo}}}
 |-
-! Materialtypus: 
+! Materialtypus:
 | {{{field|Materialtyp|delimiter=;|size=100|input type=text with autocomplete|values from property=Materialtypus}}}
 |}
 &lt;/div&gt;
 
 &lt;div id=&quot;Werkzeuge&quot;&gt;
 {| class=&quot;formtable&quot;
-! Methode: 
+! Methode:
 | {{{field|Methoden|sep=;|size=100|input type=text with autocomplete|values from property=Methoden|delimiter=;}}}
 |-
-! DH-Aktivität: 
+! DH-Aktivität:
 | {{{field|DH-Aktivität|input type=listbox|values=Konvertieren; Datenerkennung; Entdecken; Sammeln; Bilderfassung; Aufzeichnen; Transkription; Design; Programmieren; Übersetzen; Webentwicklung; Schreiben; Annotieren; Bearbeiten; Inhaltsanalyse; Netzwerkanalyse; Analyse von Relationen; Räumliche Analyse; Strukturanalyse; Stilistische Analyse; Visualisierung; Kontextualisieren; Modellieren; Theoriebildung; Archivieren; Identifizieren; Organisieren; Konservierun; Kollaboration; Kommentieren; Kommunizieren; Crowdsourcing; Veröffentlichen; Teilen;(Über)Prüfen; CommunityBuilding; ÜberblickGeben; Projektmanagement; Lehren-Lernen|size=10|delimiter=;|sep=;}}}
 |-
-! Lizenz: 
+! Lizenz:
 | {{{field|Lizenz|size=100|input type=text with autocomplete|values from property=Lizenz}}}
 |-
-! Screenshot: 
+! Screenshot:
 | {{{field|Screenshot|size=100|input type=text with autocomplete|values from property=Screenshot|uploadable}}}
 |}
 &lt;/div&gt;
 
 &lt;div id=&quot;Projekte&quot;&gt;
 {| class=&quot;formtable&quot;
-! Untersuchungsgegenstand: 
+! Untersuchungsgegenstand:
 | {{{field|Untersuchungsgegenstand|size=100|input type=text with autocomplete|values from property=Untersuchungsgegenstand|delimiter=;}}}
 |-
-!  Daten und Materialien: 
+!  Daten und Materialien:
 | {{{field|Daten und Materialien|size=100|input type=text with autocomplete|values from category=Daten und Materialien|delimiter=;}}}
 |-
-! DH-Aktivität: 
+! DH-Aktivität:
 | {{{field|DH-Aktivität|input type=listbox|values=Konvertieren; Datenerkennung; Entdecken; Sammeln; Bilderfassung; Aufzeichnen; Transkription; Design; Programmieren; Übersetzen; Webentwicklung; Schreiben; Annotieren; Bearbeiten; Inhaltsanalyse; Netzwerkanalyse; Analyse von Relationen; Räumliche Analyse; Strukturanalyse; Stilistische Analyse; Visualisierung; Kontextualisieren; Modellieren; Theoriebildung; Archivieren; Identifizieren; Organisieren; Konservierun; Kollaboration; Kommentieren; Kommunizieren; Crowdsourcing; Veröffentlichen; Teilen;(Über)Prüfen; CommunityBuilding; ÜberblickGeben; Projektmanagement; Lehren-Lernen|size=10|delimiter=;|sep=;}}}
 |-
-! Werkzeuge: 
+! Werkzeuge:
 | {{{field|Werkzeuge|size=100|input type=text with autocomplete|values from category=Werkzeuge|delimiter=;}}}
 |-
-! Methode: 
+! Methode:
 | {{{field|Methode|size=100|input type=text with autocomplete|values from category=Methode|delimiter=;}}}
 |-
-! Projektbeginn: 
+! Projektbeginn:
 | {{{field|Projektbeginn|input type=datepicker}}}
 |-
-! Projektende: 
+! Projektende:
 | {{{field|Projektende|input type=datepicker}}}
 |}
 &lt;/div&gt;
 
 &lt;div id=&quot;Rezepte&quot;&gt;
 {| class=&quot;formtable&quot;
-!  Daten und Materialien: 
+!  Daten und Materialien:
 | {{{field| Daten und Materialien|size=100|input type=text with autocomplete|values from category=Daten und Materialien|delimiter=;}}}
 |-
-! DH-Aktivität: 
+! DH-Aktivität:
 | {{{field|DH-Aktivität|input type=listbox|values=Konvertieren; Datenerkennung; Entdecken; Sammeln; Bilderfassung; Aufzeichnen; Transkription; Design; Programmieren; Übersetzen; Webentwicklung; Schreiben; Annotieren; Bearbeiten; Inhaltsanalyse; Netzwerkanalyse; Analyse von Relationen; Räumliche Analyse; Strukturanalyse; Stilistische Analyse; Visualisierung; Kontextualisieren; Modellieren; Theoriebildung; Archivieren; Identifizieren; Organisieren; Konservierun; Kollaboration; Kommentieren; Kommunizieren; Crowdsourcing; Veröffentlichen; Teilen;(Über)Prüfen; CommunityBuilding; ÜberblickGeben; Projektmanagement; Lehren-Lernen|size=10|delimiter=;|sep=;}}}
 |-
-! Werkzeuge: 
+! Werkzeuge:
 | {{{field|Werkzeuge|size=100|input type=text with autocomplete|values from category=Werkzeuge|delimiter=;}}}
 |-
-! Methoden: 
+! Methoden:
 | {{{field|Methoden|size=100|input type=text with autocomplete|values from category=Methoden|delimiter=;}}}
 |-
-! Projekte: 
+! Projekte:
 | {{{field|Projekte|size=100|input type=text with autocomplete|values from category=Projekte|delimiter=;}}}
 |}
 &lt;/div&gt;
 
 &lt;div id=&quot;Einrichtungen&quot;&gt;
 {| class=&quot;formtable&quot;
-! Gründungsdatum: 
+! Gründungsdatum:
 | {{{field|Gründungsdatum|input type=datepicker}}}
 |}
 &lt;/div&gt;
 
 &lt;div id=&quot;Konferenzen&quot;&gt;
 {| class=&quot;formtable&quot;
-! Konferenz/Tagungsbeginn: 
+! Konferenz/Tagungsbeginn:
 | {{{field|Tagungsbeginn|input type=datepicker}}}
 |-
-! Konferenz/Tagungsende: 
+! Konferenz/Tagungsende:
 | {{{field|Tagungsende|input type=datepicker}}}
 |}
 &lt;/div&gt;
@@ -976,16 +976,16 @@ Sofern bereits eine Seite dieses Namens vorhanden ist, wirst du automatisch zum 
 &lt;div id=&quot;wikiPreview&quot; style=&quot;display: none; padding-bottom: 25px; margin-bottom: 25px; border-bottom: 1px solid #AAAAAA;&quot;&gt;&lt;/div&gt;
 {{{for template|Medien}}}
 {| class=&quot;formtable&quot;
-! Titel: 
+! Titel:
 | {{{field|Titel|input type=text|size=100}}}
 |-
-! Schlagwörter: 
+! Schlagwörter:
 | {{{field|Schlagwörter|input type=text with autocomplete|size=100|list|values=Kaeltestudien, Unterricht, Schule, Maennlich, Sprachlichliterarischkuenstlerischerunterricht, Lehrerschuelerkommunikation, Gruppenarbeit, Arbeitsblatt, Lehrerverhalten, Tafelanschrieb, Schuelerverhalten, Muendigkeit, Lehrerschuelerinteraktion, Portraitfoto, Lehrerschuelerverhaeltnis, Schulprogramm, Schulreform, Kriseninduktion, Schuelerschuelerinteraktion, Hausaufgabe, Unterrichtsstoerung, Gerechtigkeit, Disziplinproblem, Fremdsprachenunterricht, Aufmerksamkeitunterricht, Gruppenfoto, Stillarbeit, Allgemeinbildung, Naturwissenschaftlichtechnischerunterricht, Weiblich, Begruessung, Sozialeintimitaet, Grammatik, Lehrerautoritaet, Sprachunterricht, Umgangmitguetern, Lesen, Solidaritaet, Partnerarbeit, Sprachdidaktik, Schulbuch, Hausaufgabenkontrolle, Tafelbild, Erziehung, Overheadprojektion, Disziplinierungsmassnahme, Klassenarbeit, Helpstellung, Literaturunterricht, Schuelerpraktikanteninteraktion, Analyse, Algebra, Praesentation, Textarbeit, Autoritaet, Lehrerpraktikanteninteraktion, Politischemuendigkeit, Nebentaetigkeit, Traeumen, Geometrie, Schreiben, Spiel, Addition, Missverstaendnis, Umgangmitliterarischentexten, Talk, Zeitformen, Schuelerstreit, Verhaltensregeln, Bildung, Mathematik, Stuhlkreis, Arbeitsheft, Vokabeln, Organisation, Rituale, Pausenkonflikt, Gehorsam, Grundrechenarten, Literatur, Gedicht, Schuelerfragen, Schuelerorientierung, Wortarten, Didaktik, Jugendliteratur, Konflikt, Sozialverhalten, Verstaendnisproblem, Interpretation, Sitzposition, Streitschlichtung, Argumentation, Aufgabenstellung, Benotung, Melden, Ruhezeichen, Selbstorganisation, Klassengespraech, Lektuere, Cd, Experiment, Konfliktloesung, Motivation, Respekt, Rollenspiel, Spracherziehung, Subtraktion, Gruppentisch, Gruschkaandreaserkenntnisinunddurchunterricht, Klausurvorbereitung, Kopfrechnen, Textanalyse, Unterrichtsgespraech, Lied, Sitzkreis, Sozialesverhalten, Verspaetung, Versuch, Kurzgeschichte, Referat, Selbstbestimmung, Gleichung, Interaktionsverhalten, Ironie, Kreativesschreiben, Notenbesprechung, Pronomen, Strafarbeit, Textinterpretation, Unterrichtsanfang, Wortmeldung, Bibel, Bruchrechnung, Nationalsozialismus, Regeln, Assoziativesunterrichtsgespraech, Fehlerkorrekturen, Inhaltszusammenfassung, Kunsterziehung, Religion, Schulausflug, Textaufgabe, Unterrichtsplanung, Film, Hoerverstehensuebung, Lueckentext, Multiplikation, Stilmittel, Bildanalyse, Bildbeschreibung, Chemischereaktion, Diktat, Konjugation, Leseverstaendnis, Plakat, Politik, Religionslehre, Schuelerzentriert, Sitzordnung, Sportunterricht, Strafe, Szenischeslesen, Zeichnen, Demokratie, Erzaehlkreis, Gespraech, Hoerverstehen, Krankheit, Lesefertigkeit, Lesekompetenz, Lesetraining, Lyrik, Schuelersolidaritaet, Vortrag, Uebersetzung, Gewalt, Kommunikation, Rechenspiel, Rechnen, Test, Uebung, Beleidigung, Charakterisierung, Inkonsequenz, Islam, Mediation, Praktikum, Schulorganisation, Sprache, Anerkennung, Arithmetik, Dividieren, Klassengemeinschaft, Klassenrat, Konfliktbewaeltigung, Lehrerzimmer, Lehrkraft, Linearegleichung, Literaturepoche, Satzbau, Tafelwischen, Unterrichtsablauf, Unterrichtsorganisation, Zahlenbereich, Direktor, Formel, Genetik, Geographie, Gott, Integration, Masseinheit, Mittelalter, Modell, Praesentationstechnik, Referendar, Vertretungslehrer, Adjektiv, Austeildienst, Beschreibung, Desoxyribonukleinsaeure, Dna, Durchsage, Gleichnis, Koerperberechnung, Rechtschreibung, Simplepast, Textgattung, Unterrichtsvorbereitung, Verbformen, Vertretungsstunde, Vokabelabfragung, Berufswahl, Demokratieerziehung, Familie, Flaecheninhalt, Glaube, Koordinatensystem, Lernstation, Leseuebung, Mindmap, Mobbing, Moralentwicklung, Quelle, Rollenverhalten, Satzglied, Schuelererwartungen, Trainingsraum, Versuchsbeschreibung, Wortsuchspiel, Aggregatzustand, Beziehungen, Diktatur, Foerderkurs, Flaechenberechnung, Geodreieck, Gerade, Geschlechterverhaeltnis, Grafik, Integrationsklasse, Interaktion, Klassenordnung, Klima, Lehrerelternkonflikt, Lehrerlehrerkommunikation, Migration, Migrationshintergrund, Nacherzaehlung, Parabel, Regelverstoss, Reimschema, Satzarten, Schulordnungregeln, Singen, Terme, Unterrichtsmethode, Vokabeltest, Werteerziehung, Winkel, Zeitgeschichte, Zeugnisnoten, Aesthetik, Oesterreich, Buchbesprechung, Fremdwoerter, Funktion, Gebet, Internet, Jesus, Kunstgeschichte, Lehrerelterninteraktion, Lehrerlehrerverhaeltnis, Lehrerzentriert, Lesefaehigkeit, Medien, Merksatz, Methode, Musik, Praeteritum, Revolution, Selbstkontrolle, Sprachfoerderung, Termumformung, Tiere, Verb, Versuchsprotokoll, Volumenberechnung, Ballsportarten, Binomischeformel, Christentum, Computer, Deklination, Diskriminierung, Einsetzungsverfahren, Elterneinbindung, Eroeffnung, Fachsprache, Feedback, Funktionsgleichung, Gesellschaftskunde, Gleichsetzungsverfahren, Gliederung, Goethejohannwolfgang, Von, Hilfsverben, Lernklima, Maerchen, Natuerlichezahlen, Ordnungsdienst, Powerpointpraesentation, Schulforschung, Schulstruktur, Sprechuebung, Unangekuendigt, Textstruktur, Versuchsdemonstration, Zahlenreihe, Abstimmung, Adhs, Alkohol, Anatomie, Ballade, Bewegungslehre, Buchstabentraining, Computerprogramm, Dialog, Drogen, Epoche, Ernaehrung, Franzoesischerevolution, Globalekonflikte, Industrialisierung, Koerperaufbau, Klassensprecher, Landeskunde, Landkarte, Lehrerforscherinteraktion, Leistungsdifferenzierung, Leseverhalten, Mensch, Metapher, Quellenanalyse, Roemischesreich, Rechtschreibunterricht, Reflexion, Schreibunterricht, Sexualitaet, Strafmuendigkeit, Stundenplan, Substantiv, Tabelle, Tagebuch, Tod, Umwelt, Unitedstatesofamerica, Usa, Vergleichsarbeit, Versmass, Wetter, Wortschatz, Zahlenstrahl, Zweiterweltkrieg, Aequivalenzumformungen, Oekologie, Adverb, Alphabetisierung, Anthropologie, Arbeitswelt, Architektur, Beamer, Befragung, Begruendetestellungnahme, Bildungsforschung, Elektrizitaetslehre, Emotion, Eroerterung, Erstlesen, Fabel, Forschung, Globalisierung, Grossezahlen, Grundgesetz, Handy, Homosexualitaet, Inhaltsangabe, Instrument, Koerperverletzung, Kassette, Kinderpsychologe, Klimawandel, Lehrlernsituation, Lehrplan, LernHelp, Modernekunst, Muskelaufbau, Optik, Philosophie, Potenzrechnung, Praktikumsbericht, Presentperfect, Projekttagwoche, Proportionalitaet, Reformation, Regelmaessigeverben, Relativsaetze, Roman, Runden, Schillerfriedrich, Schlichtungsvertrag, Schulgemeinschaft, Sozialstruktur, Steinzeit, Strecke, Sturmunddrang, Szenischesspiel, Teamteaching, Teilbarkeit, UnterrichtsConcept, Verbindlichkeit, Vererbungslehre, Vorundfruehgeschichte, Woertlicherede, Witz, Wochenplan, Wurzel, Zahlbegriff, Zehnersystem, Zuverlaessigkeit, Zwanzigstesjahrhundert, Oekonomie, Aberkennung, Aktionspotenzial, Alltagsgeschichte, Altertum, Antiproportionalitaet, Archaeologie, Armut, Aufnahme, Aufsatzunterricht, Behinderung, Bericht, Bewerbung, Bildergeschichte, Bonapartenapolã©On, Brainstorming, Chagallmarc, Dafoedanielrobinsoncrusoe, Dezimalzahl, Diagramm, Diebstahl, Distributivgesetz, Drama, Dreisatz, Elektrischerstrom, Entscheidungsfragen, Entspannung, Erdgeschichte, Erzaehlball, Ethikunterricht, Evolutionsbiologie, Gender, Groessenverhaeltnis, Grad, Kalterkrieg, Klassenraumgestaltung, Klausurbesprechung, Konferenz, Kordonklausdiereisezurwunderinsel, Kritischepaedagogik, Lebensmittel, Lebensweltbezug, Leistungsforderung, Liebesgedicht, Muendlnote, Medienerziehung, Musikunterricht, Naturschutz, Neuzeit, Perfekt, Planet, Politischereden, Praeposition, Praesens, Primzahlen, Problemorientierteaufgabe, Protokoll, Pythagoras, Quadratischegleichung, Rauchen, Raumverweis, Reformpaedagogik, Saeure, Schuelerelternkonflikt, Schuelervertretungsv, Selbstwahrnehmung, Sexualerziehung, Skelett, Smartboard, Sonnensystem, Stellentafel, Sucht, Temperatur, Textverarbeitung, Theaterstueck, Topografie, Transferleistung, Umweltschutz, Unfall, Unregelmaessigeverben, Verstehen, Vorurteil, Weimarerrepublik, Widerstand, Zellteilung, Zuordnung, Abhaengigkeit, Absolutismus, Activeboard, Altestestament, Analysis, Atom, Ausserschulischerlernort, Auge, Ausgrenzung, Breitengrad, Buchvorstellung, Bundestag, Cytologie, Design, Dezimalbruch, Diaprojektor, Diezehngebote, Dilemma, Drittesreich, Drogenmissbrauch, Drogenpraevention, Einheiten, Einzahl, Element, Erdkunde, Essen, Europa, Examensarbeit, Flaeche, Fontanetheodorirrungenwirrungen, Form, Fragewoerter, Gefaehrdeteskindeswohl, Genitiv, Geschlechtergeschichte, Herrschaft, Himmelsrichtungen, Hinterglasmalerei, Indianer, Jahreszeit, Judenverfolgung, Karikatur, Klassenbuch, Kooperation, KurvenTalk, Landwirtschaft, Leistungsmessung, Lesespiel, Luthermartin, Macht, Medienkonsum, Meditation, Mehrzahl, Mengenlehre, Mikroskopieren, Nachkriegszeit, Nachschreiben, Namenwort, Nationalhymne, Nationalitaet, Naturalismus, Neuemedien, Neuestestament, Perlenkette, Personifikation, Pflanze, Pflanzen, Platon, Portrait, ProkontraTalk, Prosa, Prozentrechnung, Quadratischefunktion, Quiz, Raetsel, Rassismus, Rechenkette, Reflex, Religioesefeste, Sauberkeitserziehung, Schulangst, Schulsozialarbeit, Schulweg, Schwerkraft, Sozialeselektion, Sozialform, Sprachphilosophie, Stochastik, Strukturierung, Taeuschungsversuch, Tanzen, Taschenrechner, Traumreise, Uhrzeit, Umweltbedingungen, Vaterunser, Versaillerfriedensvertrag, Waermelehre, Wuerfel, Wahrscheinlichkeit, Zeichensetzung, Zeitstrahl, Zelle, Aegypten, Uebergaenge, Uebungstontraeger, Adornotheodorw, Alkane, Allegorie, Antike, Assoziativgesetz, Astronomie, Aufsichtspflicht, Auslandsschule, Barock, Beratungslehrer, Bichselpeterdietochter, Binaereszahlensystem, Brittinggeorgbrudermordimaltwasser, Bundesrat, Caesarjulius, Collage, Definitionsbereich, Deutscheklassik, Diffusion, Downsyndrom, Doylearthurcanondasgefleckteband, Dreissigjaehrigerkrieg, Einfuehrungvontextaufgaben, Einschulung, Elektrischerwiderstand, Elektromagnetischeinduktion, Elektron, Emanzipation, Enjambement, Entnazifizierung, Entwicklungslaender, Entwicklungszusammenarbeit, Europapolitik, Expressionismus, Faecherverbindenderunterricht, Fachfremdethemen, Fachkonferenz, Fckw, Fluorchlorkohlenwasserstoff, Fishbackpowersmargaretspurenimsand, Fluesterrolle, Fontanetheodoreffibriest, Formsprache, Forschungsmethode, Fortpflanzung, Frischmaxandorra, Frischmaxbiedermannunddiebrandstifter, Galgenmaennchen, Gauss, Gebot, Gegenoperator, Gemisch, Gericht, Gesetz, Gesetze, Gewichtseinheiten, Gezeiten, Gluehlampe, Glaubensbekenntnis, Goethejohannwolfgangvonurfaust, Gruenmaxvondervorstadtkrokodile, Grimmrumpelstilzchen, Grossundkleinschreibung, Hoehenstufen, Halbjahreszeugnis, Hetmannfrederickdasgeraeuschdergrille, Hilfsorganisationen, Hitlerjugend, Holocaust, Homophobie, Imperfekt, Infrastruktur, Internat, Interviewleitfaden, Judentum, Jugendamt, Jugendschutzgesetz, Karldergrosse, Kartographie, Kellergottfried, Kellergottfriedkleidermachenleute, Kirchenlieder, Klimax, Klimazone, Kohlberglawrence, Kollegialitaet, Kolonialisierung, Kommunismus, Kompetenz, Kreis, Kriminalgeschichte, Kuscheltier, Loesung, Lateinamerika, Lauge, Leistungsdruck, Leistungskurs, Lernstoerung, Lesekiste, Lesewettbewerb, Limerick, Lineareungleichung, Marktwirtschaft, Mediationsprotokoll, Morgenkreis, Motorik, Musikgattung, Nationalstaat, Natur, Negativezahl, Objektivehermeneutik, Okkultismus, Paedagogischertag, Parallele, Partizipation, Periodensystem, Perspektive, Pflichten, Phaenomen, Phonetik, Physikalischechemie, Presslermirjamnovemberkatzen, Produktregel, Projektmethode, Proportion, Provokation, Quadratzahlen, Roemischezahlen, Realismus, Redoxreaktion, Reflektion, Religionskritik, Renaissance, Richterhanspeterdamalswaresfriedrich, Rittertum, Saeugetiere, Sachbeschaedigung, Satire, Schueleraustausch, Schillerfriedrichwilhelmtell, Schulgestaltung, Schulverweis, Selbstversuch, Sexuellebelaestigung, Shakespearewilliam, Siedlungsbau, Simplepresent, Sinnesorgan, Sonnenfinsternis, Spickzettel, Statistik, Stellungnahme, SterbeHelp, Stormtheodordiestadt, Stormtheodorderschimmelreiter, Strahlen, Streitschlichtungsregeln, Suizid, Symmetrie, Tagesplan, Timmuwerennschweinrudiruessel, Todesstrafe, Treibhauseffekt, Trigonometrie, Umkehraufgabe, Unterrichtsgarantieplus, Urknall, Urteilsbildung, Verkehrserziehung, Woerterliste, Wasserdampf, Wassergewinnung, Wasserverbrauch, Weltkarte, Wiederaufbau, Wienerkongress, Winde, Zahlendiktat, Zahlenraetsel, Zehnerpotenz, Zeitungsausschnitt, Zitieren, Zivilisation, Zwerenzgerhardnichtallesgefallenlassen, Aequator, Abfallentsorgung, Abiturpruefung, Adel, Aggressionstheorie, Aichingerilsedasfenstertheater, Aktionsform, Alge, Altdeutscherwortschatz, Alterspyramide, Analysator, Anderschalfredsansibaroderderletztegrund, Anlauttabelle, Arbeit, Aristoteles, Assistantteacher, Atmosphaere, Atmung, Atommodell, Auferstehung, Aufklaerung, Ausbildung, Aussagesatz, Autoevaluation, Boellheinrichanekdotezursenkungderarbeitsmoral, Barbarossafriedrichi, Bauernkriege, Begabung, Belohnungssystem, Benjaminfranklin, Berufsoberschule, Beschleunigung, Bevorzugungvonmaedchen, Bildbearbeitungsprogramm, Bilderverbot, Biographischeerzaehlung, Bonhoefferdietrich, Borchertwolfgangnachtsschlafendierattendoch, Boschhieronymusdasnarrenschiff, Boschhieronymusweltgerichtstriptychon, Brechtbertoltdergutemenschvonsezuan, Brechtbertoltmuttercourageundihrekinder, Brechtbertoltundwasbekamdessoldatenweib, Bunsenbrenner, Burg, Buschendorfffloriangeildaspeinlichefotostellenwironline, Byarsbetsytheglorygirl, Chemischesgleichgewicht, Christophkolumbus, Cobainkurtdonald, Comic, Cortã©Shernã¡N, Creeps, Duerrenmattfriedrichderrichterundseinhenker, Dagermanstigeinkindtoeten, Dahlroaldmatilda, Dasgleichnisvomfestmahl, Datumsdienst, Demografischerwandel, Descartes, Destillation, Dicamillokatewinndixie, Didaktikum, Diebienenkoenigingrimm, Diploidie, Dosendiktat, Dramapaedagogik, Dreieck, Dreieckshandel, Durchmesser, Edisonthomasalva, Edv, Eisschmelze, Elektromagnetischewellen, Elternabend, Elternsprechtag, Energiedifferenz, Erfahrungsbericht, Erhaltungssatz, Erkenntnistheorie, Ersterweltkrieg, Erwachsenenbildung, Erwerbstaetigkeit, ErziehungsHelp, Essstoerung, Eu, Europaeischeunion, Existentialismus, Exkursion, Faltblatt, Feudalsystem, Feueralarm, Fisch, Fluessigkeit, Floskel, Fontanetheodorgreteminde, Fossilien, Fotografie, Frueheneuzeit, Freiheit, Futur, Galvanischerstrom, Ganzezahl, Ganztagsschule, Gebiss, Gegliedertesschulwesen, Gemeinschaftsschule, Genie, Genetikimexperiment, Gesundheitsmanagement, Gewaltenteilung, Gewerkschaften, Glueck, Gleichgeschlechtlich, Gleichgewichtszustand, Gleichschaltung, Gletscher, Goethejohannwolfgangvonfaust, Goldenezwanziger, Gottesbeweis, Gottholdephraimlessingnathanderweise, Gottholdephraimlessingdienachtigallundderpfau, Graffiti, Griechischemythologie, Grundriss, Grundwortschatz, Hoehenlinien, Hambacherfest, Hanekemichaeldasweisseband, Haselursulapedrounddiebettlervoncartegena, Heineheinrichlorelei, Heinrichi, Heizwendel, Herbst, Hessehermannuntermrad, Himmelskoerper, Hiroshima, Hofvonversailles, Hookeschesgesetz, Hugenotten, Humor, Immunsystem, Imperialismus, Inflation, Intelligenz, Ira, Japan, Johnlocke, Kafkafranzheimkehr, Kalenderdienst, Kanon, Kant, Karlsbaderbeschluesse, Karyogramm, Kelten, Kernwaffen, Klaeranlage, Klapptest, Klimaveraenderung, Klippertheinz, Kloster, Kochen, Kommutativgesetz, Koran, Kreisbogen, Kreisinhalt, Kyotoprotokoll, Lebenslauf, Lehrer, Lerntheke, Lessinggottholdephraimemiliagalotti, Lichtgeschwindigkeit, Lorenzkonraddassogenannteboese, Lunge, Mahatmagandhi, Mannschaftsauswahl, Massenwirkungsgesetz, Mehrwertsteuer, Memorierungsuebung, Mendelscheregeln, Menschenrechte, Methodischerzweifel, Metternichklemensvon, Meyerdietrichingeunddasnenntihrmut, Mitose, Modulation, Mohammed, Molekuel, Mosererwindiefuenfholzwuermer, Motorischeslernen, Museum, Musikgeschichte, Mythos, Noestlingerchristinedasaustauschkind, Nervenzelle, Novelle, Nutzpflanze, Odellscottinselderblauendelphine, Odysseus, Oktettregel, Organischechemie, Orthographie, Ostercamp, Oxidation, Paedagogischekasuistik, Parallelogramm, Parodie, Paterfamilias, Patrizier, Peers, Periode, Persoenlichkeitsentwicklung, Personalkonferenz, Philologie, Politischeparteien, Positionssystem, Presentprogressive, Preusslerotfriedkrabat, Prometheus, Pythagorasvonsamos, Quadratischeergaenzung, Quersumme, Querversetzung, Raeterepublik, Rassenfrage, Rationalezahl, Realschule, Realschulempfehlung, Recherche, Rede, Redestab, Reichgottes, Theol, Reinlichkeitserziehung, Relationszeichen, Reliquie, Rilkerainermaria, Ritualisierung, Rohstoffe, Rousseaujeanjaques, Soerllesteinardienachtalskeinerschlief, Sachanalyse, Sartre, Schamirafikeinehandvollersterne, Schollsophie, Schulverfassung, Schulwahlentscheidungen, Seiteneinsteiger, Smithadam, Sozialefrage, Sozialprodukt, Soziogramm, Sprechendenamen, Sprichwort, Stand, Stehkreis, Storytelling, Suchtgefaehrdung, Suchtmittel, Synthese, Tagesplanarbeit, Technikgeschichte, Angekuendigt, Thermik, Thirdinternationalmathematicsandsciencestudy, Timss, Tonleiter, Tonumfang, Tragoedie, Tragikkomoedie, Trapez, Trisomie21, Troja, Tucholskykurt, Tuwortlabyrinth, Tuwortpantomime, Uhryalfreddrivingmissdaisy, Umfang, Unterrichtsbesuch, Urbanisierung, Voelkerbund, Vektor, Verdunstung, Verhaltenshomologie, Versehen, Versicherung, Verstaedterung, Vertraegevonlocarno, Vertrag, Viereck, Voigtfriedrichwilhelm, Vokabelfussball, Vorgangsbeschreibung, Waehrung, Waermewirkung, Wahlrecht, Wallfahrt, Warschauerpakt, Weisserose, Weinendelehrperson, Weltuntergang, Weltwirtschaftskrise, Wertetabelle, Wettbewerb, Wiewortmemory, Wirbeltiere, Wirklichkeitsproblematik, Wittgenstein, Wolfchristastoerfall, Wolkenbildung, Wortkette, Zahn, Zeitzone, Zeugnisvergabe, Zufallsversuch, Zusatzstoffe, Zweiersystem|sep=;}}}
 |-
-! Gehört zu Transkript: 
+! Gehört zu Transkript:
 | {{{field|belongsto|size=100|input type=text with autocomplete|list|values from category=Unterrichtstranskripte}}}
 |-
-! Gehört to Squenz: 
+! Gehört to Squenz:
 | {{{field|Gehört zu Squenz|input type=text|size=100}}}
 |}
 {{{end template}}}
@@ -1028,28 +1028,28 @@ Sofern bereits eine Seite dieses Namens vorhanden ist, wirst du automatisch zum 
 | Schulfach=
 | Schulform=
 | Jahrgangsstufe=
-| Klasse= 	
-| Zusammenfassung= 		
-| Projektzugehörigkeit= 		
+| Klasse=
+| Zusammenfassung=
+| Projektzugehörigkeit=
 | Schlagwörter=
-| File= 	
+| File=
 
-| Erhebungsdatum= 
+| Erhebungsdatum=
 | Aufnahmemedium=
 | Schulstunde=
 | Beginn laut Plan=
 | Ende laut Plan=
-| Beginn Aufnahme= 
-| Ende Aufnahme= 
+| Beginn Aufnahme=
+| Ende Aufnahme=
 | Erstellungsdatum=
-| Transkription= 	
-| Datum Korrektur= 
+| Transkription=
+| Datum Korrektur=
 | Korrektur durch=
 
 | Lehrpersonen=
 | hat Unterrichtsfächer=
-| hat Dienstjahre= 	
-| Schüler= 	
+| hat Dienstjahre=
+| Schüler=
 | Schülerinnen=
 | Weitere Personen=
 }}
@@ -1063,14 +1063,14 @@ Sofern bereits eine Seite dieses Namens vorhanden ist, wirst du automatisch zum 
 = Metadaten =
 &lt;!-- {{Metadata_View}} --&gt;
 
-{{#set: Titel = {{{Titel|}}} 
-| Stundenthema= {{{Stundenthema|}}} 
-| Schulfach = {{{Schulfach|}}} 
+{{#set: Titel = {{{Titel|}}}
+| Stundenthema= {{{Stundenthema|}}}
+| Schulfach = {{{Schulfach|}}}
 | Schulform = {{{Schulform|}}}
-| Jahrgangsstufe = {{{ Jahrgangsstufe|}}}  
-| Klasse = {{{Klasse|}}} 
-| Zusammenfassung = {{{Zusammenfassung|}}} 
-| Projektzugehörigkeit = {{{Projektzugehörigkeit|}}} 
+| Jahrgangsstufe = {{{ Jahrgangsstufe|}}}
+| Klasse = {{{Klasse|}}}
+| Zusammenfassung = {{{Zusammenfassung|}}}
+| Projektzugehörigkeit = {{{Projektzugehörigkeit|}}}
 | Erhebungsdatum = {{{Erhebungsdatum|}}}
 | Aufnahmemedium = {{{Aufnahmemedium|}}}
 | Schulstunde = {{{Schulstunde|}}}
@@ -1086,23 +1086,23 @@ Sofern bereits eine Seite dieses Namens vorhanden ist, wirst du automatisch zum 
 | hat Dienstjahre = {{{hat Dienstjahre|}}}
 | Schüler = {{{Schüler|}}}
 | Schülerinnen = {{{Schülerinnen|}}}
-}} 
+}}
 {{#arraymap:{{{Schlagwörter|}}}|;|x|{{#set:Schlagwörter=x}}}}
 {{#arraymap:{{{File|}}}|;|x|{{#set:File=x}}}}
 {{#arraymap:{{{Lehrpersonen|}}}|;|x|{{#set:Lehrpersonen=x}}}}
 {{#arraymap:{{{Weitere Personen|}}}|;|x|{{#set:Weitere Personen=x}}}}
 
-{{#set: Short Name ={{PAGENAME}}}} 
+{{#set: Short Name ={{PAGENAME}}}}
 
 {{Show Metadata
-| Titel = {{{Titel|}}} 
-| Stundenthema = {{{Stundenthema|}}} 
-| Schulfach = {{{Schulfach|}}} 
-| Schulform = {{{Schulform|}}} 
-| Jahrgangsstufe = {{{ Jahrgangsstufe|}}}  
-| Klasse = {{{Klasse|}}} 
-| Zusammenfassung = {{{Zusammenfassung|}}} 
-| Projektzugehörigkeit = {{{Projektzugehörigkeit|}}} 
+| Titel = {{{Titel|}}}
+| Stundenthema = {{{Stundenthema|}}}
+| Schulfach = {{{Schulfach|}}}
+| Schulform = {{{Schulform|}}}
+| Jahrgangsstufe = {{{ Jahrgangsstufe|}}}
+| Klasse = {{{Klasse|}}}
+| Zusammenfassung = {{{Zusammenfassung|}}}
+| Projektzugehörigkeit = {{{Projektzugehörigkeit|}}}
 | Erhebungsdatum = {{{Erhebungsdatum|}}}
 | Aufnahmemedium = {{{Aufnahmemedium|}}}
 | Schulstunde = {{{Schulstunde|}}}
@@ -1157,94 +1157,6 @@ Sofern bereits eine Seite dieses Namens vorhanden ist, wirst du automatisch zum 
     </revision>
   </page>
   <page>
-    <title>Template:Fallstrukturanalyse</title>
-    <ns>10</ns>
-    <id>260</id>
-    <revision>
-      <id>1999</id>
-      <parentid>1886</parentid>
-      <timestamp>2017-12-08T08:24:45Z</timestamp>
-      <contributor>
-        <username>LiaVeja</username>
-        <id>3</id>
-      </contributor>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="1445">&lt;noinclude&gt;
-Dies ist die Template „Fallstrukturanalyse“.
-Sie sollte im folgenden Format genutzt werden:
-&lt;pre&gt;
-{{Fallstrukturanalyse
-|Basiert auf Transkript=
-|FallStrukturNummer=
-}}
-&lt;/pre&gt;
-Klick auf „Bearbeiten“, um den Quelltext der Template anzusehen.
-&lt;/noinclude&gt;
-&lt;includeonly&gt;
-
-==Mit dieser Fallstrukturhypothese verbunden==
-{| class=&quot;wikitable&quot;
-! Basiert auf Transkript
-| [[Basiert auf Transkript::{{{Basiert auf Transkript|}}}]] 
-|-
-!Enthaltenen Geschichten
-||{{#ask:[[Basiert auf Transkript::{{{Basiert auf Transkript|}}}]][[Category:Geschichte]][[FallStrukturNummer::{{{FallStrukturNummer|}}}]]|?Kurztitel|?Autor|?Beschreibung|?Ist Annotation von Sequenz}}
-|-
-!Enthaltenen Lesart
-||{{#ask:[[Basiert auf Transkript::{{{Basiert auf Transkript|}}}]][[Category:Lesart]][[FallStrukturNummer::{{{FallStrukturNummer|}}}]]|?Kurztitel|?Autor|?Beschreibung|?Ist Annotation von Sequenz}}
-|-
-!Enthaltenen Anschlüssen
-||{{#ask:[[Basiert auf Transkript::{{{Basiert auf Transkript|}}}]][[Category:Anschlüsse]][[FallStrukturNummer::{{{FallStrukturNummer|}}}]]|?Kurztitel|?Autor|?Beschreibung|?Ist Annotation von Sequenz}}
-|-
-!Enthaltene Kontextualisierung
-||{{#ask:[[Basiert auf Transkript::{{{Basiert auf Transkript|}}}]][[Category:Notiz]][[FallStrukturNummer::{{{FallStrukturNummer|}}}]]|?Kurztitel|?Autor|?Beschreibung|?Ist Annotation von Sequenz}}
-|}
-[[Category:Fallstrukturanalyse]]
-&lt;/includeonly&gt;
-&lt;noinclude&gt;[[Category:Export]]&lt;/noinclude&gt;</text>
-      <sha1>4eophe7tzi2bysbba5wumuhtls9nw6u</sha1>
-    </revision>
-  </page>
-  <page>
-    <title>Template:Interpretation</title>
-    <ns>10</ns>
-    <id>138</id>
-    <revision>
-      <id>2000</id>
-      <parentid>468</parentid>
-      <timestamp>2017-12-08T08:25:10Z</timestamp>
-      <contributor>
-        <username>LiaVeja</username>
-        <id>3</id>
-      </contributor>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="501">&lt;noinclude&gt;
-Dies ist das Template für die Interpretation.
-Sie sollte im folgenden Format genutzt werden:
-&lt;pre&gt;
-{{Interpretation
-|Zeilennummer=
-|Akteur1=
-|Transkripttext=
-}}
-&lt;/pre&gt;
-Klick auf „Bearbeiten“, um den Quelltext der Template anzusehen.
-&lt;/noinclude&gt;&lt;includeonly&gt;
-{{#subobject:{{{Zeilennummer|}}}
-|Zeilennummer={{{Zeilennummer|}}}
-|Akteur1={{{Akteur1|}}}|+sep=;
-|Transkripttext={{{Transkripttext|}}}
-|Belongsto={{FULLPAGENAME}}
-}}
-
-&lt;/includeonly&gt;
-&lt;noinclude&gt;[[Category:Export]]&lt;/noinclude&gt;</text>
-      <sha1>nljrhbr9t3083bc9jxhli76g5ed8o66</sha1>
-    </revision>
-  </page>
-  <page>
     <title>Template:Linkliste</title>
     <ns>10</ns>
     <id>177</id>
@@ -1264,7 +1176,7 @@ Klick auf „Bearbeiten“, um den Quelltext der Template anzusehen.
 &lt;!-- ### weitere Tabelle innerhalb 1. Spalte der Meta-Tabelle ### --&gt;
 {|
 &lt;!-- ### 1. Box Content Hauptseite ### --&gt;
-| style=&quot;margin-top:0;padding-top:0&quot; | 
+| style=&quot;margin-top:0;padding-top:0&quot; |
 &lt;noinclude&gt;&lt;!--
 	--&gt;{{#ifexist:{{ns:107}}:{{PAGENAME}}|&lt;!--
 		--&gt;{{Index talk remarks}}&lt;!--
@@ -1296,8 +1208,8 @@ Klick auf „Bearbeiten“, um den Quelltext der Template anzusehen.
 {{#if:{{{Logo|}}}|
 &lt;tr&gt;
 &lt;td colspan=&quot;2&quot;&gt;[[Logo::{{{Logo|}}}]]&lt;/td&gt;
-&lt;/tr&gt; 
-}} 
+&lt;/tr&gt;
+}}
 &lt;!--Webseite--&gt;
 &lt;tr&gt;
 &lt;th scope=&quot;row&quot; style=&quot;text-align:right; vertical-align:top; padding-right:0.4em;&quot;&gt;Webseite&lt;/th&gt;
@@ -1314,8 +1226,8 @@ Klick auf „Bearbeiten“, um den Quelltext der Template anzusehen.
 {{#if:{{{Screenshot|}}}|
 &lt;tr&gt;
 &lt;td colspan=&quot;2&quot;&gt;[[Screenshot::File:{{{Screenshot|}}}]]&lt;/td&gt;
-&lt;/tr&gt; 
-}} 
+&lt;/tr&gt;
+}}
 
 &lt;!--Community--&gt;
 {{#if:{{{Community|}}}|
@@ -1469,27 +1381,27 @@ Geocode={{#geocode:{{{Ort|}}}}}
 
 |}
 &lt;!-- ### Schließen der 1. Spalte der Meta-Tabelle, Beginn der 2. Spalte ### --&gt;
-| style=&quot;width:35%;vertical-align:top;background-color: #FFFFFF&quot; | 
+| style=&quot;width:35%;vertical-align:top;background-color: #FFFFFF&quot; |
 
 &lt;!-- ### Tabelle innerhalb der 2. Spalte ### --&gt;
 {| style=&quot;margin-top:0;padding-top:0;background-color: #FFFFFF&quot; |
 
 &lt;!-- ### 1. Box rechts Marginale ### --&gt;
-| style=&quot;margin-top:0;padding-top:0;background-color: #FFFFFF&quot; |  
+| style=&quot;margin-top:0;padding-top:0;background-color: #FFFFFF&quot; |
 &lt;br/&gt;
 &lt;!--Ort--&gt;
 {{#if:{{{Ort|}}}|
 == Ort ==
-[[Ort::{{{Ort|}}}]] &lt;br&gt; 
+[[Ort::{{{Ort|}}}]] &lt;br&gt;
 {{#display_map:{{{Ort|}}}
  |service=openlayers
  |width=400
  |height=400
-}} 
+}}
 }}
 &lt;br/&gt;
 
-== Schlagwörter == 
+== Schlagwörter ==
 {{#ask:
 [[Community::+]]
 |?Community
@@ -1541,15 +1453,15 @@ Sie sollte im folgenden Format genutzt werden:
 &lt;/pre&gt;
 Klick auf „Bearbeiten“, um den Quelltext der Template anzusehen.
 &lt;/noinclude&gt;&lt;includeonly&gt;{{#set_internal:Belongsto|Titel={{{Titel|}}}|Schlagwörter={{{Schlagwörter|}}}|BelongstoSequenz={{{Gehört zu Sequenz|}}}}}
-'''Titel:''' {{{Titel|}}} 
+'''Titel:''' {{{Titel|}}}
 
-'''File:''' File:{{{File|}}} 
+'''File:''' File:{{{File|}}}
 
-'''Schlagwörter:''' {{{Schlagwörter|}}} 
+'''Schlagwörter:''' {{{Schlagwörter|}}}
 
-'''Gehört to Sequenz:''' {{{Gehört zu Sequenz|}}} 
+'''Gehört to Sequenz:''' {{{Gehört zu Sequenz|}}}
 
-'''Gehört zu Transkript:''' {{{Gehört zu Transkript|}}} 
+'''Gehört zu Transkript:''' {{{Gehört zu Transkript|}}}
 [[Category:Medien]]
 &lt;/includeonly&gt;
 &lt;noinclude&gt;[[Category:Export]]&lt;/noinclude&gt;</text>
@@ -1677,7 +1589,7 @@ Klick auf „Bearbeiten“, um den Quelltext der Template anzusehen.
 &lt;table id=&quot;prp-indexTable&quot; class=&quot;plainlinks&quot; style=&quot;border-collapse:separate; border-spacing:2px 2px; empty-cells:hide;&quot;&gt;
 &lt;tr&gt;
 &lt;td colspan=&quot;2&quot;&gt;&lt;h2&gt;Metadaten zum Transkript&lt;/h2&gt;&lt;/td&gt;
-&lt;/tr&gt; 
+&lt;/tr&gt;
 &lt;!--Titel--&gt;
 &lt;tr&gt;
 &lt;th scope=&quot;row&quot; style=&quot;text-align:right; vertical-align:top; padding-right:0.4em;&quot;&gt;Titel&lt;/th&gt;
@@ -1756,7 +1668,7 @@ Klick auf „Bearbeiten“, um den Quelltext der Template anzusehen.
 
 &lt;tr&gt;
 &lt;td colspan=&quot;2&quot;&gt;&lt;h2&gt;Metadaten zur Aufzeichnung und Transkription &lt;/h2&gt;&lt;/td&gt;
-&lt;/tr&gt; 
+&lt;/tr&gt;
 
 &lt;!--Erhebungsdatum--&gt;
 {{#if:{{{Erhebungsdatum|}}}|
@@ -1848,7 +1760,7 @@ Klick auf „Bearbeiten“, um den Quelltext der Template anzusehen.
 
 &lt;tr&gt;
 &lt;td colspan=&quot;2&quot;&gt;&lt;h2&gt;Metadaten zu anwesenden Personen&lt;/h2&gt;&lt;/td&gt;
-&lt;/tr&gt; 
+&lt;/tr&gt;
 
 &lt;!--Lehrpersonen--&gt;
 {{#if:{{{Lehrpersonen|}}}|
@@ -1921,7 +1833,7 @@ Klick auf „Bearbeiten“, um den Quelltext der Template anzusehen.
 = Transkript =
 &lt;div id=&quot;transkript&quot; class=&quot;show-transkript&quot;&gt;
 
-{{#ask: [[Gehoert zu::{{FULLPAGENAME}}]] 
+{{#ask: [[Gehoert zu::{{FULLPAGENAME}}]]
 |?Zeilennummer=Abschnitt
 |?Akteur1
 |?Transkripttext
@@ -1933,31 +1845,6 @@ Klick auf „Bearbeiten“, um den Quelltext der Template anzusehen.
 
 &lt;/div&gt;
 
-= Interpretation =
-
-{{#ask: [[Category:Interpretation]][[Ist Sequenz von::{{FULLPAGENAME}}]]
-|?Zeilennummer=Abschnitt
-|?Akteur
-|?AnnoText=Sequenztext
-|sort = Zeilennummer, Erstellungszeitpunkt
-|order = asc, asc
-|format = table
-}}
-
-= Geschichten =
-{{#ask: [[Category:Geschichte]][[Basiert auf Transkript::{{FULLPAGENAME}}]]
-|?AnnoText=Sequenztext
-|?Beschreibung
-|?Notiz
-|?Kurztitel
-|?Autor
-|?
-|sort = Erstellungszeitpunkt
-|mainlabel=-
-|order = asc
-|format = table
-}}
-
 = Lesarten =
 {{#ask: [[Category:Lesart]][[Basiert auf Transkript::{{FULLPAGENAME}}]]
 |?AnnoText=Sequenztext
@@ -1968,87 +1855,6 @@ Klick auf „Bearbeiten“, um den Quelltext der Template anzusehen.
 |?
 |sort = Erstellungszeitpunkt
 |mainlabel=-
-|order = asc
-|format = table
-}}
-
-= Anschlüsse =
-
-{{#ask: [[Category:Anschlüsse]][[Basiert auf Transkript::{{FULLPAGENAME}}]]
-|?AnnoText=Sequenztext
-|?Beschreibung
-|?Notiz
-|?Kurztitel
-|?Autor
-|?
-|sort = Erstellungszeitpunkt
-|mainlabel=-
-|order = asc
-|format = table
-}}
-
-= Kontextualisierung =
-{{#ask: [[Category:Notiz]][[Basiert auf Transkript::{{FULLPAGENAME}}]]
-|?AnnoText=Sequenztext
-|?Beschreibung
-|?Notiz
-|?Kurztitel
-|?Autor
-|?
-|sort = Erstellungszeitpunkt
-|mainlabel=-
-|order = asc
-|format = table
-}}
-
-= Pers. Interpretation =
-{{#ask: [[Category:TextAnnotationLevel2]][[Basiert auf Transkript::{{FULLPAGENAME}}]][[Autor::{{CURRENTUSER}}]]
-|?Kurztitel
-|?Beschreibung
-|?AnnoText=Sequenztext
-|?Notiz
-|?Autor
-|?TypAnno=Category
-|sort = Erstellungszeitpunkt
-|order = asc
-|format = table
-}}
-
-= Fallstrukturhypothese 1 =
-&lt;big&gt;'''[[{{FULLPAGENAME}}_FSH1|zur Textseite der Fallstrukturhypothese 1]]'''&lt;/big&gt;
-{{#ask: [[Category:Fallstrukturhypothese1]][[Basiert auf Transkript::{{FULLPAGENAME}}]]
-|?Kurztitel
-|?Beschreibung
-|?Notiz
-|?Autor
-|?TypAnno=Category
-|sort = Erstellungszeitpunkt
-|order = asc
-|format = table
-}}
-
-= Fallstrukturhypothese 2 =
-&lt;big&gt;'''[[{{FULLPAGENAME}}_FSH2|zur Textseite der Fallstrukturhypothese 2]]'''&lt;/big&gt;
-{{#ask: [[Category:Fallstrukturhypothese2]][[Basiert auf Transkript::{{FULLPAGENAME}}]]
-|?Kurztitel
-|?Beschreibung
-|?Notiz
-|?Autor
-|?TypAnno=Category
-|sort = Erstellungszeitpunkt
-|order = asc
-|format = table
-}}
-
-= Fallstrukturhypothese 3 =
-&lt;big&gt;'''[[{{FULLPAGENAME}}_FSH3|zur Textseite der Fallstrukturhypothese 3]]'''&lt;/big&gt;
-{{#ask: [[Category:Fallstrukturhypothese3]][[Basiert auf Transkript::{{FULLPAGENAME}}]]
-|?Kurztitel
-|?Beschreibung
-|?Notiz
-|?Autor
-|?TypAnno=Category
-|sort = Erstellungszeitpunkt
 |order = asc
 |format = table
 }}
@@ -2070,81 +1876,6 @@ Klick auf „Bearbeiten“, um den Quelltext der Template anzusehen.
 &lt;/noinclude&gt;
 &lt;noinclude&gt;[[Category:Export]]&lt;/noinclude&gt;</text>
       <sha1>7p28o439jmmg6phnaofqqp46k5lvf8e</sha1>
-    </revision>
-  </page>
-  <page>
-    <title>Template:StoreFallstrukturanalyse</title>
-    <ns>10</ns>
-    <id>290</id>
-    <revision>
-      <id>2007</id>
-      <parentid>1061</parentid>
-      <timestamp>2017-12-08T08:28:37Z</timestamp>
-      <contributor>
-        <username>LiaVeja</username>
-        <id>3</id>
-      </contributor>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="938">&lt;noinclude&gt;
-Dies ist die Template „StoreFallstrukturanalyse“. Dient lediglich zum zwischenspeichern der tempoären Daten
-Sie sollte im folgenden Format genutzt werden:
-&lt;pre&gt;
-{{StoreFallstrukturanalyse
-|Basiert auf Transkript=
-|Autor=
-|AnnotationFall=
-|FallStrukturNummer=
-|TypAnno=
-}}
-&lt;/pre&gt;
-Klick auf „Bearbeiten“, um den Quelltext der Template anzusehen.
-&lt;/noinclude&gt;&lt;includeonly&gt;
-{{#ifeq: {{{Basiert auf Transkript|}}}|||[[Basiert auf Transkript::{{{Basiert auf Transkript}}}|]]}}
-{{#ifeq: {{{Autor|}}}|||[[Autor::{{{Autor}}}|]]}}
-{{#ifeq: {{{AnnotationFall|}}}|||[[AnnotationFall::{{{AnnotationFall}}}|]]}}
-{{#ifeq: {{{FallStrukturNummer|}}}|||[[FallStrukturNummer::{{{FallStrukturNummer}}}|]]}}
-{{#ifeq: {{{TypAnno|}}}|||[[TypAnno::{{{TypAnno}}}|]]}}
-
-[[Category:Fallstrukturhypothese]][[Category:Fallstrukturhypothese{{{FallStrukturNummer|}}}]]
-[[Category:TypAnno]]
-&lt;/includeonly&gt;
-&lt;noinclude&gt;[[Category:Export]]&lt;/noinclude&gt;</text>
-      <sha1>0odlkdactvd4dv401k14hc9cr8lcmiq</sha1>
-    </revision>
-  </page>
-  <page>
-    <title>Template:StoreFallstrukturhypothese</title>
-    <ns>10</ns>
-    <id>314</id>
-    <revision>
-      <id>2008</id>
-      <parentid>1268</parentid>
-      <timestamp>2017-12-08T08:28:53Z</timestamp>
-      <contributor>
-        <username>LiaVeja</username>
-        <id>3</id>
-      </contributor>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="640">&lt;noinclude&gt;
-Dies ist die Template „StoreFallstrukturhypothese“. Dient lediglich zum zwischenspeichern der tempoären Daten
-Sie sollte im folgenden Format genutzt werden:
-&lt;pre&gt;
-{{StoreFallstrukturhypothese
-|FallStrukturNummer=
-|TypAnno=
-}}
-&lt;/pre&gt;
-Klick auf „Bearbeiten“, um den Quelltext der Template anzusehen.
-&lt;/noinclude&gt;&lt;includeonly&gt;
-{{#ifeq: {{{FallStrukturNummer|}}}|||[[FallStrukturNummer::{{{FallStrukturNummer}}}|]]}}
-{{#ifeq: {{{TypAnno|}}}|||[[TypAnno::{{{TypAnno}}}|]]}}
-
-[[Category:Fallstrukturhypothese]][[Category:Fallstrukturhypothese{{{FallStrukturNummer|}}}]]
-&lt;/includeonly&gt;
-&lt;noinclude&gt;[[Category:Export]]&lt;/noinclude&gt;</text>
-      <sha1>bspznxnyzkymktg1fzew86cr9ufomx1</sha1>
     </revision>
   </page>
   <page>
@@ -2215,25 +1946,25 @@ Klick auf „Bearbeiten“, um den Quelltext der Template anzusehen.
 &lt;includeonly&gt;
 {| class=&quot;wikitable&quot;
 ! Kurztitel
-| [[Kurztitel::{{{Kurztitel|}}}]] 
+| [[Kurztitel::{{{Kurztitel|}}}]]
 |-
 ! Beschreibung
-| [[Beschreibung::{{{Beschreibung|}}}]] 
+| [[Beschreibung::{{{Beschreibung|}}}]]
 |-
 ! Notiz
-| [[Notiz::{{{Notiz|}}}]] 
+| [[Notiz::{{{Notiz|}}}]]
 |-
 ! Ist Annotation von Sequenz
-| [[Ist Annotation von Sequenz::{{{Annotation1|}}}]] 
+| [[Ist Annotation von Sequenz::{{{Annotation1|}}}]]
 |-
 ! Basiert auf Transkript
-| [[Basiert auf Transkript::{{{Equivalent|}}}]] 
+| [[Basiert auf Transkript::{{{Equivalent|}}}]]
 |-
 ! Autor
-| [[Autor::{{{Author|}}}]] 
+| [[Autor::{{{Author|}}}]]
 |-
 ! Erstellungszeitpunkt
-| [[Erstellungszeitpunkt::{{{CreationTime|}}}]] 
+| [[Erstellungszeitpunkt::{{{CreationTime|}}}]]
 |}
 
 &lt;!-- BEG: inherit 'AnnoText' property from transkript level //--&gt;
@@ -2281,22 +2012,22 @@ Sie sollte im folgenden Format genutzt werden:
 Klick auf „Bearbeiten“, um den Quelltext der Template anzusehen.
 &lt;/noinclude&gt;&lt;includeonly&gt;{| class=&quot;wikitable&quot;
 ! Beschreibung
-| [[Beschreibung::{{{Beschreibung|}}}]] 
+| [[Beschreibung::{{{Beschreibung|}}}]]
 |-
 ! Notiz
-| [[Notiz::{{{Notiz|}}}]] 
+| [[Notiz::{{{Notiz|}}}]]
 |-
 ! Ist neue Version von Annotation
-| [[Ist neue Version von Annotation::{{{Annotation2|}}}]] 
+| [[Ist neue Version von Annotation::{{{Annotation2|}}}]]
 |-
 ! Basiert auf Transkript
-| [[Basiert auf Transkript::{{{Equivalent|}}}]] 
+| [[Basiert auf Transkript::{{{Equivalent|}}}]]
 |-
 ! Autor
-| [[Autor::{{{Author|}}}]] 
+| [[Autor::{{{Author|}}}]]
 |-
 ! Erstellungszeitpunkt
-| [[Erstellungszeitpunkt::{{{CreationTime|}}}]] 
+| [[Erstellungszeitpunkt::{{{CreationTime|}}}]]
 |}
 
 [[Category:TextAnnotationLevel3]][[Category:Annotation]]
@@ -2323,7 +2054,7 @@ Klick auf „Bearbeiten“, um den Quelltext der Template anzusehen.
 Dies ist die Template „TextAnnotationNew “.
 Sie sollte im folgenden Format genutzt werden:
 &lt;pre&gt;
-{{TextAnnotationNew 
+{{TextAnnotationNew
 |Initial Text=
 |AnnoText=
 |Annotation=
@@ -2339,25 +2070,25 @@ Sie sollte im folgenden Format genutzt werden:
 Klick auf „Bearbeiten“, um den Quelltext der Template anzusehen.
 &lt;/noinclude&gt;&lt;includeonly&gt;{| class=&quot;wikitable&quot;
 ! Abschnittstext
-| {{{Initial Text|}}} 
+| {{{Initial Text|}}}
 |-
 ! Sequenztext
 | {{{AnnoText|}}}
 |-
 ! Ist Sequenz von
-| [[Ist Sequenz von::{{{Equivalent|}}}]] 
+| [[Ist Sequenz von::{{{Equivalent|}}}]]
 |-
 ! Abschnitt
 | {{#arraymap:{{{Section|}}}|;|x|[[Zeilennummer::x]]}}
 |-
 ! Autor
-| [[Autor::{{{Author|}}}]] 
+| [[Autor::{{{Author|}}}]]
 |-
 ! Erstellungszeitpunkt
-| [[Erstellungszeitpunkt::{{{CreationTime|}}}]] 
+| [[Erstellungszeitpunkt::{{{CreationTime|}}}]]
 |-
 ! Akteur
-| [[Akteur::{{{Akteur|}}}]] 
+| [[Akteur::{{{Akteur|}}}]]
 {{#ifeq: {{{SeeAlso|}}}|||
 |-
 ! SeeAlso
@@ -2366,7 +2097,7 @@ Klick auf „Bearbeiten“, um den Quelltext der Template anzusehen.
 |}
 {{#set: Initial Text={{{Initial Text|}}}|AnnoText={{{AnnoText|}}} }}
 {{#ifeq: {{{Equivalent|}}}|||[[Ist Sequenz von::{{{Equivalent}}}|]][[Basiert auf Transkript::{{{Equivalent}}}|]] }}
-[[Category:Interpretation]][[Category:Annotation]]
+[[Category:Annotation]]
 &lt;/includeonly&gt;
 &lt;noinclude&gt;[[Category:Export]]&lt;/noinclude&gt;</text>
       <sha1>2gar5250ooqonytrqle80nacrow6ll2</sha1>
@@ -2496,7 +2227,7 @@ Klick auf „Bearbeiten“, um den Quelltext der Template anzusehen.
 &lt;table id=&quot;prp-indexTable&quot; class=&quot;plainlinks&quot; style=&quot;border-collapse:separate; border-spacing:2px 2px; empty-cells:hide;&quot;&gt;
 &lt;tr&gt;
 &lt;td colspan=&quot;2&quot;&gt;&lt;h2&gt;Metadaten zum Transkript&lt;/h2&gt;&lt;/td&gt;
-&lt;/tr&gt; 
+&lt;/tr&gt;
 &lt;!--Titel--&gt;
 &lt;tr&gt;
 &lt;th scope=&quot;row&quot; style=&quot;text-align:right; vertical-align:top; padding-right:0.4em;&quot;&gt;Titel&lt;/th&gt;
@@ -2575,7 +2306,7 @@ Klick auf „Bearbeiten“, um den Quelltext der Template anzusehen.
 
 &lt;tr&gt;
 &lt;td colspan=&quot;2&quot;&gt;&lt;h2&gt;Metadaten zur Aufzeichnung und Transkription &lt;/h2&gt;&lt;/td&gt;
-&lt;/tr&gt; 
+&lt;/tr&gt;
 
 &lt;!--Erhebungsdatum--&gt;
 {{#if:{{{Erhebungsdatum|}}}|
@@ -2667,7 +2398,7 @@ Klick auf „Bearbeiten“, um den Quelltext der Template anzusehen.
 
 &lt;tr&gt;
 &lt;td colspan=&quot;2&quot;&gt;&lt;h2&gt;Metadaten zu anwesenden Personen&lt;/h2&gt;&lt;/td&gt;
-&lt;/tr&gt; 
+&lt;/tr&gt;
 
 &lt;!--Lehrpersonen--&gt;
 {{#if:{{{Lehrpersonen|}}}|
@@ -2739,7 +2470,7 @@ Klick auf „Bearbeiten“, um den Quelltext der Template anzusehen.
 
 &lt;div id=&quot;transkript&quot; class=&quot;show-transkript&quot;&gt;
 
-{{#ask: [[Belongsto::{{FULLPAGENAME}}]] 
+{{#ask: [[Belongsto::{{FULLPAGENAME}}]]
 |?Zeilennummer=Sequenz
 |?Akteur1
 |?Transkripttext
@@ -3292,25 +3023,6 @@ Klick auf „Bearbeiten“, um den Quelltext der Template anzusehen.
       <text xml:space="preserve" bytes="38">[[has type::date]]
 [[Category:Export]]</text>
       <sha1>dvn2rgets9m169ltu60xu79dkh19434</sha1>
-    </revision>
-  </page>
-  <page>
-    <title>Property:FallStrukturNummer</title>
-    <ns>102</ns>
-    <id>316</id>
-    <revision>
-      <id>2049</id>
-      <parentid>1078</parentid>
-      <timestamp>2017-12-08T08:42:01Z</timestamp>
-      <contributor>
-        <username>LiaVeja</username>
-        <id>3</id>
-      </contributor>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="40">[[has type::Number]]
-[[Category:Export]]</text>
-      <sha1>7i7xv4x61wntepqdl30msf0eeaxj7ng</sha1>
     </revision>
   </page>
   <page>
@@ -4587,155 +4299,6 @@ Die möglichen Werte für dieses Property sind:
 }}
 [[Category:Export]]</text>
       <sha1>55l7fcs022zp8ttqpmke7l8hk6opb1h</sha1>
-    </revision>
-  </page>
-  <page>
-    <title>Category:Anschlüsse</title>
-    <ns>14</ns>
-    <id>271</id>
-    <revision>
-      <id>2115</id>
-      <parentid>907</parentid>
-      <timestamp>2017-12-08T09:00:22Z</timestamp>
-      <contributor>
-        <username>LiaVeja</username>
-        <id>3</id>
-      </contributor>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="19">[[Category:Export]]</text>
-      <sha1>ollsnu5g09aipvrdqysx2dxzna4qwvy</sha1>
-    </revision>
-  </page>
-  <page>
-    <title>Category:Fallstrukturhypothese</title>
-    <ns>14</ns>
-    <id>337</id>
-    <revision>
-      <id>2117</id>
-      <parentid>1261</parentid>
-      <timestamp>2017-12-08T09:00:56Z</timestamp>
-      <contributor>
-        <username>LiaVeja</username>
-        <id>3</id>
-      </contributor>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="21">.
-[[Category:Export]]</text>
-      <sha1>6k8ivhyx7pbfy9ydlybioby6dmfx9wu</sha1>
-    </revision>
-  </page>
-  <page>
-    <title>Category:Fallstrukturanalyse</title>
-    <ns>14</ns>
-    <id>279</id>
-    <revision>
-      <id>2116</id>
-      <parentid>933</parentid>
-      <timestamp>2017-12-08T09:00:41Z</timestamp>
-      <contributor>
-        <username>LiaVeja</username>
-        <id>3</id>
-      </contributor>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="57">{{#default_form:Fallstrukturanalyse}}
-[[Category:Export]]</text>
-      <sha1>5qpyams9uekoia7am3q1xsd5xsxlgpt</sha1>
-    </revision>
-  </page>
-  <page>
-    <title>Category:Fallstrukturhypothese1</title>
-    <ns>14</ns>
-    <id>338</id>
-    <revision>
-      <id>2118</id>
-      <parentid>1262</parentid>
-      <timestamp>2017-12-08T09:01:09Z</timestamp>
-      <contributor>
-        <username>LiaVeja</username>
-        <id>3</id>
-      </contributor>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="21">.
-[[Category:Export]]</text>
-      <sha1>6k8ivhyx7pbfy9ydlybioby6dmfx9wu</sha1>
-    </revision>
-  </page>
-  <page>
-    <title>Category:Fallstrukturhypothese2</title>
-    <ns>14</ns>
-    <id>758</id>
-    <revision>
-      <id>2119</id>
-      <timestamp>2017-12-08T09:01:23Z</timestamp>
-      <contributor>
-        <username>LiaVeja</username>
-        <id>3</id>
-      </contributor>
-      <comment>Die Seite wurde neu angelegt: „[[Category:Export]]“</comment>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="19">[[Category:Export]]</text>
-      <sha1>ollsnu5g09aipvrdqysx2dxzna4qwvy</sha1>
-    </revision>
-  </page>
-  <page>
-    <title>Category:Fallstrukturhypothese3</title>
-    <ns>14</ns>
-    <id>759</id>
-    <revision>
-      <id>2120</id>
-      <timestamp>2017-12-08T09:01:56Z</timestamp>
-      <contributor>
-        <username>LiaVeja</username>
-        <id>3</id>
-      </contributor>
-      <comment>Die Seite wurde neu angelegt: „[[Category:Export]]“</comment>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="19">[[Category:Export]]</text>
-      <sha1>ollsnu5g09aipvrdqysx2dxzna4qwvy</sha1>
-    </revision>
-  </page>
-  <page>
-    <title>Category:Geschichte</title>
-    <ns>14</ns>
-    <id>217</id>
-    <revision>
-      <id>2121</id>
-      <parentid>729</parentid>
-      <timestamp>2017-12-08T09:02:10Z</timestamp>
-      <contributor>
-        <username>LiaVeja</username>
-        <id>3</id>
-      </contributor>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="40">Category Geschichte
-[[Category:Export]]</text>
-      <sha1>t1ugq8lam8t4o7n014m5lva3vsn1282</sha1>
-    </revision>
-  </page>
-  <page>
-    <title>Category:Interpretation</title>
-    <ns>14</ns>
-    <id>236</id>
-    <revision>
-      <id>2122</id>
-      <parentid>775</parentid>
-      <timestamp>2017-12-08T09:02:27Z</timestamp>
-      <contributor>
-        <username>LiaVeja</username>
-        <id>3</id>
-      </contributor>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="80">This category helps to select the right level of annotation.
-[[Category:Export]]</text>
-      <sha1>84euo5qu4014ydwzc0uxciywskytah8</sha1>
     </revision>
   </page>
   <page>
