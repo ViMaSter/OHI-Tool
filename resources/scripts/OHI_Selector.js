@@ -804,7 +804,6 @@ function onWgAction(){
 
             jQuery("#Interpretation  table tr:first").css('background', 'green');
 
-
             jQuery("#Interpretation  table tr:first").append("<td ><button name='plus-general' value='+' id='plus-general' class='toggle-general' >+</button></td>");
             jQuery("#Interpretation  table tr:gt(0)").append('<td class="blank-td">&nbsp;</td>');
 
@@ -813,19 +812,32 @@ function onWgAction(){
             });
             jQuery('#Interpretation table tr th:first-child').hide();
             var val = 1;
+
+            function genHTML(val, annotation, i)
+            {
+                return '<div id="div-g-'+val+'" style="width: 100%;">' +
+                            '<table border="0" style="width: 100%;">' +
+                                '<tbody>' +
+                                    '<tr class="expandable-new">' +
+                                        '<td><span class="g"><input type="button" value="+" data="'+annotation+'" class="toggle" id="toggle-g-'+val+'"> Geschichten</span></td>' +
+                                        '<td width="5%" align="rigth"><input type="button" value="+G" class="button-g" data="'+annotation+'" id="button-g-'+val+'" /></td>' +
+                                    '</tr>' +
+                                    '<tr>' +
+                                        '<td colspan="2">' +
+                                            '<div id="div-level-2-g-'+val+'-'+i+'" style="width: 100%; display: none;" class="div-level-2">' +
+                                                '<p>Annotations level 2 table</p>' +
+                                            '</div>' +
+                                        '</td>' +
+                                    '</tr>' +
+                                '</tbody>' +
+                            '</table>' +
+                        '</div>';
+            }
+
             //  $('span[id^="flight"]').closest('tr').after('<tr>This is a new tr</tr>');
             jQuery("#Interpretation  table tr:gt(0)").each(function() {
                 var annotation =  jQuery(this).find('td:first-child > a').attr("title");
-                var newTableG = '<div id="div-g-'+val+'" style="width: 100%;"><table border="0" style="width: 100%;"><tbody><tr class="expandable-new"><td ><span class="g"><input type="button" value="+" data="'+annotation+'" class="toggle" id="toggle-g-'+val+'"> Geschichten</span></td><td width="5%" align="rigth"><input type="button" value="+G" class="button-g" data="'+annotation+'" id="button-g-'+val+'" /></td></tr>';
-                newTableG += '<tr ><td colspan="2"><div id="div-level-2-g-'+val+'" style="width: 100%; display: none;" class="div-level-2"><p>Annotations level 2 table</p></div></td></tr></tbody></table></div>';
-                var newTableA = '<div id="div-a-'+val+'" style="width: 100%;"><table border="0" style="width: 100%;"><tbody><tr class="expandable-new"><td ><span class="a"><input type="button" value="+" data="'+annotation+'" class="toggle" id="toggle-a-'+val+'"> Anschl&#252;sse</span></td><td width="5%" align="rigth"><input type="button" value="+A" class="button-a" data="'+annotation+'" id="button-a-'+val+'" /></td></tr>';
-                newTableA += '<tr ><td colspan="2"><div id="div-level-2-a-'+val+'" style="width: 100%; display: none;" class="div-level-2"><p>Annotations level 2 table</p></div></td></tr></tbody></table></div>';
-                var newTableL = '<div id="div-l-'+val+'" style="width: 100%;"><table border="0" style="width: 100%;"><tbody><tr class="expandable-new"><td ><span class="l"><input type="button" value="+" data="'+annotation+'" class="toggle" id="toggle-l-'+val+'"> Lesarten</span></td><td width="5%" align="rigth"><input type="button" value="+L" class="button-l" data="'+annotation+'" id="button-l-'+val+'" /></td></tr>';
-                newTableL += '<tr ><td colspan="2"><div id="div-level-2-l-'+val+'" style="width: 100%; display: none;" class="div-level-2"><p>Annotations level 2 table</p></div></td></tr></tbody></table></div>';
-                var newTableN = '<div id="div-n-'+val+'" style="width: 100%;"><table border="0" style="width: 100%;"><tbody><tr class="expandable-new"><td ><span class="n"><input type="button" value="+" data="'+annotation+'" class="toggle" id="toggle-n-'+val+'"> Kontextualisierung</span></td><td width="5%" align="rigth"><input type="button" value="+N" class="button-n" data="'+annotation+'" id="button-n-'+val+'" /></td></tr>';
-                newTableN += '<tr ><td colspan="2"><div id="div-level-2-n-'+val+'" style="width: 100%; display: none;" class="div-level-2"><p>Annotations level 2 table</p></div></td></tr></tbody></table></div>';
-
-                jQuery(this).after('<tr class="new-row"><td>&nbsp;</td><td class="new-buttons" colspan="2">'+newTableG+newTableL+newTableA+newTableN+'</td></tr>');
+                jQuery(this).after('<tr class="new-row"><td>&nbsp;</td><td class="new-buttons" colspan="2">'+genHTML(val, annotation, 1)+genHTML(val, annotation, 2)+'</td></tr>');
                 val++;
             });
         } // endif cc>0
@@ -1063,7 +1075,7 @@ jQuery( document ).ready(function() {
         var idParent = jQuery(this).closest('div').attr("id");
         //  alert(idParent);
         var sp = jQuery(this).closest('span').attr("class");
-        var target = jQuery("#"+idParent).find('.div-level-2').attr("id");
+        var target = jQuery(this.parentElement.parentElement.parentElement.parentElement.querySelector(".div-level-2")).attr("id");
         //  alert(target);
         var printouts = new Array();
         printouts['Kurztitel'] = "?Kurztitel";
@@ -1090,14 +1102,14 @@ jQuery( document ).ready(function() {
         }
         if(val.trim() == '+') {
             //   alert(idParent);
-            jQuery("#" + idParent).find('.div-level-2').toggle(350);
+            jQuery(this.parentElement.parentElement.parentElement.parentElement.querySelector(".div-level-2")).toggle(350);
             jQuery(this).toggleClass("expanded");
             jQuery(this).attr("value","-");
             content = content.substr(content.lastIndexOf('/') + 1);
             OHI_SimpleAsk(content, "table", printouts,  type, "Ist Annotation von Sequenz", target);
         }
         else {
-            jQuery("#" + idParent).find('.div-level-2').hide();
+            jQuery(this.parentElement.parentElement.parentElement.parentElement.querySelector(".div-level-2")).hide();
             jQuery(this).removeClass("expanded");
             jQuery(this).attr("value","+");
         }
