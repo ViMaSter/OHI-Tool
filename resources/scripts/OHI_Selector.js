@@ -819,8 +819,8 @@ function onWgAction(){
                             '<table border="0" style="width: 100%;">' +
                                 '<tbody>' +
                                     '<tr class="expandable-new">' +
-                                        '<td>'+text+'</td>' +
-                                        '<td width="5%" align="rigth">'+(hasAdder?('<input type="button" value="Interpretieren" class="button-g" data="'+annotation+'" id="button-g-'+val+'" />'):'')+(hasOpener?'<span class="g"><input type="button" value="Ausklappen" data="'+annotation+'" class="toggle" id="toggle-g-'+val+'"></span> ':'')+'</td>' +
+                                        '<td>'+(hasAdder?('<a href="#" value="Interpretieren" class="button-g" data="'+annotation+'" id="button-g-'+val+'">'+text+'</a>'):text)+'</td>' +
+                                        '<td width="5%" align="rigth">'+(hasOpener?'<span class="g"><input type="button" value="Ausklappen" data="'+annotation+'" class="toggle" id="toggle-g-'+val+'"></span> ':'')+'</td>' +
                                     '</tr>' +
                                     '<tr>' +
                                         '<td colspan="2">' +
