@@ -600,13 +600,9 @@ function onWgAction(){
         htmlDialogC += '<input type="hidden" id="section2"  size=""/>'; // TODO: remove it
         htmlDialogC += '</div>';
 
-        var htmlDialogF = '<div id="dialog-form-fsh" title="Fallstrukturhypothese" class="AQE-dialog-form" style="display:none;">';
-        htmlDialogF  += 'Fallstrukturhypothese typ: <select id="select-fsh" >';
-        htmlDialogF  += '<option value="1" selected>Fallstrukturhypothese 1</option><option value="2">Fallstrukturhypothese 2</option> <option value="3">Fallstrukturhypothese 3</option>';
-        htmlDialogF  += '</select><br/>';
-        htmlDialogF  += '<input type="hidden" id="position3"  size=""/><br/>'; // TODO: remove it
-        htmlDialogF  += '<input type="hidden" id="section3"  size=""/>'; // TODO: remove it
-        htmlDialogF  += '</div>';
+        var htmlDialogF = '<select id="select-fsh" style="display:none;" >';
+        htmlDialogF  += '<option value="1" selected="selected">Fallstrukturhypothese 1</option>';
+        htmlDialogF  += '</select>';
 
         var htmlDialogS = '<div id="ajaxSpinnerContainer" >    </div>';
 

@@ -2027,32 +2027,6 @@ Klick auf „Bearbeiten“, um den Quelltext der Template anzusehen.
 |format = table
 }}
 
-= Fallstrukturhypothese 2 =
-&lt;big&gt;'''[[{{FULLPAGENAME}}_FSH2|zur Textseite der Fallstrukturhypothese 2]]'''&lt;/big&gt;
-{{#ask: [[Category:Fallstrukturhypothese2]][[Basiert auf Transkript::{{FULLPAGENAME}}]]
-|?Kurztitel
-|?Beschreibung
-|?Notiz
-|?Autor
-|?TypAnno=Category
-|sort = Erstellungszeitpunkt
-|order = asc
-|format = table
-}}
-
-= Fallstrukturhypothese 3 =
-&lt;big&gt;'''[[{{FULLPAGENAME}}_FSH3|zur Textseite der Fallstrukturhypothese 3]]'''&lt;/big&gt;
-{{#ask: [[Category:Fallstrukturhypothese3]][[Basiert auf Transkript::{{FULLPAGENAME}}]]
-|?Kurztitel
-|?Beschreibung
-|?Notiz
-|?Autor
-|?TypAnno=Category
-|sort = Erstellungszeitpunkt
-|order = asc
-|format = table
-}}
-
 
 &lt;headertabs /&gt;
 
@@ -4662,42 +4636,6 @@ Die möglichen Werte für dieses Property sind:
       <text xml:space="preserve" bytes="21">.
 [[Category:Export]]</text>
       <sha1>6k8ivhyx7pbfy9ydlybioby6dmfx9wu</sha1>
-    </revision>
-  </page>
-  <page>
-    <title>Category:Fallstrukturhypothese2</title>
-    <ns>14</ns>
-    <id>758</id>
-    <revision>
-      <id>2119</id>
-      <timestamp>2017-12-08T09:01:23Z</timestamp>
-      <contributor>
-        <username>LiaVeja</username>
-        <id>3</id>
-      </contributor>
-      <comment>Die Seite wurde neu angelegt: „[[Category:Export]]“</comment>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="19">[[Category:Export]]</text>
-      <sha1>ollsnu5g09aipvrdqysx2dxzna4qwvy</sha1>
-    </revision>
-  </page>
-  <page>
-    <title>Category:Fallstrukturhypothese3</title>
-    <ns>14</ns>
-    <id>759</id>
-    <revision>
-      <id>2120</id>
-      <timestamp>2017-12-08T09:01:56Z</timestamp>
-      <contributor>
-        <username>LiaVeja</username>
-        <id>3</id>
-      </contributor>
-      <comment>Die Seite wurde neu angelegt: „[[Category:Export]]“</comment>
-      <model>wikitext</model>
-      <format>text/x-wiki</format>
-      <text xml:space="preserve" bytes="19">[[Category:Export]]</text>
-      <sha1>ollsnu5g09aipvrdqysx2dxzna4qwvy</sha1>
     </revision>
   </page>
   <page>
