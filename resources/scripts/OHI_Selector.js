@@ -820,7 +820,7 @@ function onWgAction(){
                                 '<tbody>' +
                                     '<tr class="expandable-new">' +
                                         '<td>'+text+'</td>' +
-                                        '<td width="5%" align="rigth">'+(hasAdder?('<input type="button" value="+G" class="button-g" data="'+annotation+'" id="button-g-'+val+'" />'):'')+(hasOpener?'<span class="g"><input type="button" value="+" data="'+annotation+'" class="toggle" id="toggle-g-'+val+'"></span> ':'')+'</td>' +
+                                        '<td width="5%" align="rigth">'+(hasAdder?('<input type="button" value="Interpretieren" class="button-g" data="'+annotation+'" id="button-g-'+val+'" />'):'')+(hasOpener?'<span class="g"><input type="button" value="Ausklappen" data="'+annotation+'" class="toggle" id="toggle-g-'+val+'"></span> ':'')+'</td>' +
                                     '</tr>' +
                                     '<tr>' +
                                         '<td colspan="2">' +
@@ -1100,18 +1100,18 @@ jQuery( document ).ready(function() {
             default:
                 type="Geschichte";
         }
-        if(val.trim() == '+') {
+        if(val.trim() == 'Ausklappen') {
             //   alert(idParent);
             jQuery(this.parentElement.parentElement.parentElement.parentElement.querySelector(".div-level-2")).toggle(350);
             jQuery(this).toggleClass("expanded");
-            jQuery(this).attr("value","-");
+            jQuery(this).attr("value","Einklappen");
             content = content.substr(content.lastIndexOf('/') + 1);
             OHI_SimpleAsk(content, "table", printouts,  type, "Ist Annotation von Sequenz", target);
         }
         else {
             jQuery(this.parentElement.parentElement.parentElement.parentElement.querySelector(".div-level-2")).hide();
             jQuery(this).removeClass("expanded");
-            jQuery(this).attr("value","+");
+            jQuery(this).attr("value","Ausklappen");
         }
         //  content.slideToggle();
         //   $('.expandable').not(this).find('input[type="button"]').val("+");
