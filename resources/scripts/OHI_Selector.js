@@ -813,14 +813,14 @@ function onWgAction(){
             jQuery('#Interpretation table tr th:first-child').hide();
             var val = 1;
 
-            function genHTML(val, annotation, i)
+            function genHTML(val, annotation, i, hasOpener, hasAdder, text)
             {
                 return '<div id="div-g-'+val+'" style="width: 100%;">' +
                             '<table border="0" style="width: 100%;">' +
                                 '<tbody>' +
                                     '<tr class="expandable-new">' +
-                                        '<td><span class="g"><input type="button" value="+" data="'+annotation+'" class="toggle" id="toggle-g-'+val+'"> Geschichten</span></td>' +
-                                        '<td width="5%" align="rigth"><input type="button" value="+G" class="button-g" data="'+annotation+'" id="button-g-'+val+'" /></td>' +
+                                        '<td>'+text+'</td>' +
+                                        '<td width="5%" align="rigth">'+(hasAdder?('<input type="button" value="+G" class="button-g" data="'+annotation+'" id="button-g-'+val+'" />'):'')+(hasOpener?'<span class="g"><input type="button" value="+" data="'+annotation+'" class="toggle" id="toggle-g-'+val+'"></span> ':'')+'</td>' +
                                     '</tr>' +
                                     '<tr>' +
                                         '<td colspan="2">' +
@@ -837,7 +837,7 @@ function onWgAction(){
             //  $('span[id^="flight"]').closest('tr').after('<tr>This is a new tr</tr>');
             jQuery("#Interpretation  table tr:gt(0)").each(function() {
                 var annotation =  jQuery(this).find('td:first-child > a').attr("title");
-                jQuery(this).after('<tr class="new-row"><td>&nbsp;</td><td class="new-buttons" colspan="2">'+genHTML(val, annotation, 1)+genHTML(val, annotation, 2)+'</td></tr>');
+                jQuery(this).after('<tr class="new-row"><td>&nbsp;</td><td class="new-buttons" colspan="2">'+genHTML(val, annotation, 1, false, true, "1. Interpretieren Sie die Sequenz!")+genHTML(val, annotation, 2, true, false, "2. Vergleichen Sie mit anderen Interpretationen")+genHTML(val, annotation, 3, false, true, "3. Aktuallisieren Sie Ihre Interpretation")+'</td></tr>');
                 val++;
             });
         } // endif cc>0
