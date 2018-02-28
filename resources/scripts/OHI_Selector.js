@@ -819,8 +819,8 @@ function onWgAction(){
                             '<table border="0" style="width: 100%;">' +
                                 '<tbody>' +
                                     '<tr class="expandable-new">' +
-                                        '<td>'+(hasAdder?('<a href="#" value="Interpretieren" class="button-g" data="'+annotation+'" id="button-g-'+val+'">'+text+'</a>'):text)+'</td>' +
-                                        '<td width="5%" align="rigth">'+(hasOpener?'<span class="g"><input type="button" value="Ausklappen" data="'+annotation+'" class="toggle" id="toggle-g-'+val+'"></span> ':'')+'</td>' +
+                                        '<td>'+(hasOpener?'<span class="g">'+text+' <a href="#" data="'+annotation+'" class="toggle" id="toggle-g-'+val+'">(ausklappen)</a></span> ':'')+(hasAdder?('<a href="#" value="Interpretieren" class="button-g" data="'+annotation+'" id="button-g-'+val+'">'+text+'</a>'):'')+'</td>' +
+                                        '<td width="5%" align="rigth"></td>' +
                                     '</tr>' +
                                     '<tr>' +
                                         '<td colspan="2">' +
@@ -1070,7 +1070,7 @@ jQuery( document ).ready(function() {
      });*/
  //   jQuery(document).on('click', '.toggle', toogle );
     jQuery(document).on('click', '.toggle', function(e) {
-        var val = jQuery(this).attr("value");
+        var val = jQuery(this).text();
         var content =  jQuery(this).attr("data");
         var idParent = jQuery(this).closest('div').attr("id");
         //  alert(idParent);
@@ -1100,18 +1100,18 @@ jQuery( document ).ready(function() {
             default:
                 type="Geschichte";
         }
-        if(val.trim() == 'Ausklappen') {
+        if(val.trim() == '(ausklappen)') {
             //   alert(idParent);
             jQuery(this.parentElement.parentElement.parentElement.parentElement.querySelector(".div-level-2")).toggle(350);
             jQuery(this).toggleClass("expanded");
-            jQuery(this).attr("value","Einklappen");
+            jQuery(this).text("(einklappen)");
             content = content.substr(content.lastIndexOf('/') + 1);
             OHI_SimpleAsk(content, "table", printouts,  type, "Ist Annotation von Sequenz", target);
         }
         else {
             jQuery(this.parentElement.parentElement.parentElement.parentElement.querySelector(".div-level-2")).hide();
             jQuery(this).removeClass("expanded");
-            jQuery(this).attr("value","Ausklappen");
+            jQuery(this).text("(ausklappen)");
         }
         //  content.slideToggle();
         //   $('.expandable').not(this).find('input[type="button"]').val("+");
