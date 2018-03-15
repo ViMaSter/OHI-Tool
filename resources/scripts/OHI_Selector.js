@@ -595,30 +595,20 @@ function onWgAction(){
         var htmlDialogC = '<div id="dialog-form-notiz" title="Diskussion" class="AQE-dialog-form" style="display:none;">';
         htmlDialogC += 'Beschreibung: <textarea id="bess"  rows="10" cols="50"/><br/>';
         htmlDialogC += 'Notiz: <textarea id="notiztext2"  rows="20" cols="50"/><br/>';
-        //  htmlDialogC += 'Status der Interpretation: <input type="checkbox" id="bes2" checked="checked">Akzeptiert</input><br/>';
         htmlDialogC += '<input type="hidden" id="position2"  size=""/><br/>'; // TODO: remove it
         htmlDialogC += '<input type="hidden" id="section2"  size=""/>'; // TODO: remove it
         htmlDialogC += '</div>';
 
-        var htmlDialogF = '<div id="dialog-form-fsh" title="Fallstrukturhypothese" class="AQE-dialog-form" style="display:none;">';
-        htmlDialogF  += 'Fallstrukturhypothese typ: <select id="select-fsh" >';
-        htmlDialogF  += '<option value="1" selected>Fallstrukturhypothese 1</option><option value="2">Fallstrukturhypothese 2</option> <option value="3">Fallstrukturhypothese 3</option>';
-        htmlDialogF  += '</select><br/>';
-        htmlDialogF  += '<input type="hidden" id="position3"  size=""/><br/>'; // TODO: remove it
-        htmlDialogF  += '<input type="hidden" id="section3"  size=""/>'; // TODO: remove it
-        htmlDialogF  += '</div>';
+        var htmlDialogF  += '<select id="select-fsh" style="display:none;">';
+        htmlDialogF  += '<option value="1" selected>Fallstrukturhypothese 1</option>';
+        htmlDialogF  += '</select>';
 
         var htmlDialogS = '<div id="ajaxSpinnerContainer" >    </div>';
 
         var c = jQuery("#transkript > table tr th").length;
         //  alert(c);
-        var cc = jQuery("#Interpretation table ").length;
-        // alert(cc);
         var gg = jQuery("#Geschichten > table tr th").length;
-        var aa = jQuery("#Anschl_C3_BCsse > table tr th").length;
         var ll = jQuery("#Lesarten > table tr th").length;
-        var nn = jQuery("#Kontextualisierung > table tr th").length;
-        jQuery("#Interpretation  table").attr("id", "table-level-1");
         if(c > 0) {
             //  alert(c);
 
@@ -674,7 +664,6 @@ function onWgAction(){
             });
             jQuery('#transkript > table tr th:first-child').hide();
         } // end if
-
         if(cc > 0) {
             //  alert("Interpretation");
             jQuery("#Interpretation").append(htmlDialogG);
@@ -851,19 +840,9 @@ function onWgAction(){
             var prefix = "gg";
             OHI_Galn_Process (parentId, prefix);
         }
-        if(aa > 0) {
-            var parentId = 'Anschl_C3_BCsse';
-            var prefix = "aa";
-            OHI_Galn_Process (parentId, prefix);
-        }
         if(ll > 0) {
             var parentId = 'Lesarten';
             var prefix = "ll";
-            OHI_Galn_Process (parentId, prefix);
-        }
-        if(nn > 0) {
-            var parentId = 'Kontextualisierung';
-            var prefix = "nn";
             OHI_Galn_Process (parentId, prefix);
         }
 
@@ -906,9 +885,6 @@ var toogle =  function( event ) {
         case "l":
             type="Lesart";
             break;
-        case "a":
-            type="Anschl&#252;sse";
-            break;
         case "n":
             type="Notiz";
             break;
@@ -943,10 +919,6 @@ jQuery( document ).ready(function() {
         if(href=='#Transkript'){
             document.location.reload(true);
             window.location.href = href;
-        }
-        else if(href=='#Interpretation') {
-            window.location.href = href;
-            return false;
         }
     });*/
     onWgAction();
@@ -1028,17 +1000,7 @@ jQuery( document ).ready(function() {
     });
 
     jQuery(document).on('click', '.button-a', function (e) {
-        e.preventDefault();
-     //   alert(jQuery(this).closest('tr').find('.a').text());
-        var data = jQuery(this).attr("data");
-        jQuery('#section').val(data);
-        jQuery('#position').val("Anschl&uuml;sse");
-        var row = jQuery(this).closest('tr.new-row');
-        var text = row.prev('tr').find('td:eq(3)').text();
-        //  alert(text);
-        jQuery('#annotextG').val(text);
-        jQuery( "#dialog-form-g").dialog('option', 'title', 'Neue Anschl&uuml;sse');
-        jQuery( "#dialog-form-g" ).dialog( "open" );
+        alert("THIS IS NO LONGER SUPPORTED!");
     });
 
     jQuery(document).on('click', '.button-l', function (e) {
@@ -1094,9 +1056,6 @@ jQuery( document ).ready(function() {
                 break;
             case "l":
                 type="Lesart";
-                break;
-            case "a":
-                type="Anschl&#252;sse";
                 break;
             case "n":
                 type="Notiz";
@@ -1171,9 +1130,6 @@ jQuery( document ).ready(function() {
                             case "l":
                                 type = "Lesart";
                                 break;
-                            case "a":
-                                type = "Anschl&#252;sse";
-                                break;
                             case "n":
                                 type = "Notiz";
                                 break;
@@ -1230,9 +1186,6 @@ jQuery( document ).ready(function() {
             case "l":
                 type = "Lesart";
                 break;
-            case "a":
-                type = "Anschl&#252;sse";
-                break;
             case "n":
                 type = "Notiz";
                 break;
@@ -1266,9 +1219,6 @@ jQuery( document ).ready(function() {
                 break;
             case "l":
                 type="Lesart";
-                break;
-            case "a":
-                type="Anschl&#252;sse";
                 break;
             case "n":
                 type="Notiz";
