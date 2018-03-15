@@ -1,6 +1,6 @@
 <?php
 	/**
-	* Objective Hermeneutic Interpretor Tool 
+	* Objective Hermeneutic Interpretor Tool
 	* An Extension to Semantic Mediawiki which allows users to semantically annotate texts following the Objective Hermeneutic Methodology.
 	* @author Lia Veja
 	*/
@@ -10,8 +10,8 @@
 	if( !defined( 'MEDIAWIKI' ) ) {
 		die( 'Not an entry point.' );
 	}
-	
-	
+
+
 	//Take credit for your work.
 	//$wgExtensionCredits['others'][] = array(
 	$wgExtensionCredits[defined( 'SEMANTIC_EXTENSION_TYPE' ) ? 'semantic' : 'specialpage'][] = array(
@@ -21,47 +21,50 @@
 		//The version of the extension, which will appear on Special:Version.
 		'version' => '0.1',
 		//The name of the author, which will appear on Special:Version
-		'author' => 'Lia Veja',
+		'author' => [
+			'Lia Veja',
+			'[https://vincent.mahn.ke/ Vincent Mahnke]'
+		],
 		//The URL to a wiki page/web page with information about the extension, which will appear on Special:Version
-		'url' => 'http://www.mediawiki.org/',
+		'url' => 'https://github.com/ViMaSter/OHI-Tool/',
 		//The description, which will appear on Special:Version
 		'descriptionmsg' => 'annot-description',
-        'license-name' => 'GPL-2.0+'
+		'license-name' => 'GPL-2.0+'
 	);
-	
-	
+
+
 	//Define path of the Extension
 	$dir = dirname(__FILE__);
 	//Define path of Message File
 	$wgExtensionMessagesFiles['OHI'] = "$dir/OHI.i18n.php";
-	
+
 	// Load the class that contains the Subclass of the class "SpecialPage"
 	$wgAutoloadClasses['SpecialOHI'] = "$dir/specials/SpecialOHI.php";
 	// Extend the $wgSpecialPages-Array by the Value OHI (Klasse wurde in Zeile davor geladen)
 	$wgSpecialPages['OHI'] = 'SpecialOHI';
-	
+
 	// Your special page gets put under a heading in Special:SpecialPage
 	// Extend the $wgSpeicalPageGroups-Array by the Value Lia's Extensions
 	$wgSpecialPageGroups['OHI'] = 'smw_group';
-	
-		
+
+
 	//Create new Namespace for the Extension
 	define("NS_TEXTANNOTATION", 382);
 	$wgExtraNamespaces[NS_TEXTANNOTATION] = "TextAnnotation";
 	//Define Namespace:TextAnnotation as Namespace with Semantic Links
 	$smwgNamespacesWithSemanticLinks += array(NS_TEXTANNOTATION => true);
-	
-	
+
+
 	//Resources for the ResourceLoader
 $moduleTemplate = array(
 	'localBasePath' => dirname( __FILE__ ) ,
 	'remoteExtPath' => 'OHI',
-    'dependencies' => array('jquery.ui.dialog'),
+	'dependencies' => array('jquery.ui.dialog'),
 );
 
 $wgResourceModules['ext.OHI'] = $moduleTemplate + array(
 		'scripts' => array(
-            'resources/lib/jquery.ui.dialog.js',
+			'resources/lib/jquery.ui.dialog.js',
 			'resources/scripts/OHI_Selector.js',
 			//'resources/scripts/helpFunctions.js',
 			//'resources/scripts/spin.js'
@@ -85,9 +88,9 @@ $wgResourceModules['ext.OHI.NS_TEXTANNOTATION'] = $moduleTemplate + array (
 $wgResourceModules['ext.OHI.add'] = $moduleTemplate + array (
 			//Scripts to always include
 			'scripts'		=>	array(
-                                    // 'resources/scripts/STA_articleNS.js',
+									// 'resources/scripts/STA_articleNS.js',
 									//  'resources/scripts/annotation_mode.js',
-								    //  'resources/scripts/OHI_AJAXcall.js',
+									//  'resources/scripts/OHI_AJAXcall.js',
 									 // 'resources/scripts/helpFunctions.js',
 									//  'resources/scripts/posLocator.js',
 									//  'resources/scripts/highlightAnnotations.js',
@@ -96,16 +99,16 @@ $wgResourceModules['ext.OHI.add'] = $moduleTemplate + array (
 									 // 'resources/scripts/insertSpanNodeForEveryNode.js',
 									  'resources/scripts/OHI_getAnnotatedText.js'
 
-								),		
+								),
 			//Styles to always include
 			'styles'		=>	array('resources/styles/OHI.css'),
 			//Modules which must be loaded before this module
 			'dependencies'	=>	array('ext.OHI'),
 		//	'localBasePath'	=>	dirname(__FILE__),
 		//	'remoteExtPath'	=>	'SemanticTextAnnotator',
-			//'messages'		=>	array('sta-buttonannotate'),	
+			//'messages'		=>	array('sta-buttonannotate'),
 	);
-	
+
 	//Integrate File "STA_AjaxFunctions.php"
 	include_once('OHI_AjaxFunctions.php');
 	global $wgAjaxExportList;
@@ -122,15 +125,15 @@ $wgResourceModules['ext.OHI.add'] = $moduleTemplate + array (
 	$wgAjaxExportList[] = 'writeOHIWikiPage';
 	$wgAjaxExportList[] = 'getOHITableSecondLevel';
 	$wgAjaxExportList[] = 'ohi_writeAnnotationPage';
-	
-	
+
+
 
 
 	//register MediaWiki hooks
 	//see: 'http://www.mediawiki.org/wiki/Manual:Hooks#Available_hooks'
 	//see: 'http://www.mediawiki.org/wiki/Manual:Hooks/OutputPageBeforeHTML'
 	$wgHooks['OutputPageBeforeHTML'][] = 'ohi_hookOutputPageBeforeHTML';
-	
+
 	//see: 'http://svn.wikimedia.org/doc/classOutputPage.html'
 	//see: 'http://www.mediawiki.org/wiki/Manual:Hooks/OutputPageBeforeHTML'
 	function ohi_hookOutputPageBeforeHTML (&$out, &$text) {
@@ -146,20 +149,20 @@ $wgResourceModules['ext.OHI.add'] = $moduleTemplate + array (
 		}
 		return true;
 	}
-	
-	
-	
-	
+
+
+
+
 	//**********************
 
 	//$wgHooks['OutputPageBeforeHTML'][] = 'sta_hookOutputPageBeforeHTML2';
-    $wgHooks['ArticleSaveComplete'][] = 'OHI_CheckSave';
+	$wgHooks['ArticleSaveComplete'][] = 'OHI_CheckSave';
 	$wgHooks['smwInitProperties'][] = 'ohi_initProperties';
-	
+
 	//see: 'http://svn.wikimedia.org/doc/classOutputPage.html'
 	//see: 'http://www.mediawiki.org/wiki/Manual:Hooks/OutputPageBeforeHTML'
 	function ohi_hookOutputPageBeforeHTML2 (&$out, &$text) {
-		if($out->getTitle()->getNamespace() == 382) {		
+		if($out->getTitle()->getNamespace() == 382) {
 			$out->addModules('ext.OHI.NS_TEXTANNOTATION');
 		}
 		return true;
@@ -182,8 +185,8 @@ function OHI_CheckSave(  $article, $user) {
 	//$wgOut->addScriptFile(  $wgScriptPath . '/extensions/OfflineImportLexicon/second.js'  ); window.location.reload();
 	return true;
 }
-	
-		
+
+
 	function ohi_initProperties(){
 		if ( class_exists( 'SMWDIProperty' ) ) {
 			SMWDIProperty::registerProperty( "__STA_ARTICLE_NAME", '_str', "STAarticleName", true );
@@ -200,9 +203,8 @@ function OHI_CheckSave(  $article, $user) {
 		//	SMWPropertyValue::registerProperty( "__STA_COMMENT", '_str', "STAcomment", true );
 		//	SMWPropertyValue::registerProperty( "__STA_ANNOTATED_TEXT", '_str', "STAannotatedText", true );
 		}
-		
+
 		return true;
 	}
 
 unset( $moduleTemplate );
-	
