@@ -874,12 +874,12 @@ function onWgAction(){
                 id = id.substr(id.lastIndexOf("/") + 1, id.length - id.lastIndexOf("/") + 1);
 
                 var blankTd =  jQuery(this).find('td.blank-td');
-                var button = jQuery("<button>Löschen</button>");
+                var button = jQuery("<button>L&ouml;schen</button>");
                 button.click(function()
                 {
-                    if (confirm("Diese Interpretation wirklich löschen?"))
+                    if (confirm("Diese Interpretation wirklich l"+unescape("%F6")+"schen?"))
                     {
-                        OHI_deleteAnnotation(id);   
+                        OHI_deleteAnnotation(id);
                     }
                 });
 
