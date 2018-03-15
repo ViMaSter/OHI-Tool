@@ -464,6 +464,30 @@ function OHI_saveWikiPageAsk(title, content, type, par_name){
 
 }
 
+function OHI_deleteAnnotation(title){
+    var api = new mw.Api();
+    var edittoken = mw.user.tokens.get( 'editToken' );
+    //  alert(content);
+    //  var tit = "Talk:"+title;
+    var tit = title;
+    api.postWithToken( "delete", {
+        action: "delete",
+        title: tit,
+    } ).done( function( result, jqXHR ) {
+        mw.log( "Deleted successfully" );
+        document.location.reload(true);
+    } ).fail( function( code, result ) {
+        if ( code === "http" ) {
+            mw.log( "HTTP error: " + result.textStatus ); // result.xhr contains the jqXHR object
+        } else if ( code === "ok-but-empty" ) {
+            mw.log( "Got an empty response from the server" );
+        } else {
+            mw.log( "API error: " + code );
+        }
+    } );
+
+}
+
 function OHI_saveWikiPageContent(title, content){
     var contE = urlencode(content);
     //  alert(cont);
@@ -840,9 +864,23 @@ function onWgAction(){
 
             //  $('span[id^="flight"]').closest('tr').after('<tr>This is a new tr</tr>');
             jQuery("#Interpretation  table tr:gt(0)").each(function() {
+                // add "interpretation" interaction
                 var annotation =  jQuery(this).find('td:first-child > a').attr("title");
                 jQuery(this).after('<tr class="new-row"><td>&nbsp;</td><td class="new-buttons" colspan="2">'+genHTML(val, annotation, 1, false, true, "1. Interpretieren Sie die Sequenz")+genHTML(val, annotation, 2, true, false, "2. Vergleichen Sie mit anderen Interpretationen")+genHTML(val, annotation, 3, false, true, "3. Aktualisieren Sie Ihre Interpretation")+'</td></tr>');
                 val++;
+
+                // add delete-button
+                var id = jQuery(this).find(".smwtype_wpg a").attr("href");
+                id = id.substr(id.lastIndexOf("/") + 1, id.length - id.lastIndexOf("/") + 1);
+
+                var blankTd =  jQuery(this).find('td.blank-td');
+                var button = jQuery("<button>Löschen</button>");
+                button.click(function()
+                {
+                    OHI_deleteAnnotation(id);
+                });
+
+                blankTd.html(button);
             });
         } // endif cc>0
         // start process tabs Geschichten, Anschl_C3_BCsse, Lesarten, Notizen
