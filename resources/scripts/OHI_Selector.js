@@ -314,7 +314,7 @@ function OHI_SimpleAsk(content, format, customPrintouts,  type, linkprop , targe
                     var edit = temp.replace("tr", "button-edit");
                     var insert = temp.replace("tr", "button-add");
 
-                    jQuery(this).append('<td style="text-align: right;"><input type="button" value="'+textAdd+'" class="button-notiz" data="'+hr+'" id="'+insert+'-'+i+'" /><input type="button" value="'+textEdit+'" class="button-fsh" data="'+hr+'" id="'+edit+'-'+i+'" /></td>');
+                    jQuery(this).append('<td style="text-align: right;"><input type="button" value="'+textAdd+'" class="button-notiz" data="'+hr+'" id="'+insert+'-'+i+'" /></td>');
                     i++;
 
                     // TODO add table with new level of annotation - level 3
@@ -575,9 +575,9 @@ function onWgAction(){
         //  alert("view");
         var htmlDialogG = '<div id="dialog-form-g" title="Neu" class="AQE-dialog-form" style="display:none;">';
         htmlDialogG += 'Sequenztext:&nbsp;&nbsp;<textarea rows="10" cols="50" id="annotextG" disabled="disabled"  /><br/>';
-        htmlDialogG += 'Kurztitel: <input type="text" id="kurztitel" size="50" /><br/><br/>';
-        htmlDialogG += 'Beschreibung: <textarea id="bes"  rows="10" cols="50"/><br/>';
-        htmlDialogG += 'Notiz: <textarea id="notiztext"  rows="6" cols="50"/><br/>';
+        htmlDialogG += 'Zeilennummer: <input type="text" id="kurztitel" size="50" /><br/><br/>';
+        htmlDialogG += 'Interpretation: <textarea id="bes"  rows="10" cols="50"/><br/>';
+        htmlDialogG += 'Lesart: <textarea id="notiztext"  rows="6" cols="50"/><br/>';
         htmlDialogG += '<input type="hidden" id="position"  size=""/><br/>'; // TODO: remove it
         htmlDialogG += '<input type="hidden" id="section"  size=""/>'; // TODO: remove it
         htmlDialogG += '</div>';
@@ -593,22 +593,32 @@ function onWgAction(){
         htmlDialog += '</div>';
 
         var htmlDialogC = '<div id="dialog-form-notiz" title="Diskussion" class="AQE-dialog-form" style="display:none;">';
-        htmlDialogC += 'Beschreibung: <textarea id="bess"  rows="10" cols="50"/><br/>';
+        htmlDialogC += 'Kommentar: <textarea id="bess"  rows="10" cols="50"/><br/>';
         htmlDialogC += 'Notiz: <textarea id="notiztext2"  rows="20" cols="50"/><br/>';
+        //  htmlDialogC += 'Status der Interpretation: <input type="checkbox" id="bes2" checked="checked">Akzeptiert</input><br/>';
         htmlDialogC += '<input type="hidden" id="position2"  size=""/><br/>'; // TODO: remove it
         htmlDialogC += '<input type="hidden" id="section2"  size=""/>'; // TODO: remove it
         htmlDialogC += '</div>';
 
-        var htmlDialogF  += '<select id="select-fsh" style="display:none;">';
-        htmlDialogF  += '<option value="1" selected>Fallstrukturhypothese 1</option>';
-        htmlDialogF  += '</select>';
+        var htmlDialogF = '<div id="dialog-form-fsh" title="Fallstrukturhypothese" class="AQE-dialog-form" style="display:none;">';
+        htmlDialogF  += 'Fallstrukturhypothese typ: <select id="select-fsh" >';
+        htmlDialogF  += '<option value="1" selected>Fallstrukturhypothese 1</option><option value="2">Fallstrukturhypothese 2</option> <option value="3">Fallstrukturhypothese 3</option>';
+        htmlDialogF  += '</select><br/>';
+        htmlDialogF  += '<input type="hidden" id="position3"  size=""/><br/>'; // TODO: remove it
+        htmlDialogF  += '<input type="hidden" id="section3"  size=""/>'; // TODO: remove it
+        htmlDialogF  += '</div>';
 
         var htmlDialogS = '<div id="ajaxSpinnerContainer" >    </div>';
 
         var c = jQuery("#transkript > table tr th").length;
         //  alert(c);
+        var cc = jQuery("#Interpretation table ").length;
+        // alert(cc);
         var gg = jQuery("#Geschichten > table tr th").length;
+        var aa = jQuery("#Anschl_C3_BCsse > table tr th").length;
         var ll = jQuery("#Lesarten > table tr th").length;
+        var nn = jQuery("#Kontextualisierung > table tr th").length;
+        jQuery("#Interpretation  table").attr("id", "table-level-1");
         if(c > 0) {
             //  alert(c);
 
@@ -664,6 +674,7 @@ function onWgAction(){
             });
             jQuery('#transkript > table tr th:first-child').hide();
         } // end if
+
         if(cc > 0) {
             //  alert("Interpretation");
             jQuery("#Interpretation").append(htmlDialogG);
@@ -830,7 +841,7 @@ function onWgAction(){
             //  $('span[id^="flight"]').closest('tr').after('<tr>This is a new tr</tr>');
             jQuery("#Interpretation  table tr:gt(0)").each(function() {
                 var annotation =  jQuery(this).find('td:first-child > a').attr("title");
-                jQuery(this).after('<tr class="new-row"><td>&nbsp;</td><td class="new-buttons" colspan="2">'+genHTML(val, annotation, 1, false, true, "1. Interpretieren Sie die Sequenz!")+genHTML(val, annotation, 2, true, false, "2. Vergleichen Sie mit anderen Interpretationen")+genHTML(val, annotation, 3, false, true, "3. Aktuallisieren Sie Ihre Interpretation")+'</td></tr>');
+                jQuery(this).after('<tr class="new-row"><td>&nbsp;</td><td class="new-buttons" colspan="2">'+genHTML(val, annotation, 1, false, true, "1. Interpretieren Sie die Sequenz")+genHTML(val, annotation, 2, true, false, "2. Vergleichen Sie mit anderen Interpretationen")+genHTML(val, annotation, 3, false, true, "3. Aktualisieren Sie Ihre Interpretation")+'</td></tr>');
                 val++;
             });
         } // endif cc>0
@@ -840,9 +851,19 @@ function onWgAction(){
             var prefix = "gg";
             OHI_Galn_Process (parentId, prefix);
         }
+        if(aa > 0) {
+            var parentId = 'Anschl_C3_BCsse';
+            var prefix = "aa";
+            OHI_Galn_Process (parentId, prefix);
+        }
         if(ll > 0) {
             var parentId = 'Lesarten';
             var prefix = "ll";
+            OHI_Galn_Process (parentId, prefix);
+        }
+        if(nn > 0) {
+            var parentId = 'Kontextualisierung';
+            var prefix = "nn";
             OHI_Galn_Process (parentId, prefix);
         }
 
@@ -885,6 +906,9 @@ var toogle =  function( event ) {
         case "l":
             type="Lesart";
             break;
+        case "a":
+            type="Anschl&#252;sse";
+            break;
         case "n":
             type="Notiz";
             break;
@@ -919,6 +943,10 @@ jQuery( document ).ready(function() {
         if(href=='#Transkript'){
             document.location.reload(true);
             window.location.href = href;
+        }
+        else if(href=='#Interpretation') {
+            window.location.href = href;
+            return false;
         }
     });*/
     onWgAction();
@@ -1000,7 +1028,17 @@ jQuery( document ).ready(function() {
     });
 
     jQuery(document).on('click', '.button-a', function (e) {
-        alert("THIS IS NO LONGER SUPPORTED!");
+        e.preventDefault();
+     //   alert(jQuery(this).closest('tr').find('.a').text());
+        var data = jQuery(this).attr("data");
+        jQuery('#section').val(data);
+        jQuery('#position').val("Anschl&uuml;sse");
+        var row = jQuery(this).closest('tr.new-row');
+        var text = row.prev('tr').find('td:eq(3)').text();
+        //  alert(text);
+        jQuery('#annotextG').val(text);
+        jQuery( "#dialog-form-g").dialog('option', 'title', 'Neue Anschl&uuml;sse');
+        jQuery( "#dialog-form-g" ).dialog( "open" );
     });
 
     jQuery(document).on('click', '.button-l', function (e) {
@@ -1056,6 +1094,9 @@ jQuery( document ).ready(function() {
                 break;
             case "l":
                 type="Lesart";
+                break;
+            case "a":
+                type="Anschl&#252;sse";
                 break;
             case "n":
                 type="Notiz";
@@ -1130,6 +1171,9 @@ jQuery( document ).ready(function() {
                             case "l":
                                 type = "Lesart";
                                 break;
+                            case "a":
+                                type = "Anschl&#252;sse";
+                                break;
                             case "n":
                                 type = "Notiz";
                                 break;
@@ -1186,6 +1230,9 @@ jQuery( document ).ready(function() {
             case "l":
                 type = "Lesart";
                 break;
+            case "a":
+                type = "Anschl&#252;sse";
+                break;
             case "n":
                 type = "Notiz";
                 break;
@@ -1219,6 +1266,9 @@ jQuery( document ).ready(function() {
                 break;
             case "l":
                 type="Lesart";
+                break;
+            case "a":
+                type="Anschl&#252;sse";
                 break;
             case "n":
                 type="Notiz";
