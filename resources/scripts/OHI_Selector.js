@@ -879,6 +879,10 @@ function onWgAction(){
                 {
                     var id = jQuery(this.parentElement.parentElement).find(".smwtype_wpg a").attr("href");
                     id = id.substr(id.lastIndexOf("/") + 1, id.length - id.lastIndexOf("/") + 1);
+                    if (id.substr(id.lastIndexOf("=")) != -1)
+                    {
+                        id = id.substr(id.lastIndexOf("=") + 1, id.length - id.lastIndexOf("=") + 1);
+                    }
                     if (confirm("Diese Interpretation wirklich l"+unescape("%F6")+"schen?"))
                     {
                         OHI_deleteAnnotation(id);
