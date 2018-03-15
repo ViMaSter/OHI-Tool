@@ -664,7 +664,177 @@ function onWgAction(){
             });
             jQuery('#transkript > table tr th:first-child').hide();
         } // end if
-        // start process tabs Geschichten, Lesarten, Notizen
+        if(cc > 0) {
+            //  alert("Interpretation");
+            jQuery("#Interpretation").append(htmlDialogG);
+            jQuery("#Interpretation").append(htmlDialogC);
+            jQuery("#Interpretation").append(htmlDialogF);
+            jQuery("#Interpretation").append(htmlDialogS);
+            jQuery("#dialog-form-g").dialog({
+                autoOpen: false,
+                height: 600,
+                width: 600,
+                modal: true,
+                close: function() {
+                    jQuery( this ).dialog( "close" );
+                },
+                buttons: {
+                    'Speichern': function() {
+
+                        var titel = jQuery( "#kurztitel" ), bes = jQuery( "#bes" ), notiz =  jQuery( "#notiztext"), link =  jQuery( "#section"), type = jQuery("#position"), anno = jQuery("#annotextG");
+                        var li = link.val();
+                        var content = li.substr(li.lastIndexOf('/') + 1);
+                        var ty = type.val();
+                        if(ty.indexOf('Ansch') !=-1 ) ty= 'Anschl&#252;sse';
+                        var tit = li.substr(li.lastIndexOf('/') + 1);
+                        var title = createUniqueAnnotationPageNameNew(titel.val());
+                        //  alert(title);
+                        var myDate = new Date();
+                        // alert(myDate.toLocaleString());
+                        var min = myDate.getMinutes()<10?'0':'';
+                        min = min+myDate.getMinutes();
+                        var sec = myDate.getSeconds()<10?'0':'';
+                        sec = sec+ myDate.getSeconds();
+                        var displayDate =   (myDate.getDate()) + '-' + (myDate.getMonth()+1) + '-' + myDate.getFullYear() + " " + myDate.getHours()+':' + min + ':' + sec;
+                        //  var displayDate = date("d-m-Y h:i:s");
+                        //  alert(displayDate);
+                        //   var options ="{{TextAnnotationNew\n|Initial Text="+text.val()+"\n|AnnoText="+annottext.val()+"\n|Annotation="+anno.val()+"\n|Tag="+tag.text()+"\n|Comment="+notiz.val()+"\n|Equivalent="+wgTitle+"\n|Section="+section.val()+"\n|Author="+wgUserName+"\n|CreationTime="+displayDate+"\n|SeeAlso=\n}}";
+                        var options ="{{TextAnnotationLevel2\n|Kurztitel="+titel.val()+"\n|Beschreibung="+bes.val()+"\n|Notiz="+notiz.val()+"\n|Type="+ty +"\n|Annotation1="+content+"\n|Status=Nein\n|Equivalent="+wgTitle+"\n|Author="+wgUserName+"\n|CreationTime="+displayDate+"\n|SeeAlso=\n}}";
+
+                        OHI_saveWikiPageAsk(title, options, "", "");
+                        jQuery( this ).dialog( "close" );
+                        document.location.reload(true);
+                    },
+                    "Abbrechen": function() {
+                        jQuery( this ).dialog( "close" );
+                    }
+                }
+
+            });
+
+            jQuery("#dialog-form-notiz").dialog({
+                autoOpen: false,
+                height: 600,
+                width: 600,
+                modal: true,
+                close: function() {
+                    jQuery( this ).dialog( "close" );
+                },
+                buttons: {
+                    'Speichern': function() {
+
+                        var notiz =  jQuery( "#notiztext2"), link =  jQuery( "#section2"), type = jQuery("#position2"), bess = jQuery("#bess");
+
+                        var li = link.val();
+                        // alert(li);
+                        var content = li.substr(li.lastIndexOf('/') + 1);
+                        var tit = li.substr(li.lastIndexOf(':') + 1);
+                        var title = createUniqueAnnotationPageNameNew3(tit);
+                        //  alert(title);
+                        var myDate = new Date();
+                        // alert(myDate.toLocaleString());
+                        var min = myDate.getMinutes()<10?'0':'';
+                        min = min+myDate.getMinutes();
+                        var sec = myDate.getSeconds()<10?'0':'';
+                        sec = sec+ myDate.getSeconds();
+                        var displayDate =   (myDate.getDate()) + '-' + (myDate.getMonth()+1) + '-' + myDate.getFullYear() + " " + myDate.getHours()+':' + min + ':' + sec;
+                        //  var displayDate = date("d-m-Y h:i:s");
+                        //  alert(displayDate);
+                        //   var options ="{{TextAnnotationNew\n|Initial Text="+text.val()+"\n|AnnoText="+annottext.val()+"\n|Annotation="+anno.val()+"\n|Tag="+tag.text()+"\n|Comment="+notiz.val()+"\n|Equivalent="+wgTitle+"\n|Section="+section.val()+"\n|Author="+wgUserName+"\n|CreationTime="+displayDate+"\n|SeeAlso=\n}}";
+                        var options ="{{TextAnnotationLevel3\n|Beschreibung="+bess.val()+"\n|Notiz="+notiz.val()+"\n|Annotation2="+content+"\n|Equivalent="+wgTitle+"\n|Author="+wgUserName+"\n|CreationTime="+displayDate+"\n|SeeAlso=\n}}";
+                        //   alert(options);
+                        OHI_saveWikiPageAsk(title, options, "", "");
+                        jQuery( this ).dialog( "close" );
+                        document.location.reload(true);
+                    },
+                    "Abbrechen": function() {
+                        jQuery( this ).dialog( "close" );
+                    }
+                }
+
+            });
+
+            jQuery("#dialog-form-fsh").dialog({
+                autoOpen: false,
+                height: 300,
+                width: 300,
+                modal: true,
+                close: function() {
+                    jQuery( this ).dialog( "close" );
+                },
+                buttons: {
+                    'Speichern': function() {
+
+                        var link =  jQuery( "#section3"), type = jQuery("#position3"), bess = jQuery("#select-fsh option:selected");
+
+                        var li = link.val();
+                        // alert(li);
+                        var title = li.substr(li.lastIndexOf('/') + 1);
+                        //   var tit = li.substr(li.lastIndexOf(':') + 1);
+                        //   var title = createUniqueAnnotationPageNameFsh3(tit);
+                        //   title += "_"+ bess.val();
+                        var myDate = new Date();
+                        // alert(myDate.toLocaleString());
+                        var min = myDate.getMinutes()<10?'0':'';
+                        min = min+myDate.getMinutes();
+                        var sec = myDate.getSeconds()<10?'0':'';
+                        sec = sec+ myDate.getSeconds();
+                        var displayDate =   (myDate.getDate()) + '-' + (myDate.getMonth()+1) + '-' + myDate.getFullYear() + " " + myDate.getHours()+':' + min + ':' + sec;
+                        //  var displayDate = date("d-m-Y h:i:s");
+                        // alert(displayDate);
+                        //   var options ="{{TextAnnotationNew\n|Initial Text="+text.val()+"\n|AnnoText="+annottext.val()+"\n|Annotation="+anno.val()+"\n|Tag="+tag.text()+"\n|Comment="+notiz.val()+"\n|Equivalent="+wgTitle+"\n|Section="+section.val()+"\n|Author="+wgUserName+"\n|CreationTime="+displayDate+"\n|SeeAlso=\n}}";
+                        var options ="{{StoreFallstrukturhypothese\n|FallStrukturNummer="+bess.val()+"\n|TypAnno="+type.val()+"\n}}";
+                        //  alert(options);
+                        //   var options = "[[TypAnno::"+type.val()+"]]\n[[FallStrukturNummer::"+bess.val()+"]]\n[[Category:Fallstrukturhypothese"+bess.val()+"]]\n";
+                        OHI_saveWikiPageContent(title, options);
+                        jQuery( this ).dialog( "close" );
+                    },
+                    "Abbrechen": function() {
+                        jQuery( this ).dialog( "close" );
+                    }
+                }
+            });
+
+            jQuery("#Interpretation  table tr:first").css('background', 'green');
+
+            jQuery("#Interpretation  table tr:first").append("<td ><button name='plus-general' value='+' id='plus-general' class='toggle-general' >+</button></td>");
+            jQuery("#Interpretation  table tr:gt(0)").append('<td class="blank-td">&nbsp;</td>');
+
+            jQuery('#Interpretation table tr td:first-child').each(function() {
+                (jQuery(this).hide());
+            });
+            jQuery('#Interpretation table tr th:first-child').hide();
+            var val = 1;
+
+            function genHTML(val, annotation, i, hasOpener, hasAdder, text)
+            {
+                return '<div id="div-g-'+val+'" style="width: 100%;">' +
+                            '<table border="0" style="width: 100%;">' +
+                                '<tbody>' +
+                                    '<tr class="expandable-new">' +
+                                        '<td>'+(hasOpener?'<span class="g">'+text+' <a href="#" data="'+annotation+'" class="toggle" id="toggle-g-'+val+'">(ausklappen)</a></span> ':'')+(hasAdder?('<a href="#" value="Interpretieren" class="button-g" data="'+annotation+'" id="button-g-'+val+'">'+text+'</a>'):'')+'</td>' +
+                                        '<td width="5%" align="rigth"></td>' +
+                                    '</tr>' +
+                                    '<tr>' +
+                                        '<td colspan="2">' +
+                                            '<div id="div-level-2-g-'+val+'-'+i+'" style="width: 100%; display: none;" class="div-level-2">' +
+                                                '<p>Annotations level 2 table</p>' +
+                                            '</div>' +
+                                        '</td>' +
+                                    '</tr>' +
+                                '</tbody>' +
+                            '</table>' +
+                        '</div>';
+            }
+
+            //  $('span[id^="flight"]').closest('tr').after('<tr>This is a new tr</tr>');
+            jQuery("#Interpretation  table tr:gt(0)").each(function() {
+                var annotation =  jQuery(this).find('td:first-child > a').attr("title");
+                jQuery(this).after('<tr class="new-row"><td>&nbsp;</td><td class="new-buttons" colspan="2">'+genHTML(val, annotation, 1, false, true, "1. Interpretieren Sie die Sequenz!")+genHTML(val, annotation, 2, true, false, "2. Vergleichen Sie mit anderen Interpretationen")+genHTML(val, annotation, 3, false, true, "3. Aktuallisieren Sie Ihre Interpretation")+'</td></tr>');
+                val++;
+            });
+        } // endif cc>0
+        // start process tabs Geschichten, Anschl_C3_BCsse, Lesarten, Notizen
         if(gg > 0 ) {
             var parentId = 'Geschichten';
             var prefix = "gg";
@@ -866,12 +1036,12 @@ jQuery( document ).ready(function() {
      });*/
  //   jQuery(document).on('click', '.toggle', toogle );
     jQuery(document).on('click', '.toggle', function(e) {
-        var val = jQuery(this).attr("value");
+        var val = jQuery(this).text();
         var content =  jQuery(this).attr("data");
         var idParent = jQuery(this).closest('div').attr("id");
         //  alert(idParent);
         var sp = jQuery(this).closest('span').attr("class");
-        var target = jQuery("#"+idParent).find('.div-level-2').attr("id");
+        var target = jQuery(this.parentElement.parentElement.parentElement.parentElement.querySelector(".div-level-2")).attr("id");
         //  alert(target);
         var printouts = new Array();
         printouts['Kurztitel'] = "?Kurztitel";
@@ -893,18 +1063,18 @@ jQuery( document ).ready(function() {
             default:
                 type="Geschichte";
         }
-        if(val.trim() == '+') {
+        if(val.trim() == '(ausklappen)') {
             //   alert(idParent);
-            jQuery("#" + idParent).find('.div-level-2').toggle(350);
+            jQuery(this.parentElement.parentElement.parentElement.parentElement.querySelector(".div-level-2")).toggle(350);
             jQuery(this).toggleClass("expanded");
-            jQuery(this).attr("value","-");
+            jQuery(this).text("(einklappen)");
             content = content.substr(content.lastIndexOf('/') + 1);
             OHI_SimpleAsk(content, "table", printouts,  type, "Ist Annotation von Sequenz", target);
         }
         else {
-            jQuery("#" + idParent).find('.div-level-2').hide();
+            jQuery(this.parentElement.parentElement.parentElement.parentElement.querySelector(".div-level-2")).hide();
             jQuery(this).removeClass("expanded");
-            jQuery(this).attr("value","+");
+            jQuery(this).text("(ausklappen)");
         }
         //  content.slideToggle();
         //   $('.expandable').not(this).find('input[type="button"]').val("+");
@@ -1067,4 +1237,3 @@ jQuery( document ).ready(function() {
 
 
 });
-

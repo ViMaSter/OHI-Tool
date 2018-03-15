@@ -1859,6 +1859,60 @@ Klick auf „Bearbeiten“, um den Quelltext der Template anzusehen.
 |format = table
 }}
 
+= Anschlüsse =
+
+{{#ask: [[Category:Anschlüsse]][[Basiert auf Transkript::{{FULLPAGENAME}}]]
+|?AnnoText=Sequenztext
+|?Beschreibung
+|?Notiz
+|?Kurztitel
+|?Autor
+|?
+|sort = Erstellungszeitpunkt
+|mainlabel=-
+|order = asc
+|format = table
+}}
+
+= Kontextualisierung =
+{{#ask: [[Category:Notiz]][[Basiert auf Transkript::{{FULLPAGENAME}}]]
+|?AnnoText=Sequenztext
+|?Beschreibung
+|?Notiz
+|?Kurztitel
+|?Autor
+|?
+|sort = Erstellungszeitpunkt
+|mainlabel=-
+|order = asc
+|format = table
+}}
+
+= Pers. Interpretation =
+{{#ask: [[Category:TextAnnotationLevel2]][[Basiert auf Transkript::{{FULLPAGENAME}}]][[Autor::{{CURRENTUSER}}]]
+|?Kurztitel
+|?Beschreibung
+|?AnnoText=Sequenztext
+|?Notiz
+|?Autor
+|?TypAnno=Category
+|sort = Erstellungszeitpunkt
+|order = asc
+|format = table
+}}
+
+= Fallstrukturhypothese 1 =
+&lt;big&gt;'''[[{{FULLPAGENAME}}_FSH1|zur Textseite der Fallstrukturhypothese 1]]'''&lt;/big&gt;
+{{#ask: [[Category:Fallstrukturhypothese1]][[Basiert auf Transkript::{{FULLPAGENAME}}]]
+|?Kurztitel
+|?Beschreibung
+|?Notiz
+|?Autor
+|?TypAnno=Category
+|sort = Erstellungszeitpunkt
+|order = asc
+|format = table
+}}
 
 &lt;headertabs /&gt;
 
@@ -4299,6 +4353,119 @@ Die möglichen Werte für dieses Property sind:
 }}
 [[Category:Export]]</text>
       <sha1>55l7fcs022zp8ttqpmke7l8hk6opb1h</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Category:Anschlüsse</title>
+    <ns>14</ns>
+    <id>271</id>
+    <revision>
+      <id>2115</id>
+      <parentid>907</parentid>
+      <timestamp>2017-12-08T09:00:22Z</timestamp>
+      <contributor>
+        <username>LiaVeja</username>
+        <id>3</id>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="19">[[Category:Export]]</text>
+      <sha1>ollsnu5g09aipvrdqysx2dxzna4qwvy</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Category:Fallstrukturhypothese</title>
+    <ns>14</ns>
+    <id>337</id>
+    <revision>
+      <id>2117</id>
+      <parentid>1261</parentid>
+      <timestamp>2017-12-08T09:00:56Z</timestamp>
+      <contributor>
+        <username>LiaVeja</username>
+        <id>3</id>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="21">.
+[[Category:Export]]</text>
+      <sha1>6k8ivhyx7pbfy9ydlybioby6dmfx9wu</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Category:Fallstrukturanalyse</title>
+    <ns>14</ns>
+    <id>279</id>
+    <revision>
+      <id>2116</id>
+      <parentid>933</parentid>
+      <timestamp>2017-12-08T09:00:41Z</timestamp>
+      <contributor>
+        <username>LiaVeja</username>
+        <id>3</id>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="57">{{#default_form:Fallstrukturanalyse}}
+[[Category:Export]]</text>
+      <sha1>5qpyams9uekoia7am3q1xsd5xsxlgpt</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Category:Fallstrukturhypothese1</title>
+    <ns>14</ns>
+    <id>338</id>
+    <revision>
+      <id>2118</id>
+      <parentid>1262</parentid>
+      <timestamp>2017-12-08T09:01:09Z</timestamp>
+      <contributor>
+        <username>LiaVeja</username>
+        <id>3</id>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="21">.
+[[Category:Export]]</text>
+      <sha1>6k8ivhyx7pbfy9ydlybioby6dmfx9wu</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Category:Geschichte</title>
+    <ns>14</ns>
+    <id>217</id>
+    <revision>
+      <id>2121</id>
+      <parentid>729</parentid>
+      <timestamp>2017-12-08T09:02:10Z</timestamp>
+      <contributor>
+        <username>LiaVeja</username>
+        <id>3</id>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="40">Category Geschichte
+[[Category:Export]]</text>
+      <sha1>t1ugq8lam8t4o7n014m5lva3vsn1282</sha1>
+    </revision>
+  </page>
+  <page>
+    <title>Category:Interpretation</title>
+    <ns>14</ns>
+    <id>236</id>
+    <revision>
+      <id>2122</id>
+      <parentid>775</parentid>
+      <timestamp>2017-12-08T09:02:27Z</timestamp>
+      <contributor>
+        <username>LiaVeja</username>
+        <id>3</id>
+      </contributor>
+      <model>wikitext</model>
+      <format>text/x-wiki</format>
+      <text xml:space="preserve" bytes="80">This category helps to select the right level of annotation.
+[[Category:Export]]</text>
+      <sha1>84euo5qu4014ydwzc0uxciywskytah8</sha1>
     </revision>
   </page>
   <page>
