@@ -877,7 +877,10 @@ function onWgAction(){
                 var button = jQuery("<button>Löschen</button>");
                 button.click(function()
                 {
-                    OHI_deleteAnnotation(id);
+                    if (confirm("Diese Interpretation wirklich löschen?"))
+                    {
+                        OHI_deleteAnnotation(id);   
+                    }
                 });
 
                 blankTd.html(button);
