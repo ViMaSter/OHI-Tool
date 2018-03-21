@@ -1340,4 +1340,3 @@ jQuery( document ).ready(function() {
 
 
 });
-jQuery("#annotextG").jqte();
