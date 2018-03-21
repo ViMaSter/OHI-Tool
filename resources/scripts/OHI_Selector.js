@@ -1037,7 +1037,7 @@ jQuery( document ).ready(function() {
             var act = [];
             jQuery('.button-analyse:checked').each(function(){
                 var ac = jQuery(this).closest('tr').find('.Akteur1').text();
-                area.push(ac+": "+jQuery(this).closest('tr').find('.Transkripttext').text());
+                area.push(jQuery(this).closest('tr').find('.Transkripttext').text());
                 sec.push(jQuery(this).closest('tr').find('td:eq(1)').text());
                 act.push(ac);
             });
