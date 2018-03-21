@@ -23,6 +23,8 @@
     i(a),c;if(b.start!=b.end){c=a.value;a.value=c.slice(0,b.start)+c.slice(b.end)}h(a,b.start,b.start);return b.text};r=function(a,b,c,d){var f=a.value;a.value=f.slice(0,c)+b+f.slice(c);if(d){b=c+b.length;h(a,b,b)}};s=function(a,b){var c=i(a),d=a.value;a.value=d.slice(0,c.start)+b+d.slice(c.end);c=c.start+b.length;h(a,c,c)};t=function(a,b,c){var d=i(a),f=a.value;a.value=f.slice(0,d.start)+b+d.text+c+f.slice(d.end);b=d.start+b.length;h(a,b,b+d.length)};n.fn.extend({getSelection:e(i,false),setSelection:e(h,
     true),collapseSelection:e(m,true),deleteSelectedText:e(q,true),deleteText:e(l,true),extractSelectedText:e(u,false),insertText:e(r,true),replaceSelectedText:e(s,true),surroundSelectedText:e(t,true)})})})(jQuery);
 
+
+
 /*$(document).ready(function() {
     var $foo = $("#foo");
     $foo.focus();
@@ -159,7 +161,7 @@ function createUniqueAnnotationPageNameNew(sect) {
 
         var response, jsonRes;
         var randomString = OHI_randomString(3);
-        annotationPageName = 'TextAnnotation' 	  + ':' + wgTitle + '_' +sect+ '-' + randomString;
+        annotationPageName = 'TextAnnotation'     + ':' + wgTitle + '_' +sect+ '-' + randomString;
 
         response = $.ajax({
             type: "GET", // request type ( GET or POST )
@@ -190,7 +192,7 @@ function createUniqueAnnotationPageNameNew3(sect) {
 
         var response, jsonRes;
         var randomString = OHI_randomString(4);
-        annotationPageName =  'TextAnnotation' 	  + ':' + sect+ '-' + randomString;
+        annotationPageName =  'TextAnnotation'    + ':' + sect+ '-' + randomString;
 
         response = $.ajax({
             type: "GET", // request type ( GET or POST )
@@ -221,7 +223,7 @@ function createUniqueAnnotationPageNameFsh3(sect) {
 
         var response, jsonRes;
         var randomString = OHI_randomString(4);
-        annotationPageName =  'FSH' 	  + ':' + sect+ '-' + randomString;
+        annotationPageName =  'FSH'       + ':' + sect+ '-' + randomString;
 
         response = $.ajax({
             type: "GET", // request type ( GET or POST )
@@ -295,7 +297,7 @@ function OHI_SimpleAsk(content, format, customPrintouts,  type, linkprop , targe
                jQuery('#'+newTab+" th").css('background', '#ccc');
 
 
-              //  jQuery('#'+newTab+" tr:first").append("<td ><a href=''>Notiz</a></td>");
+              //  jQuery('#'+newTab+" tr:first").append("<td ><a href=''>Lesart</a></td>");
               //  jQuery('#'+newTab+" tr:gt(0)").append('<td class="blank-td">&nbsp;</td>');
                 var i=1;
 
@@ -314,7 +316,7 @@ function OHI_SimpleAsk(content, format, customPrintouts,  type, linkprop , targe
                     var edit = temp.replace("tr", "button-edit");
                     var insert = temp.replace("tr", "button-add");
 
-                    jQuery(this).append('<td style="text-align: right;"><input type="button" value="'+textAdd+'" class="button-notiz" data="'+hr+'" id="'+insert+'-'+i+'" /></td>');
+                    jQuery(this).append('<td style="text-align: right;"><input type="button" value="'+textAdd+'" class="button-Lesart" data="'+hr+'" id="'+insert+'-'+i+'" /></td>');
                     i++;
 
                     // TODO add table with new level of annotation - level 3
@@ -322,18 +324,18 @@ function OHI_SimpleAsk(content, format, customPrintouts,  type, linkprop , targe
                     var content = hr;
                    // content = content.substr(content.lastIndexOf('/') + 1);
                     var printouts = new Array();
-                    printouts['Beschreibung'] = "?Beschreibung";
-                    printouts['Notiz'] = "?Notiz";
+                    printouts['Kommentar'] = "?Kommentar";
                     printouts['Autor'] = "?Autor";
+                    printouts['Erstellungszeitpunkt'] = "?Erstellungszeitpunkt";
                     var types = "TextAnnotationLevel3";
                     var target1 = this;
                     var idParent = jQuery(target1).attr("id");
                 //    alert(idParent);
                     var newDivId = idParent.replace('level-2','level-3').replace("tr", "div");
                     var newTabId = idParent.replace('level-2','level-3').replace('tr','tab');
-                    jQuery('#'+newTabId).children("table").attr('style', 'width: 100%; background-color: #C3EAE9;');
+                    jQuery('#'+newTabId).children("table").attr('style', 'width: 100%; background-color: #eeeeee;');
                     OHI_SimpleAsk_New(content, "table", printouts,  types, "", idParent);
-                  //  jQuery(this).closest('tr').after('<tr><td>Notiz</td><td colspan="4"><div class="anno-level-3">New Content 2</div></td></tr>');
+                  //  jQuery(this).closest('tr').after('<tr><td>Lesart</td><td colspan="4"><div class="anno-level-3">New Content 2</div></td></tr>');
 
                 });
 
@@ -406,7 +408,7 @@ function OHI_SimpleAsk_New(content, format, customPrintouts,  type, options , ta
                 });*/
 
               // alert(test);
-                jQuery("#"+target).after('<tr><td style="background-color: #C3EAE9;">Diskussion</td><td colspan="5" style="background-color: #C3EAE9;"><div class="anno-level-3" id="'+newDivId+'"></div></td></tr>');
+                jQuery("#"+target).after('<tr><td colspan="6" style="background-color: #e8e8e8;"><div class="anno-level-3" id="'+newDivId+'"></div></td></tr>');
                 jQuery('#'+newDivId).append(test);
 
 
@@ -414,7 +416,7 @@ function OHI_SimpleAsk_New(content, format, customPrintouts,  type, options , ta
                 //   jQuery('#'+newTab+" tr:first").css('background', '#cc6600');
 
 
-                //  jQuery('#'+newTab+" tr:first").append("<td ><a href=''>Notiz</a></td>");
+                //  jQuery('#'+newTab+" tr:first").append("<td ><a href=''>Lesart</a></td>");
                 //  jQuery('#'+newTab+" tr:gt(0)").append('<td class="blank-td">&nbsp;</td>');
                /*  var i = 1;
                  jQuery('#'+newTabId+" tr:gt(0)").each(function() {
@@ -534,9 +536,9 @@ function OHI_Galn_Process (parentId, prefix){
         var content = hr;
         // content = content.substr(content.lastIndexOf('/') + 1);
         var printouts = new Array();
-        printouts['Beschreibung'] = "?Beschreibung";
-        printouts['Notiz'] = "?Notiz";
+        printouts['Interpretation'] = "?Interpretation";
         printouts['Autor'] = "?Autor";
+        printouts['Erstellungszeitpunkt'] = "?Erstellungszeitpunkt";
         var types = "TextAnnotationLevel3";
         var target1 = this;
         jQuery(target1).attr("id", "tr-"+prefix+"-"+i);
@@ -545,7 +547,7 @@ function OHI_Galn_Process (parentId, prefix){
         //  var newDivId = idParent.replace('level-2','level-3').replace("tr", "div");
         //  var newTabId = idParent.replace('level-2','level-3').replace('tr','tab');
         var newTabId = idParent;
-        jQuery('#'+newTabId).children("table").attr('style', 'width: 100%; background-color: #C3EAE9;');
+        jQuery('#'+newTabId).children("table").attr('style', 'width: 100%; background-color: #e8e8e8;');
         OHI_SimpleAsk_New(content, "table", printouts,  types, "", idParent);
     });
 }
@@ -598,10 +600,14 @@ function onWgAction(){
 
         //  alert("view");
         var htmlDialogG = '<div id="dialog-form-g" title="Neu" class="AQE-dialog-form" style="display:none;">';
-        htmlDialogG += 'Sequenztext:&nbsp;&nbsp;<textarea rows="10" cols="50" id="annotextG" disabled="disabled"  /><br/>';
-        htmlDialogG += 'Zeilennummer: <input type="text" id="kurztitel" size="50" /><br/><br/>';
-        htmlDialogG += 'Interpretation: <textarea id="bes"  rows="10" cols="50"/><br/>';
-        htmlDialogG += 'Lesart: <textarea id="notiztext"  rows="6" cols="50"/><br/>';
+        // Warnbox
+        htmlDialogG += '<div id="dialog-warning"><strong>Warnung: Abgeschickte Interpretationen k&ouml;nnen nicht mehr gel&ouml;scht oder bearbeitet werden! Bitte nehmen Sie sich Zeit.</strong></div>';
+        // Transkriptionsregeln
+        htmlDialogG += '<div class="hinweisbox interpretation"><details><summary>Transkriptionsregeln</summary><table><tbody><tr><td><ul><li> P: = Interviewte Person </li><li> I: = Interviewerin</li><li> [          ] &ouml;ffnende eckige Klammern werden an die Stelle des Textes gesetzt, an der &uuml;berlappend eingesetzt wird, und schlie&szlig;ende dort, wo das Simultansprechen endet. Die Klammerpaare werden untereinander ausgerichtet.</li><li> (1) = Pausen werden ab einer Sekunde L&auml;nge und in Klammern die L&auml;nge notiert  </li><li> (unverst&auml;ndlich) = unverst&auml;ndliche &Auml;u&szlig;erungen</li><li> (Also morgen will ich?) = nicht genau verst&auml;ndlicher, aber vermuteter Wortlaut</li><li> (&hellip;) = Auslassung durch die transkribierende Person</li><li> <u>wahnsinnig</u> = auff&auml;llige Betonung (unterstrichen)</li><li> <b>wahnsinnig</b> = gr&ouml;&szlig;ere Lautst&auml;rke (fett)</li><li> jaaa = Dehnung (Je mehr Vokale aneinandergereiht sind, desto l&auml;nger die Dehnung.)</li><li> @xxx@ = Lachend gesprochene Worte werden zwischen zwei "@-Zeichen" gesetzt.</li></ul></td><td><ul><li> Tilgungen werden so erfasst, dass die urspr&uuml;ngliche Form des Wortes erkennbar bleibt, z.B. sin - sind, is &ndash; ist, </li><li> Assimilationen werden notiert, interne wortinterne Assimilationen aber nicht, z.B. ham &ndash; haben </li><li> &auml;h &ouml;h &auml;hm etc. werden notiert</li><li> die in der gesprochenen Standardsprache allgemein &uuml;bliche Aussprache von Reduktionssilben (= Silben, die einen reduzierten Vokal enthalten) wird nicht notiert.  Z.B. halten &ndash; nicht: haltn</li><li> Klitisierungen werden notiert, z.B. biste &ndash; bist du oder kannste &ndash; kannst du</li><li> Regionalismen und Dialekt werden notiert, Beispiele f&uuml;r Hamburg: hamburch oder hambuich (hamburg), tach (tag)</li><li> Fremdw&ouml;rter werden so geschrieben, wie es in der Orthographie &uuml;blich ist.</li><li> Zahlw&ouml;rter werden ausgeschrieben</li></ul></td></tr></tbody></table></details></div>';
+        htmlDialogG += 'Sequenztext:&nbsp;&nbsp; <textarea rows="10" cols="50" id="annotextG" disabled="disabled"  /><br/>';
+        htmlDialogG += '<div class="tooltip">Zeilennummer:<span class="tooltiptext">Geben Sie hier die Zeilennummer an, auf die Sie sich beziehen. Z.B. "3", oder "1-7"</span></div><input type="text" id="Zeilennummer" size="50" /><br/><br/>';
+        htmlDialogG += '<div class="tooltip">Interpretation<span class="tooltiptext">Geben Sie hier die Zeilennummer an, auf die Sie sich beziehen. Z.B. "3", oder "1-7"</span></div><textarea id="bes"  rows="10" cols="50"/><br/>';
+        htmlDialogG += '<div class="tooltip">Lesart:<span class="tooltiptext">Geben Sie hier die Zeilennummer an, auf die Sie sich beziehen. Z.B. "3", oder "1-7"</span></div><textarea id="Lesarttext"  rows="6" cols="50"/><br/>';
         htmlDialogG += '<input type="hidden" id="position"  size=""/><br/>'; // TODO: remove it
         htmlDialogG += '<input type="hidden" id="section"  size=""/>'; // TODO: remove it
         htmlDialogG += '</div>';
@@ -616,9 +622,9 @@ function onWgAction(){
         htmlDialog += '<input type="hidden" id="section"  size=""/>'; // TODO: remove it
         htmlDialog += '</div>';
 
-        var htmlDialogC = '<div id="dialog-form-notiz" title="Diskussion" class="AQE-dialog-form" style="display:none;">';
+        var htmlDialogC = '<div id="dialog-form-Lesart" title="Diskussion" class="AQE-dialog-form" style="display:none;"><div id="dialog-warning"><strong>Warnung: Abgeschickte Kommentare k&ouml;nnen nicht mehr gel&ouml;scht oder bearbeitet werden! Bitte nehmen Sie sich Zeit.</strong></div>';
         htmlDialogC += 'Kommentar: <textarea id="bess"  rows="10" cols="50"/><br/>';
-        htmlDialogC += 'Notiz: <textarea id="notiztext2"  rows="20" cols="50"/><br/>';
+        //  htmlDialogC += 'Lesart: <textarea id="Lesarttext2"  rows="20" cols="50"/><br/>';
         //  htmlDialogC += 'Status der Interpretation: <input type="checkbox" id="bes2" checked="checked">Akzeptiert</input><br/>';
         htmlDialogC += '<input type="hidden" id="position2"  size=""/><br/>'; // TODO: remove it
         htmlDialogC += '<input type="hidden" id="section2"  size=""/>'; // TODO: remove it
@@ -658,7 +664,7 @@ function onWgAction(){
                 buttons: {
                     'Speichern': function() {
                         jQuery('#position').val(jQuery('#annottext').val());
-                        var annottext = jQuery( "#annottext" ),  notiz =  jQuery( "#notiztext"), section =  jQuery( "#section"), text = jQuery( "#transkripttext"),act = jQuery("#akteur");
+                        var annottext = jQuery( "#annottext" ),  Lesart =  jQuery( "#Lesarttext"), section =  jQuery( "#section"), text = jQuery( "#transkripttext"),act = jQuery("#akteur");
                         var title = createUniqueAnnotationPageNameNew(section.val());
                         var myDate = new Date();
                         // alert(myDate.toLocaleString());
@@ -668,7 +674,7 @@ function onWgAction(){
                         sec = sec+ myDate.getSeconds();
                         var displayDate =   (myDate.getDate()) + '-' +(myDate.getMonth()+1) + '-' + myDate.getFullYear() + " " + myDate.getHours()+':'+min+':'+sec;
 
-                        //   var options ="{{TextAnnotationNew\n|Initial Text="+text.val()+"\n|AnnoText="+annottext.val()+"\n|Annotation="+anno.val()+"\n|Tag="+tag.text()+"\n|Comment="+notiz.val()+"\n|Equivalent="+wgTitle+"\n|Section="+section.val()+"\n|Author="+wgUserName+"\n|CreationTime="+displayDate+"\n|SeeAlso=\n}}";
+                        //   var options ="{{TextAnnotationNew\n|Initial Text="+text.val()+"\n|AnnoText="+annottext.val()+"\n|Annotation="+anno.val()+"\n|Tag="+tag.text()+"\n|Comment="+Lesart.val()+"\n|Equivalent="+wgTitle+"\n|Section="+section.val()+"\n|Author="+wgUserName+"\n|CreationTime="+displayDate+"\n|SeeAlso=\n}}";
                         var options ="{{TextAnnotationNew\n|Initial Text="+text.val()+"\n|AnnoText="+annottext.val()+"\n|Akteur="+act.val()+"\n|Equivalent="+wgTitle+"\n|Section="+section.val()+"\n|Author="+wgUserName+"\n|CreationTime="+displayDate+"\n|SeeAlso=\n}}";
                         //alert (options);
                         OHI_saveWikiPageAsk(title, options, "", "");
@@ -716,7 +722,7 @@ function onWgAction(){
                 buttons: {
                     'Speichern': function() {
 
-                        var titel = jQuery( "#kurztitel" ), bes = jQuery( "#bes" ), notiz =  jQuery( "#notiztext"), link =  jQuery( "#section"), type = jQuery("#position"), anno = jQuery("#annotextG");
+                        var titel = jQuery( "#Zeilennummer" ), bes = jQuery( "#bes" ), Lesart =  jQuery( "#Lesarttext"), link =  jQuery( "#section"), type = jQuery("#position"), anno = jQuery("#annotextG");
                         var li = link.val();
                         var content = li.substr(li.lastIndexOf('/') + 1);
                         var ty = type.val();
@@ -733,8 +739,8 @@ function onWgAction(){
                         var displayDate =   (myDate.getDate()) + '-' + (myDate.getMonth()+1) + '-' + myDate.getFullYear() + " " + myDate.getHours()+':' + min + ':' + sec;
                         //  var displayDate = date("d-m-Y h:i:s");
                         //  alert(displayDate);
-                        //   var options ="{{TextAnnotationNew\n|Initial Text="+text.val()+"\n|AnnoText="+annottext.val()+"\n|Annotation="+anno.val()+"\n|Tag="+tag.text()+"\n|Comment="+notiz.val()+"\n|Equivalent="+wgTitle+"\n|Section="+section.val()+"\n|Author="+wgUserName+"\n|CreationTime="+displayDate+"\n|SeeAlso=\n}}";
-                        var options ="{{TextAnnotationLevel2\n|Kurztitel="+titel.val()+"\n|Beschreibung="+bes.val()+"\n|Notiz="+notiz.val()+"\n|Type="+ty +"\n|Annotation1="+content+"\n|Status=Nein\n|Equivalent="+wgTitle+"\n|Author="+wgUserName+"\n|CreationTime="+displayDate+"\n|SeeAlso=\n}}";
+                        //   var options ="{{TextAnnotationNew\n|Initial Text="+text.val()+"\n|AnnoText="+annottext.val()+"\n|Annotation="+anno.val()+"\n|Tag="+tag.text()+"\n|Comment="+Lesart.val()+"\n|Equivalent="+wgTitle+"\n|Section="+section.val()+"\n|Author="+wgUserName+"\n|CreationTime="+displayDate+"\n|SeeAlso=\n}}";
+                        var options ="{{TextAnnotationLevel2\n|Zeilennummer="+titel.val()+"\n|Interpretation="+bes.val()+"\n|Lesart="+Lesart.val()+"\n|Type="+ty +"\n|Annotation1="+content+"\n|Status=Nein\n|Equivalent="+wgTitle+"\n|Author="+wgUserName+"\n|CreationTime="+displayDate+"\n|SeeAlso=\n}}";
 
                         OHI_saveWikiPageAsk(title, options, "", "");
                         jQuery( this ).dialog( "close" );
@@ -747,7 +753,7 @@ function onWgAction(){
 
             });
 
-            jQuery("#dialog-form-notiz").dialog({
+            jQuery("#dialog-form-Lesart").dialog({
                 autoOpen: false,
                 height: 600,
                 width: 600,
@@ -758,7 +764,7 @@ function onWgAction(){
                 buttons: {
                     'Speichern': function() {
 
-                        var notiz =  jQuery( "#notiztext2"), link =  jQuery( "#section2"), type = jQuery("#position2"), bess = jQuery("#bess");
+                        var Lesart =  jQuery( "#Lesarttext2"), link =  jQuery( "#section2"), type = jQuery("#position2"), bess = jQuery("#bess");
 
                         var li = link.val();
                         // alert(li);
@@ -775,8 +781,8 @@ function onWgAction(){
                         var displayDate =   (myDate.getDate()) + '-' + (myDate.getMonth()+1) + '-' + myDate.getFullYear() + " " + myDate.getHours()+':' + min + ':' + sec;
                         //  var displayDate = date("d-m-Y h:i:s");
                         //  alert(displayDate);
-                        //   var options ="{{TextAnnotationNew\n|Initial Text="+text.val()+"\n|AnnoText="+annottext.val()+"\n|Annotation="+anno.val()+"\n|Tag="+tag.text()+"\n|Comment="+notiz.val()+"\n|Equivalent="+wgTitle+"\n|Section="+section.val()+"\n|Author="+wgUserName+"\n|CreationTime="+displayDate+"\n|SeeAlso=\n}}";
-                        var options ="{{TextAnnotationLevel3\n|Beschreibung="+bess.val()+"\n|Notiz="+notiz.val()+"\n|Annotation2="+content+"\n|Equivalent="+wgTitle+"\n|Author="+wgUserName+"\n|CreationTime="+displayDate+"\n|SeeAlso=\n}}";
+                        //   var options ="{{TextAnnotationNew\n|Initial Text="+text.val()+"\n|AnnoText="+annottext.val()+"\n|Annotation="+anno.val()+"\n|Tag="+tag.text()+"\n|Comment="+Lesart.val()+"\n|Equivalent="+wgTitle+"\n|Section="+section.val()+"\n|Author="+wgUserName+"\n|CreationTime="+displayDate+"\n|SeeAlso=\n}}";
+                        var options ="{{TextAnnotationLevel3\n|Kommentar="+bess.val()+"\n|Lesart="+Lesart.val()+"\n|Annotation2="+content+"\n|Equivalent="+wgTitle+"\n|Author="+wgUserName+"\n|CreationTime="+displayDate+"\n|SeeAlso=\n}}";
                         //   alert(options);
                         OHI_saveWikiPageAsk(title, options, "", "");
                         jQuery( this ).dialog( "close" );
@@ -817,7 +823,7 @@ function onWgAction(){
                         var displayDate =   (myDate.getDate()) + '-' + (myDate.getMonth()+1) + '-' + myDate.getFullYear() + " " + myDate.getHours()+':' + min + ':' + sec;
                         //  var displayDate = date("d-m-Y h:i:s");
                         // alert(displayDate);
-                        //   var options ="{{TextAnnotationNew\n|Initial Text="+text.val()+"\n|AnnoText="+annottext.val()+"\n|Annotation="+anno.val()+"\n|Tag="+tag.text()+"\n|Comment="+notiz.val()+"\n|Equivalent="+wgTitle+"\n|Section="+section.val()+"\n|Author="+wgUserName+"\n|CreationTime="+displayDate+"\n|SeeAlso=\n}}";
+                        //   var options ="{{TextAnnotationNew\n|Initial Text="+text.val()+"\n|AnnoText="+annottext.val()+"\n|Annotation="+anno.val()+"\n|Tag="+tag.text()+"\n|Comment="+Lesart.val()+"\n|Equivalent="+wgTitle+"\n|Section="+section.val()+"\n|Author="+wgUserName+"\n|CreationTime="+displayDate+"\n|SeeAlso=\n}}";
                         var options ="{{StoreFallstrukturhypothese\n|FallStrukturNummer="+bess.val()+"\n|TypAnno="+type.val()+"\n}}";
                         //  alert(options);
                         //   var options = "[[TypAnno::"+type.val()+"]]\n[[FallStrukturNummer::"+bess.val()+"]]\n[[Category:Fallstrukturhypothese"+bess.val()+"]]\n";
@@ -832,7 +838,7 @@ function onWgAction(){
 
             jQuery("#Interpretation  table tr:first").css('background', 'green');
 
-            jQuery("#Interpretation  table tr:first").append("<td ><button name='plus-general' value='+' id='plus-general' class='toggle-general' >+</button></td>");
+            jQuery("#Interpretation  table tr:first").append("<td ></td>");
             jQuery("#Interpretation  table tr:gt(0)").append('<td class="blank-td">&nbsp;</td>');
 
             jQuery('#Interpretation table tr td:first-child').each(function() {
@@ -847,7 +853,7 @@ function onWgAction(){
                             '<table border="0" style="width: 100%;">' +
                                 '<tbody>' +
                                     '<tr class="expandable-new">' +
-                                        '<td>'+(hasOpener?'<span class="g">'+text+' <a href="#" data="'+annotation+'" class="toggle" id="toggle-g-'+val+'">(ausklappen)</a></span> ':'')+(hasAdder?('<a href="#" value="Interpretieren" class="button-g" data="'+annotation+'" id="button-g-'+val+'">'+text+'</a>'):'')+'</td>' +
+                                        '<td>'+(hasOpener?'<span class="g">'+text+' <a href="#" data="'+annotation+'" class="toggle" id="toggle-g-'+val+'"><strong>(ausklappen)</strong></a></span> ':'')+(hasAdder?('<a href="#" value="Interpretieren" class="button-g" data="'+annotation+'" id="button-g-'+val+'">'+text+'</a>'):'')+'</td>' +
                                         '<td width="5%" align="rigth"></td>' +
                                     '</tr>' +
                                     '<tr>' +
@@ -866,7 +872,7 @@ function onWgAction(){
             jQuery("#Interpretation  table tr:gt(0)").each(function() {
                 // add "interpretation" interaction
                 var annotation =  jQuery(this).find('td:first-child > a').attr("title");
-                jQuery(this).after('<tr class="new-row"><td>&nbsp;</td><td class="new-buttons" colspan="2">'+genHTML(val, annotation, 1, false, true, "1. Interpretieren Sie die Sequenz")+genHTML(val, annotation, 2, true, false, "2. Vergleichen Sie mit anderen Interpretationen")+genHTML(val, annotation, 3, false, true, "3. Aktualisieren Sie Ihre Interpretation")+'</td></tr>');
+                jQuery(this).after('<tr class="new-row"><td>&nbsp;</td><td class="new-buttons" colspan="3">'+genHTML(val, annotation, 1, false, true, "<strong>1. Interpretieren Sie die Sequenz</strong>")+genHTML(val, annotation, 2, true, false, "2. Vergleichen Sie mit anderen Interpretationen")+'</td></tr>');
                 val++;
 
                 // add delete-button
@@ -892,7 +898,7 @@ function onWgAction(){
                 blankTd.html(button);
             });
         } // endif cc>0
-        // start process tabs Geschichten, Anschl_C3_BCsse, Lesarten, Notizen
+        // start process tabs Geschichten, Anschl_C3_BCsse, Lesarten, Lesarten
         if(gg > 0 ) {
             var parentId = 'Geschichten';
             var prefix = "gg";
@@ -940,11 +946,11 @@ var toogle =  function( event ) {
     var target = jQuery("#"+idParent).find('.div-level-2').attr("id");
     //  alert(target);
     var printouts = new Array();
-    printouts['Kurztitel'] = "?Kurztitel";
-    printouts['Beschreibung'] = "?Beschreibung";
-    printouts['Notiz'] = "?Notiz";
+    printouts['Zeilennummer'] = "?Zeilennummer";
+    printouts['Interpretation'] = "?Interpretation";
+    printouts['Lesart'] = "?Lesart";
     printouts['Autor'] = "?Autor";
-    printouts['FallStrukturNummer'] = "?FallStrukturNummer";
+ //   printouts['FallStrukturNummer'] = "?FallStrukturNummer";
     var type="Geschichte";
     switch(sp.trim()) {
         case "g":
@@ -957,7 +963,7 @@ var toogle =  function( event ) {
             type="Anschl&#252;sse";
             break;
         case "n":
-            type="Notiz";
+            type="Lesart";
             break;
         default:
             type="Geschichte";
@@ -1107,12 +1113,12 @@ jQuery( document ).ready(function() {
      //   alert(jQuery(this).closest('tr').find('.n').text());
         var data = jQuery(this).attr("data");
         jQuery('#section').val(data);
-        jQuery('#position').val("Notiz");
+        jQuery('#position').val("Lesart");
         var row = jQuery(this).closest('tr.new-row');
         var text = row.prev('tr').find('td:eq(3)').text();
         //  alert(text);
         jQuery('#annotextG').val(text);
-        jQuery( "#dialog-form-g").dialog('option', 'title', 'Neue Notiz ');
+        jQuery( "#dialog-form-g").dialog('option', 'title', 'Neue Lesart ');
         jQuery( "#dialog-form-g" ).dialog( "open" );
     });
     /*   jQuery("#create-user")
@@ -1129,11 +1135,11 @@ jQuery( document ).ready(function() {
         var target = jQuery(this.parentElement.parentElement.parentElement.parentElement.querySelector(".div-level-2")).attr("id");
         //  alert(target);
         var printouts = new Array();
-        printouts['Kurztitel'] = "?Kurztitel";
-        printouts['Beschreibung'] = "?Beschreibung";
-        printouts['Notiz'] = "?Notiz";
+        printouts['Zeilennummer'] = "?Zeilennummer";
+        printouts['Interpretation'] = "?Interpretation";
+        printouts['Lesart'] = "?Lesart";
         printouts['Autor'] = "?Autor";
-        printouts['FallStrukturNummer'] = "?FallStrukturNummer";
+   //     printouts['FallStrukturNummer'] = "?FallStrukturNummer";
         var type="Geschichte";
         switch(sp.trim()) {
             case "g":
@@ -1146,7 +1152,7 @@ jQuery( document ).ready(function() {
                 type="Anschl&#252;sse";
                 break;
             case "n":
-                type="Notiz";
+                type="Lesart";
                 break;
             default:
                 type="Geschichte";
@@ -1205,11 +1211,11 @@ jQuery( document ).ready(function() {
                         var target = jQuery("#" + idParent).find('.div-level-2').attr("id");
                         //  alert(target);
                         var printouts = new Array();
-                        printouts['Kurztitel'] = "?Kurztitel";
-                        printouts['Beschreibung'] = "?Beschreibung";
-                        printouts['Notiz'] = "?Notiz";
+                        printouts['Zeilennummer'] = "?Zeilennummer";
+                        printouts['Interpretation'] = "?Interpretation";
+                        printouts['Lesart'] = "?Lesart";
                         printouts['Autor'] = "?Autor";
-                        printouts['FallStrukturNummer'] = "?FallStrukturNummer";
+                   //     printouts['FallStrukturNummer'] = "?FallStrukturNummer";
                         var type = "Geschichte";
                         switch (sp.trim()) {
                             case "g":
@@ -1222,7 +1228,7 @@ jQuery( document ).ready(function() {
                                 type = "Anschl&#252;sse";
                                 break;
                             case "n":
-                                type = "Notiz";
+                                type = "Lesart";
                                 break;
                             default:
                                 type = "Geschichte";
@@ -1257,12 +1263,12 @@ jQuery( document ).ready(function() {
            // spinner.stop();
     });
 
-    jQuery(document).on('click', '.button-notiz', function (e) {
+    jQuery(document).on('click', '.button-Lesart', function (e) {
         //   $('.expandable').not(this).nextAll('tr').hide();
         var val = jQuery(this).attr("value");
         var content =  jQuery(this).attr("data");
         var idParent = jQuery(this).closest('table').attr("id");
-        var kurz = jQuery(this).closest('tr').find(".Kurztitel").html();
+        var kurz = jQuery(this).closest('tr').find(".Zeilennummer").html();
       //  alert(kurz);
         var sp="g";
         if(idParent.lastIndexOf("-g-")!=-1)  sp="g";
@@ -1281,7 +1287,7 @@ jQuery( document ).ready(function() {
                 type = "Anschl&#252;sse";
                 break;
             case "n":
-                type = "Notiz";
+                type = "Lesart";
                 break;
             default:
                 type = "Geschichte";
@@ -1290,8 +1296,8 @@ jQuery( document ).ready(function() {
        //add level 3 annotation
         jQuery('#section2').val(content);
         jQuery('#position2').val(type);
-        jQuery( "#dialog-form-notiz").dialog('option', 'title', 'Diskussion '+type+" "+kurz);
-        jQuery( "#dialog-form-notiz" ).dialog( "open" );
+        jQuery( "#dialog-form-Lesart").dialog('option', 'title', 'Diskussion '+type+" "+kurz);
+        jQuery( "#dialog-form-Lesart" ).dialog( "open" );
         //  content.slideToggle();
         //   $('.expandable').not(this).find('input[type="button"]').val("+");
     });
@@ -1318,7 +1324,7 @@ jQuery( document ).ready(function() {
                 type="Anschl&#252;sse";
                 break;
             case "n":
-                type="Notiz";
+                type="Lesart";
                 break;
             default:
                 type="Geschichte";
