@@ -885,6 +885,8 @@ function onWgAction(){
                     jQuery("#Interpretation table tr > *:nth-child(5)").each(function() {
                         $(this).remove();
                     });
+
+                    $("#headertabs li a[href=#Transkript]").parent().remove();
                 }
                 else
                 {
