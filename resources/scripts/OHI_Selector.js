@@ -847,9 +847,9 @@ function onWgAction(){
             jQuery('#Interpretation table tr th:first-child').hide();
             var val = 1;
 
-            function genHTML(val, annotation, i, hasOpener, hasAdder, text)
+            function genHTML(val, annotation, i, hasOpener, hasAdder, text, isEnabled)
             {
-                return '<div id="div-g-'+val+'" style="width: 100%;">' +
+                return '<div id="div-g-'+i+'" style="width: 100%;" class="'+(isEnabled?"enabled":"disabled")+'">' +
                             '<table border="0" style="width: 100%;">' +
                                 '<tbody>' +
                                     '<tr class="expandable-new">' +
@@ -869,10 +869,17 @@ function onWgAction(){
             }
 
             //  $('span[id^="flight"]').closest('tr').after('<tr>This is a new tr</tr>');
-            jQuery("#Interpretation  table tr:gt(0)").each(function() {
+            jQuery("#Interpretation table tr:gt(0)").each(function() {
                 // add "interpretation" interaction
                 var annotation =  jQuery(this).find('td:first-child > a').attr("title");
-                jQuery(this).after('<tr class="new-row"><td>&nbsp;</td><td class="new-buttons" colspan="3">'+genHTML(val, annotation, 1, false, true, "<strong>1. Interpretieren Sie die Sequenz</strong>")+genHTML(val, annotation, 2, true, false, "2. Vergleichen Sie mit anderen Interpretationen")+'</td></tr>');
+                var interpretationActionsHTML = [];
+                var otherInterpretationsExist = jQuery("#Geschichten table").length != 0;
+
+                interpretationActionsHTML.push('<tr class="new-row"><td>&nbsp;</td><td class="new-buttons" colspan="3">');
+                interpretationActionsHTML.push(genHTML(val, annotation, 1, false, true, "<strong>1. Interpretieren Sie die Sequenz</strong>", true));
+                interpretationActionsHTML.push(genHTML(val, annotation, 2, true, false, "2. Vergleichen Sie mit anderen Interpretationen", otherInterpretationsExist));
+                interpretationActionsHTML.push('</td></tr>');
+                jQuery(this).after(interpretationActionsHTML);
                 val++;
 
                 // add delete-button
