@@ -879,7 +879,7 @@ function onWgAction(){
                 interpretationActionsHTML.push(genHTML(val, annotation, 1, false, true, "<strong>1. Interpretieren Sie die Sequenz</strong>", true));
                 interpretationActionsHTML.push(genHTML(val, annotation, 2, true, false, "2. Vergleichen Sie mit anderen Interpretationen", otherInterpretationsExist));
                 interpretationActionsHTML.push('</td></tr>');
-                jQuery(this).after(interpretationActionsHTML);
+                jQuery(this).after(interpretationActionsHTML.join(""));
                 val++;
 
                 // add delete-button
