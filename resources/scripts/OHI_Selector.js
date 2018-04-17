@@ -601,13 +601,14 @@ function onWgAction(){
         //  alert("view");
         var htmlDialogG = '<div id="dialog-form-g" title="Neu" class="AQE-dialog-form" style="display:none;">';
         // Warnbox
-        htmlDialogG += '<div id="dialog-warning"><strong>Warnung: Abgeschickte Interpretationen k&ouml;nnen nicht mehr gel&ouml;scht oder bearbeitet werden! Bitte nehmen Sie sich Zeit.</strong></div>';
+        htmlDialogG += '<div class="dialog-warning"><strong>Warnung: Abgeschickte Interpretationen k&ouml;nnen nicht mehr gel&ouml;scht oder bearbeitet werden! Bitte nehmen Sie sich Zeit.</strong></div>';
+		htmlDialogG += '<div class="dialog-warning green"><strong>Jede Interpretation ist wertvoll. Scheuen Sie sich nicht davor sowohl kurze, als auch umfangreiche oder subjektive Texte zu verfassen.</strong></div>';
         // Transkriptionsregeln
         htmlDialogG += '<div class="hinweisbox interpretation"><details><summary>Transkriptionsregeln</summary><table><tbody><tr><td><ul><li> P: = Interviewte Person </li><li> I: = Interviewerin</li><li> [          ] &ouml;ffnende eckige Klammern werden an die Stelle des Textes gesetzt, an der &uuml;berlappend eingesetzt wird, und schlie&szlig;ende dort, wo das Simultansprechen endet. Die Klammerpaare werden untereinander ausgerichtet.</li><li> (1) = Pausen werden ab einer Sekunde L&auml;nge und in Klammern die L&auml;nge notiert  </li><li> (unverst&auml;ndlich) = unverst&auml;ndliche &Auml;u&szlig;erungen</li><li> (Also morgen will ich?) = nicht genau verst&auml;ndlicher, aber vermuteter Wortlaut</li><li> (&hellip;) = Auslassung durch die transkribierende Person</li><li> <u>wahnsinnig</u> = auff&auml;llige Betonung (unterstrichen)</li><li> <b>wahnsinnig</b> = gr&ouml;&szlig;ere Lautst&auml;rke (fett)</li><li> jaaa = Dehnung (Je mehr Vokale aneinandergereiht sind, desto l&auml;nger die Dehnung.)</li><li> @xxx@ = Lachend gesprochene Worte werden zwischen zwei "@-Zeichen" gesetzt.</li></ul></td><td><ul><li> Tilgungen werden so erfasst, dass die urspr&uuml;ngliche Form des Wortes erkennbar bleibt, z.B. sin - sind, is &ndash; ist, </li><li> Assimilationen werden notiert, interne wortinterne Assimilationen aber nicht, z.B. ham &ndash; haben </li><li> &auml;h &ouml;h &auml;hm etc. werden notiert</li><li> die in der gesprochenen Standardsprache allgemein &uuml;bliche Aussprache von Reduktionssilben (= Silben, die einen reduzierten Vokal enthalten) wird nicht notiert.  Z.B. halten &ndash; nicht: haltn</li><li> Klitisierungen werden notiert, z.B. biste &ndash; bist du oder kannste &ndash; kannst du</li><li> Regionalismen und Dialekt werden notiert, Beispiele f&uuml;r Hamburg: hamburch oder hambuich (hamburg), tach (tag)</li><li> Fremdw&ouml;rter werden so geschrieben, wie es in der Orthographie &uuml;blich ist.</li><li> Zahlw&ouml;rter werden ausgeschrieben</li></ul></td></tr></tbody></table></details></div>';
         htmlDialogG += 'Sequenztext:&nbsp;&nbsp; <textarea rows="10" cols="50" id="annotextG" disabled="disabled"  /><br/>';
-        htmlDialogG += '<div class="tooltip">Zeilennummer:<span class="tooltiptext">Geben Sie hier die Zeilennummer an, auf die Sie sich beziehen. Z.B. "3", oder "1-7"</span></div><input type="text" id="Zeilennummer" size="50" /><br/><br/>';
-        htmlDialogG += '<div class="tooltip">Interpretation<span class="tooltiptext">Geben Sie hier die Zeilennummer an, auf die Sie sich beziehen. Z.B. "3", oder "1-7"</span></div><textarea id="bes"  rows="10" cols="50"/><br/>';
-        htmlDialogG += '<div class="tooltip">Lesart:<span class="tooltiptext">Geben Sie hier die Zeilennummer an, auf die Sie sich beziehen. Z.B. "3", oder "1-7"</span></div><textarea id="Lesarttext"  rows="6" cols="50"/><br/>';
+        htmlDialogG += '<div class="tooltip">Zeilennummer&#040;n&#041;:<span class="tooltiptext">Geben Sie hier die Zeilennummer&#040;n&#041; an, auf die Sie sich beziehen. Z.B. "3", oder "1-7"</span></div><input type="text" id="Zeilennummer" size="50" /><br/><br/>';
+        htmlDialogG += '<div class="tooltip">Interpretation<span class="tooltiptext">Geben Sie hier Ihre Interpretation ein.</span></div><textarea id="bes"  rows="10" cols="50"/><br/>';
+        htmlDialogG += '<div class="tooltip">Lesart &#040;optional&#041;:<span class="tooltiptext">Geben Sie hier Ihre Lesart an, auf die Sie sich bei Ihrer Interpretation beziehen.</span></div><textarea id="Lesarttext"  rows="6" cols="50"/><br/>';
         htmlDialogG += '<input type="hidden" id="position"  size=""/><br/>'; // TODO: remove it
         htmlDialogG += '<input type="hidden" id="section"  size=""/>'; // TODO: remove it
         htmlDialogG += '</div>';
@@ -1096,7 +1097,7 @@ jQuery( document ).ready(function() {
         var text = row.prev('tr').find('td:eq(3)').text();
       //  alert(text);
         jQuery('#annotextG').val(text);
-        jQuery( "#dialog-form-g").dialog('option', 'title', 'Neue Geschichte');
+        jQuery( "#dialog-form-g").dialog('option', 'title', 'Neue Interpretation');
         jQuery( "#dialog-form-g" ).dialog( "open" );
     });
 
@@ -1316,7 +1317,7 @@ jQuery( document ).ready(function() {
        //add level 3 annotation
         jQuery('#section2').val(content);
         jQuery('#position2').val(type);
-        jQuery( "#dialog-form-Lesart").dialog('option', 'title', 'Diskussion '+type+" "+kurz);
+        jQuery( "#dialog-form-Lesart").dialog('option', 'title', 'Diskussion '+'Interpretation'+" "+kurz);
         jQuery( "#dialog-form-Lesart" ).dialog( "open" );
         //  content.slideToggle();
         //   $('.expandable').not(this).find('input[type="button"]').val("+");
