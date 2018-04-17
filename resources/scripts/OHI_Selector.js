@@ -874,7 +874,15 @@ function onWgAction(){
                 // add "interpretation" interaction
                 var annotation =  jQuery(this).find('td:first-child > a').attr("title");
                 var interpretationActionsHTML = [];
-                var otherInterpretationsExist = jQuery("#Geschichten table").length != 0;
+                var otherInterpretationsExist = false;
+
+                jQuery("#Geschichten table tr td.Autor").each(function()
+                {
+                    if (this.innerHTML == mw.user.getName())
+                    {
+                        otherInterpretationsExist = true;
+                    }
+                });
 
                 interpretationActionsHTML.push('<tr class="new-row"><td>&nbsp;</td><td class="new-buttons" colspan="3">');
                 interpretationActionsHTML.push(genHTML(val, annotation, 1, false, true, "<strong>1. Interpretieren Sie die Sequenz</strong>", true));
