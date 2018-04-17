@@ -870,62 +870,77 @@ function onWgAction(){
             }
 
             //  $('span[id^="flight"]').closest('tr').after('<tr>This is a new tr</tr>');
-            jQuery("#Interpretation table tr:gt(0)").each(function() {
-                // add "interpretation" interaction
-                var annotation =  jQuery(this).find('td:first-child > a').attr("title");
-                var interpretationActionsHTML = [];
-                var otherInterpretationsExist = false;
+            mw.user.getGroups(function(groups){
+                var isSysOp = groups.indexOf("sysop") != -1;
 
-                jQuery("#Geschichten table tr td.Autor").each(function()
-                {
-                    if (this.innerHTML == mw.user.getName())
+                jQuery("#Interpretation table tr:gt(0)").each(function() {
+                    // add "interpretation" interaction
+                    var annotation =  jQuery(this).find('td:first-child > a').attr("title");
+                    var interpretationActionsHTML = [];
+                    var otherInterpretationsExist = false;
+
+                    jQuery("#Geschichten table tr td.Autor").each(function()
                     {
-                        otherInterpretationsExist = true;
+                        if (otherInterpretationsExist == true)
+                        {
+                            return;
+                        }
+                        if (isSysOp)
+                        {
+                            otherInterpretationsExist = true;
+                            return;
+                        }
+                        if (this.innerHTML == mw.user.getName())
+                        {
+                            otherInterpretationsExist = true;
+                            return;
+                        }
+                    });
+
+                    interpretationActionsHTML.push('<tr class="new-row"><td>&nbsp;</td><td class="new-buttons" colspan="3">');
+                    interpretationActionsHTML.push(genHTML(val, annotation, 1, false, true, "<strong>1. Interpretieren Sie die Sequenz</strong>", true));
+                    interpretationActionsHTML.push(genHTML(val, annotation, 2, true, false, "2. Vergleichen Sie mit anderen Interpretationen", otherInterpretationsExist));
+                    interpretationActionsHTML.push('</td></tr>');
+                    jQuery(this).after(interpretationActionsHTML.join(""));
+                    val++;
+
+                    // add delete-button
+                    var id = jQuery(this).find(".smwtype_wpg a").attr("href");
+                    id = id.substr(id.lastIndexOf("/") + 1, id.length - id.lastIndexOf("/") + 1);
+
+                    if (wgUserGroups.indexOf("sysop") == -1)
+                    {
+                        //  $('span[id^="flight"]').closest('tr').after('<tr>This is a new tr</tr>');
+                        jQuery("#Interpretation table tr > *:nth-child(5)").each(function() {
+                            $(this).remove();
+                        });
+
+                        $("#headertabs li a[href=#Transkript]").parent().remove();
+                    }
+                    else
+                    {
+                        var blankTd =  jQuery(this).find('td.blank-td');
+
+                        var button = jQuery("<button>L&ouml;schen</button>");
+                        button.click(function()
+                        {
+                            var id = jQuery(this.parentElement.parentElement).find(".smwtype_wpg a").attr("href");
+                            id = id.substr(id.lastIndexOf("/") + 1, id.length - id.lastIndexOf("/") + 1);
+                            if (id.substr(id.lastIndexOf("=")) != -1)
+                            {
+                                id = id.substr(id.lastIndexOf("=") + 1, id.length - id.lastIndexOf("=") + 1);
+                            }
+                            if (confirm("Diese Interpretation wirklich l"+unescape("%F6")+"schen?"))
+                            {
+                                OHI_deleteAnnotation(id);
+                            }
+                        });
+
+                        blankTd.html(button);
                     }
                 });
+            })
 
-                interpretationActionsHTML.push('<tr class="new-row"><td>&nbsp;</td><td class="new-buttons" colspan="3">');
-                interpretationActionsHTML.push(genHTML(val, annotation, 1, false, true, "<strong>1. Interpretieren Sie die Sequenz</strong>", true));
-                interpretationActionsHTML.push(genHTML(val, annotation, 2, true, false, "2. Vergleichen Sie mit anderen Interpretationen", otherInterpretationsExist));
-                interpretationActionsHTML.push('</td></tr>');
-                jQuery(this).after(interpretationActionsHTML.join(""));
-                val++;
-
-                // add delete-button
-                var id = jQuery(this).find(".smwtype_wpg a").attr("href");
-                id = id.substr(id.lastIndexOf("/") + 1, id.length - id.lastIndexOf("/") + 1);
-
-                if (wgUserGroups.indexOf("sysop") == -1)
-                {
-                    //  $('span[id^="flight"]').closest('tr').after('<tr>This is a new tr</tr>');
-                    jQuery("#Interpretation table tr > *:nth-child(5)").each(function() {
-                        $(this).remove();
-                    });
-
-                    $("#headertabs li a[href=#Transkript]").parent().remove();
-                }
-                else
-                {
-                    var blankTd =  jQuery(this).find('td.blank-td');
-
-                    var button = jQuery("<button>L&ouml;schen</button>");
-                    button.click(function()
-                    {
-                        var id = jQuery(this.parentElement.parentElement).find(".smwtype_wpg a").attr("href");
-                        id = id.substr(id.lastIndexOf("/") + 1, id.length - id.lastIndexOf("/") + 1);
-                        if (id.substr(id.lastIndexOf("=")) != -1)
-                        {
-                            id = id.substr(id.lastIndexOf("=") + 1, id.length - id.lastIndexOf("=") + 1);
-                        }
-                        if (confirm("Diese Interpretation wirklich l"+unescape("%F6")+"schen?"))
-                        {
-                            OHI_deleteAnnotation(id);
-                        }
-                    });
-
-                    blankTd.html(button);
-                }
-            });
         } // endif cc>0
         // start process tabs Geschichten, Anschl_C3_BCsse, Lesarten, Lesarten
         if(gg > 0 ) {
