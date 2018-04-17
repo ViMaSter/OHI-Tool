@@ -1112,16 +1112,25 @@ jQuery( document ).ready(function() {
 
     jQuery(document).on('click', '.button-g', function (e) {
         e.preventDefault();
-      //  alert(jQuery(this).closest('tr').find('.g').text());
-        var data = jQuery(this).attr("data");
-        jQuery('#section').val(data);
-        jQuery('#position').val("Geschichte");
-        var row = jQuery(this).closest('tr.new-row');
-        var text = row.prev('tr').find('td:eq(3)').text();
-      //  alert(text);
-        jQuery('#annotextG').val(text);
-        jQuery( "#dialog-form-g").dialog('option', 'title', 'Neue Interpretation');
-        jQuery( "#dialog-form-g" ).dialog( "open" );
+        mw.user.getGroups(function(groups){
+            var isSysOp = groups.indexOf("sysop") != -1;
+            if (!isSysOp && !mw.config.get("ohiEmailConfirmed"))
+            {
+                alert(unescape("E-Mail Adressen m%FCssen best%E4tigt werden, um Interpretationen zu hinterlegen!"));
+                return;
+            }
+
+          //  alert(jQuery(this).closest('tr').find('.g').text());
+            var data = jQuery(this).attr("data");
+            jQuery('#section').val(data);
+            jQuery('#position').val("Geschichte");
+            var row = jQuery(this).closest('tr.new-row');
+            var text = row.prev('tr').find('td:eq(3)').text();
+          //  alert(text);
+            jQuery('#annotextG').val(text);
+            jQuery( "#dialog-form-g").dialog('option', 'title', 'Neue Interpretation');
+            jQuery( "#dialog-form-g" ).dialog( "open" );
+        });
     });
 
     jQuery(document).on('click', '.button-a', function (e) {

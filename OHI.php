@@ -132,7 +132,7 @@ $wgResourceModules['ext.OHI.add'] = $moduleTemplate + array (
 	//register MediaWiki hooks
 	//see: 'http://www.mediawiki.org/wiki/Manual:Hooks#Available_hooks'
 	//see: 'http://www.mediawiki.org/wiki/Manual:Hooks/OutputPageBeforeHTML'
-	$wgHooks['OutputPageBeforeHTML'][] = 'ohi_hookOutputPageBeforeHTML';
+    $wgHooks['OutputPageBeforeHTML'][] = 'ohi_hookOutputPageBeforeHTML';
 
 	//see: 'http://svn.wikimedia.org/doc/classOutputPage.html'
 	//see: 'http://www.mediawiki.org/wiki/Manual:Hooks/OutputPageBeforeHTML'
@@ -150,8 +150,11 @@ $wgResourceModules['ext.OHI.add'] = $moduleTemplate + array (
 		return true;
 	}
 
-
-
+    $wgHooks['MakeGlobalVariablesScript'][] = 'ohi_onMakeGlobalVariablesScript';
+	function ohi_onMakeGlobalVariablesScript (&$vars, $context) {
+        $user = $context->getUser();
+		$vars["ohiEmailConfirmed"] = $user->isEmailConfirmed();
+	}
 
 	//**********************
 
