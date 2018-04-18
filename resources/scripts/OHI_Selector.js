@@ -1121,10 +1121,10 @@ jQuery( document ).ready(function() {
             }
 
           //  alert(jQuery(this).closest('tr').find('.g').text());
-            var data = jQuery(this).attr("data");
+            var data = jQuery(e.currentTarget).attr("data");
             jQuery('#section').val(data);
             jQuery('#position').val("Geschichte");
-            var row = jQuery(this).closest('tr.new-row');
+            var row = jQuery(e.currentTarget).closest('tr.new-row');
             var text = row.prev('tr').find('td:eq(3)').text();
           //  alert(text);
             jQuery('#annotextG').val(text);
