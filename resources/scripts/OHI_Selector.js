@@ -294,6 +294,11 @@ function OHI_SimpleAsk(content, format, customPrintouts,  type, linkprop , targe
                jQuery('#'+target).children("table").attr('style','width: 100%;');
                // add column at the end of table with add button annotation 3rd level
                jQuery('#'+newTab+" tr:first").append('<td style="background: #ccc;">&nbsp;</td>');
+
+               if (wgUserGroups.indexOf("sysop") != -1)
+               {
+                   jQuery('#'+newTab+" tr:first").append('<td class="delete">&nbsp;</td>');
+               }
                jQuery('#'+newTab+" th").css('background', '#ccc');
 
 
@@ -317,6 +322,29 @@ function OHI_SimpleAsk(content, format, customPrintouts,  type, linkprop , targe
                     var insert = temp.replace("tr", "button-add");
 
                     jQuery(this).append('<td style="text-align: right;"><input type="button" value="'+textAdd+'" class="button-Lesart" data="'+hr+'" id="'+insert+'-'+i+'" /></td>');
+
+                    if (wgUserGroups.indexOf("sysop") != -1)
+                    {
+                        var button = jQuery("<button>L&ouml;schen</button>");
+                        button.click(function()
+                        {
+                            var id = jQuery(this.parentElement.parentElement).find(".smwtype_wpg a").attr("href");
+                            id = id.substr(id.lastIndexOf("/") + 1, id.length - id.lastIndexOf("/") + 1);
+                            if (id.substr(id.lastIndexOf("=")) != -1)
+                            {
+                                id = id.substr(id.lastIndexOf("=") + 1, id.length - id.lastIndexOf("=") + 1);
+                            }
+                            if (confirm("Diese Interpretation wirklich l"+unescape("%F6")+"schen?"))
+                            {
+                                OHI_deleteAnnotation(id);
+                            }
+                        });
+
+                        var buttonCell = $("<td></td>");
+                        buttonCell.append(button);
+                        jQuery(this).append(buttonCell);
+                    }
+
                     i++;
 
                     // TODO add table with new level of annotation - level 3
@@ -330,6 +358,13 @@ function OHI_SimpleAsk(content, format, customPrintouts,  type, linkprop , targe
                     var types = "TextAnnotationLevel3";
                     var target1 = this;
                     var idParent = jQuery(target1).attr("id");
+
+                    if (wgUserGroups.indexOf("sysop") != -1)
+                    {
+                        jQuery("#Interpretation table tr:first").append("<td></td>");
+                    }
+
+
                 //    alert(idParent);
                     var newDivId = idParent.replace('level-2','level-3').replace("tr", "div");
                     var newTabId = idParent.replace('level-2','level-3').replace('tr','tab');
@@ -919,8 +954,7 @@ function onWgAction(){
                     }
                     else
                     {
-                        var blankTd =  jQuery(this).find('td.blank-td');
-
+                        var blankTd = jQuery(this).find('td.blank-td');
                         var button = jQuery("<button>L&ouml;schen</button>");
                         button.click(function()
                         {
@@ -930,7 +964,7 @@ function onWgAction(){
                             {
                                 id = id.substr(id.lastIndexOf("=") + 1, id.length - id.lastIndexOf("=") + 1);
                             }
-                            if (confirm("Diese Interpretation wirklich l"+unescape("%F6")+"schen?"))
+                            if (confirm("Diese Sequenz wirklich l"+unescape("%F6")+"schen?"))
                             {
                                 OHI_deleteAnnotation(id);
                             }
